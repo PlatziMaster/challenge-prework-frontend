@@ -39,7 +39,7 @@ Platzi Game es un juego en el que compiten 2 personajes. Cada personaje comienza
 
 ## 3. Requerimientos
 
-1. Hacer la maquetación de los dos diseños dados (pantalla principal y modal).
+1. Hacer la maquetación de los dos diseños dados (pantalla principal y modal). En el footer de la pantalla principal donde dice @pepito_01, debe ir tu nombre de usuario en GitHub y los enlaces correspondientes a tus redes sociales (mínimo una).
 2. Hacer los dos personajes de las cards con CSS. Puedes escoger 2 personajes de este [enlace](https://dribbble.com/shots/3189737-My-Game-Characters).
 3. La barra de progreso debe mostrar visualmente (color rosado) el estado de la vida del personaje y también su equivalente en porcentaje.
 4. El botón `Play` debe restar la vida del oponente de forma aleatoria y deshabilitarse en caso de no tener el turno para jugar. El botón deshabilitado debe cambiar de color para indicar visualmente quién es el que tiene el turno.
