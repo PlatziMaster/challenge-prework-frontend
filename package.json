@@ -1,0 +1,32 @@
+{
+  "name": "challenge-prework-frontend",
+  "version": "1.0.0",
+  "description": "Platzi Game",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegoalesco95/challenge-prework-frontend.git"
+  },
+  "keywords": [],
+  "author": "Diego Osorio <Diegoalesco95@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Diegoalesco95/challenge-prework-frontend/issues"
+  },
+  "homepage": "https://github.com/Diegoalesco95/challenge-prework-frontend#readme",
+  "dependencies": {
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.6.2"
+  }
+}
