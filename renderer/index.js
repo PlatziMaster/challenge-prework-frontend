@@ -4,6 +4,10 @@ const $widthLifeOne = document.getElementById('lifeBoxOne')
 const $widthLifeTwo = document.getElementById('lifeBoxTwo')
 const $textOne = document.getElementById('lifePercentOne')
 const $textTwo = document.getElementById('lifePercentTwo')
+const $winner = document.getElementById('winner')
+const $winnerModal = document.getElementById('winner-modal')
+const $title = document.getElementById('titleContent')
+const $buttonPlay = document.getElementById('add-hide-modal')
 
 let playNumberOne = 100
 let playNumberTwo = 100
@@ -18,7 +22,6 @@ function changingText ($container, valorText, $content) {
 }
 
 function heigthBox ($container, valorText) {
-  debugger
   switch (valorText) {
     case 1:
       $container.style.height = '14px'
@@ -51,7 +54,6 @@ function heigthBox ($container, valorText) {
 }
 
 function borderRadiusBox ($container, valorText) {
-  debugger
   switch (valorText) {
     case 1:
       $container.style.borderRadius = "100px 0px 0px 100px"
@@ -141,7 +143,7 @@ $playOne.addEventListener('click', async(event) => {
     playNumberOne = numberCheck(playNumberOne, $widthLifeOne, $textOne, false, true)
   }
   if (playNumberOne == 0) {
-    alert('The winner is: Player 2')
+    winnerIs(2)
     playNumberOne = 100
     playNumberTwo = 100
     reset()
@@ -153,7 +155,7 @@ $playTwo.addEventListener('click', async(event) => {
     playNumberTwo = numberCheck(playNumberTwo, $widthLifeTwo, $textTwo, true, false)
   }
   if (playNumberTwo == 0) {
-    alert('The winner is: Player 1')
+    winnerIs(1)
     playNumberOne = 100
     playNumberTwo = 100
     reset()
@@ -163,3 +165,23 @@ $playTwo.addEventListener('click', async(event) => {
 function getRandom (min, max) {
   return Math.floor(Math.random() * (max - min)) + min
 }
+
+function hideModal ($overlayElement, $modal) {
+  $overlayElement.classList.remove('active')
+  $modal.style.animation = 'modalOut .8s forwards'
+}
+
+function showModal (player, $overlay, $modal, $modalTitle) {
+  $overlay.classList.add('active')
+  $modal.style.animation = 'modalIn .8s forwards'
+  $modalTitle.textContent = `Player ${player}`
+}
+
+function winnerIs (player) {
+  debugger
+  showModal(player, $winner, $winnerModal, $title)
+}
+
+$buttonPlay.addEventListener('click', async(event) => {
+  hideModal($winner, $winnerModal)
+})
