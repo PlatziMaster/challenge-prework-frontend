@@ -1,0 +1,21 @@
+/*Mixin----------Mixin*/
+
+@mixin ball($size, $top, $right, $bottom, $left) {
+  width: $size;
+  height: $size;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  background-color: var(--color-primary);
+  border-radius: 100%;
+}
+
+@mixin bar-life($width, $background, $radius) {
+  width: $width;
+  display: block;
+  height: 40px;
+  background-color: $background;
+  border-radius: $radius;
+}
