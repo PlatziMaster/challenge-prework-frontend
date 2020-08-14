@@ -14,10 +14,15 @@
   font-family: Poppins, Arial;
 }
 
+body {
+  height: 100vh;
+}
+
 .circle {
   background-color: var(--blue);
   position: absolute;
   border-radius: 50%;
+  z-index: -1;
 }
 
 .circle--left {
@@ -46,4 +51,44 @@
   height: 49px;
   right: 48px;
   top: 99px;
+}
+
+.title {
+  text-align: center;
+  font-size: 64px;
+  padding: 64px 0;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 232px;
+  margin: 16px 182px 0;
+}
+
+.card {
+  height: 408px;
+  flex: 1;
+  border-radius: 10px;
+  border: 2px solid var(--black);
+}
+
+.card--left {
+  background-color: var(--green);
+}
+
+.card--right {
+  background-color: var(--yellow);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin: 36px 48px;
+}
+
+.footer-link {
+  color: initial;
+  text-decoration: none;
 }
