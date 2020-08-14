@@ -177,30 +177,13 @@ main div {
 }
 
 .pink-background {
-  width: 13%;
+  width: 100%;
   height: 44px;
-  /* height: 40px; 8%*/
-  /* height: 38px; 7%*/
-  /* height: 38px; 6%*/
-  /* height: 35px; 5%*/
-  /* height: 30px; 4%*/
-  /* height: 27px; 3%*/
-  /* height: 25px; 2%*/
-  /* height: 14px; 1%*/
   left: 234px;
   top: 468px;
   align-self: center;
   background: var(--main-pink-color);
-  border-radius: 100px 0px 0px 100px;
-  /* border-radius: 20px 0px 0px 20px; 9%*/
-  /* border-radius: 30px 3px 3px 30px; 92%*/
-  /* border-radius: 30px 5px 5px 30px; 93%*/
-  /* border-radius: 30px 9px 9px 30px; 94%*/
-  /* border-radius: 30px 12px 12px 30px; 95%*/
-  /* border-radius: 30px 16px 16px 30px; 96%*/
-  /* border-radius: 30px 18px 18px 30px; 97%*/
-  /* border-radius: 30px 22px 22px 30px; 98%*/
-  /* border-radius: 30px 29px 29px 30px; 99%*/
+  border-radius: 30px 30px 30px 30px;
 }
 
 .boxes-sections__button-play p {
@@ -278,6 +261,7 @@ footer {
   padding-right: 58px;
 }
 
+.boxes-sections__button-play,
 .footer-comments img:nth-child(2),
 .footer-comments img:nth-child(3),
 .footer-comments img:nth-child(4):hover {

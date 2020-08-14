@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="./assets/images/palanca-de-mando.png">
+  <link rel="icon" type="image/png" href="./assets/images/pokemon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/normalize.css">
@@ -24,16 +24,16 @@
         <div class="boxes-sections">
           <section class="boxes-sections__state">
             <div class="boxes-life">
-              <p id="lifePercent">50%</p>
+              <p id="lifePercentOne">100%</p>
             </div>
             <div class="boxes-life">
               <div class="blue-background">
-                <div class="pink-background" id="lifeBox"></div>
+                <div class="pink-background" id="lifeBoxOne"></div>
               </div>
             </div>
           </section>
           <section class="boxes-sections__state">
-            <div class="boxes-sections__button-play">
+            <div class="boxes-sections__button-play" id="playOne">
               <p>Play</p>
             </div>
           </section>
@@ -51,23 +51,23 @@
         <div class="boxes-sections">
           <section class="boxes-sections__state">
             <div class="boxes-life">
-              <p id="lifePercent">50%</p>
+              <p id="lifePercentTwo">100%</p>
             </div>
             <div class="boxes-life">
               <div class="blue-background">
-                <div class="pink-background" id="lifeBox"></div>
+                <div class="pink-background" id="lifeBoxTwo"></div>
               </div>
             </div>
           </section>
           <section class="boxes-sections__state">
-            <div class="boxes-sections__button-play">
+            <div class="boxes-sections__button-play" id="playTwo">
               <p>Play</p>
             </div>
           </section>
         </div>
         <div class="boxes-sections">
           <div class="boxes-sections__image">
-            <img src="./assets/images/palanca-de-mando.png" alt="">
+            <img src="./assets/images/pokemon.png" alt="">
           </div>
         </div>
       </section>
@@ -83,5 +83,23 @@
       </section>
     </div>
   </footer>
+  <div class="overlay" id="overlay"></div>
+      <div class="modal" id="modal">
+        <h2 id="titleContent">The winner is:</h2>
+        <div class="modal-content">
+          <h2>Player 1</h2>
+        </div>
+        <div class="modal-buttons">
+          <button class="modal-btn primary" id="add-hide-information-modal">
+            Play again
+          </button>
+        </div>
+      </div>
+  <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./renderer/index.js"></script>
 </body>
 </html>
