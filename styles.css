@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root {
+  --blue: #1A46E5;
+  --green: #43D8C9;
+  --yellow: #FFBD11;
+  --rose: #FF89BB;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Arial;
+}
+
+.circle {
+  background-color: var(--blue);
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle--left {
+  width: 195px;
+  height: 195px;
+  left: -48px;
+  top: 26px;
+}
+
+.circle--top-left {
+  width: 97px;
+  height: 97px;
+  left: 162px;
+  top: 16px;
+}
+
+.circle--top-right {
+  width: 335px;
+  height: 335px;
+  right: 48px;
+  top: -222px;
+}
+
+.circle--right {
+  width: 49px;
+  height: 49px;
+  right: 48px;
+  top: 99px;
+}
