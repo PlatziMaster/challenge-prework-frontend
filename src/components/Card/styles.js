@@ -72,11 +72,16 @@ export const Button = styled.button`
   border-radius: 10rem;
   background-color: ${colors.primary};
   box-shadow: 0.4rem 0.8rem 0rem 0rem ${colors.black};
+  cursor: pointer;
   & span {
     font-size: 3.6rem;
     font-weight: bold;
     line-height: 5.4rem;
     color: ${colors.white};
+  }
+  &:disabled {
+    cursor: initial;
+    background-color: #667199;
   }
 `;
 

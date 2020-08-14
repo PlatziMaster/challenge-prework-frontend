@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components';
+import GenerealState from 'context/GeneralState';
 
 const theme = {
   primary: 'blue'
@@ -6,9 +7,11 @@ const theme = {
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />;
-    </ThemeProvider>
+    <GenerealState>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />;
+      </ThemeProvider>
+    </GenerealState>
   );
 }
 

@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const GenearalContext = createContext();
+const GeneralContext = createContext();
 
-export default GenearalContext;
+export default GeneralContext;
