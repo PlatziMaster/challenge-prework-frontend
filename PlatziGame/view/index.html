@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzi Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    
+</head>
+<body>
+    <script src="../controler/Game.js" type="text/javascript"></script>
+    <header class="header">
+        <div class="header__decoration">
+            <p class="header__decoration--ball" id="ball_mediana"></p>
+            <p class="header__decoration--ball" id="ball_pequeña"></p>
+        </div>
+        <h1 class="header__title">Platzi Game</h1>
+        <div class="header__decoration">
+            <p class="header__decoration--ball" id="ball_grande"></p>
+            <p class="header__decoration--ball" id="ball_diminuta"></p>
+        </div>
+    </header>
+    <main class="gameContainer">
+        <div class="modal">
+            <section class="modal__winnerContainer">  
+                <img src="" alt="" class="modal__winnerContainer--gif border">
+                <section class="modal__winnerContainer--data">
+                    <section>The winner is: <p id="whinerLabel"></p></section>
+                    <button class="border" id="playAgainbtn">Play again</button>
+                </section>
+            </section>
+        </div>
+
+        <div class="gameContainer__card border" id="player1">
+            <h3 class="gameConainer__card--title">Player 1</h3>
+            <div class="gameConainer__card--playerOptions">
+                <div class="playerOptions__playerHP--container">
+                    <p class="playerOptions__playerHP--percentage" id="percentagePlayer1">100%</p>
+                    <div class="playerOptions__playerHP--graphBar border">
+                        <section class="positiveHealt" id="pHealtPlayer1"></section>
+                        <section class="negativeHealt" id="nHealtPlayer2"></section>
+                    </div>
+                </div>
+                <button class="playerOptions__playbtn border">Play</button>
+            </div>
+            <img src="" alt="" class="gameConainer__card--img border">
+        </div>
+
+        <div class="gameContainer__card border" id="player2">
+            <h3 class="gameConainer__card--title">Player 2</h3>
+            <div class="gameConainer__card--playerOptions">
+                <div class="playerOptions__playerHP--container">
+                    <p class="playerOptions__playerHP--percentage" id="percentagePlayer2">100%</p>
+                    <div class="playerOptions__playerHP--graphBar">
+                        <section class="positiveHealt" id="pHealtPlayer2"></section>
+                        <section class="negativeHealt" id="nHealtPlayer2"></section>
+                    </div>
+                </div>
+                <button class="playerOptions__playbtn border">Play</button>
+            </div>
+            <img src="" alt="" class="gameConainer__card--img border">
+        </div> 
+    </main>
+    <footer class="footer">   
+        <p class="footer__signature">Made by @LuisGerardoDC</p>
+        <a class="footer__icon" href="https://twitter.com/noobsterlife">
+            <img class="footer__icon--img"src="https://img.icons8.com/metro/104/000000/twitter.png"/>
+        </a>
+        <a class="footer__icon" href="https://github.com/LuisGerardoDC">
+            <img class="footer__icon--img" src="https://img.icons8.com/windows/128/000000/github.png"/>
+        </a>
+    </footer>
+</body>
+</html>
+<!--         (div.gameContainer__card#player$>(h3.gameConainer__card--title{Player $}+(div.gameConainer__card--playerOptions>(div.playerOptions__playerHP(p.playerOptions__playerHP--percentage{100}+div.playerOptions__playerHP--graphBar)+button.playerOptions__play{Play}))+img.gameConainer__card--img))*2  -->
