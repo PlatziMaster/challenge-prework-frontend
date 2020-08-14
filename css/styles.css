@@ -1,0 +1,36 @@
+/* General */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+div {
+  border: 1px solid red;
+}
+
+.container {
+  max-width: 1000px;
+  flex: 1;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+/* Estilos tipográficos */
+
+/* Header */
+
+/* Body */
+
+/* Footer */
+.footer {
+  color: white;
+  background-color: rgba(35, 59, 74, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Pages HTML */
+
+/*
+* Source de iconos
+*/
