@@ -1,6 +1,7 @@
 import { Card } from 'components/card';
 import { Footer } from 'components/Footer';
 import { Bubbles } from 'components/Bubbles';
+import { Hero1 } from 'components/Hero1';
 import { GlobalStyle } from 'styles/Globals';
 import { Main, Heading, Cards } from './styles';
 
@@ -29,7 +30,9 @@ const Home = () => {
           r2={'7.7rem'}
         />
         <Cards>
-          <Card bgColor={'#43D8C9'} title={'Player 1'} />
+          <Card bgColor={'#43D8C9'} title={'Player 1'}>
+            <Hero1 />
+          </Card>
           <Card bgColor={'#FFBD11'} title={'Player 2'} />
         </Cards>
         <Footer />

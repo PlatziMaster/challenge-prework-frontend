@@ -6,3 +6,12 @@ export const colors = {
   white: '#fff',
   black: '#000'
 };
+
+export const heros = {
+  color1: '#1c3d4b',
+  color2: '#eb726b',
+  color3: '#F9C28D',
+  color4: '#419DA1',
+  color5: '#9BD3EA',
+  color5: '#D4E0E6'
+};

@@ -8,7 +8,7 @@ import {
   Character
 } from './styles';
 
-export const Card = ({ bgColor, posCol, title }) => {
+export const Card = ({ bgColor, posCol, title, children }) => {
   return (
     <Container bgColor={bgColor} posCol={posCol}>
       <Title>{title}</Title>
@@ -22,7 +22,7 @@ export const Card = ({ bgColor, posCol, title }) => {
       <Button>
         <span>Play</span>
       </Button>
-      <Character />
+      <Character>{children}</Character>
     </Container>
   );
 };
