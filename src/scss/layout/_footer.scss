@@ -1,0 +1,19 @@
+/*Footer----------Footer*/
+
+.footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  p {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  img {
+    margin-left: 10px;
+  }
+}

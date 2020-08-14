@@ -1,0 +1,27 @@
+/*Header----------Header*/
+
+.header {
+  width: 100%;
+  height: 130px;
+}
+.header__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  h1 {
+    font-size: 60px;
+  }
+}
+.header__decoration-ball-uno {
+  @include ball(200px, 20px, inherit, inherit, -50px);
+}
+.header__decoration-ball-dos {
+  @include ball(100px, 15px, inherit, inherit, 170px);
+}
+.header__decoration-ball-tres {
+  @include ball(300px, -200px, 100px, inherit, inherit);
+}
+.header__decoration-ball-cuatro {
+  @include ball(60px, 60px, 70px, inherit, inherit);
+}
