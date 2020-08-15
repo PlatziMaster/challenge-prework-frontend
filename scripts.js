@@ -20,8 +20,8 @@ const lifeBarRemainingPlayer2 = document.getElementById("life-bar-remaining-play
 const lifeBarSubtractedPlayer1 = document.getElementById("life-bar-subtracted-player-1"); // prettier-ignore
 const lifeBarSubtractedPlayer2 = document.getElementById("life-bar-subtracted-player-2"); // prettier-ignore
 
-let lifePlayer1 = 90;
-let lifePlayer2 = 90;
+let lifePlayer1 = 100;
+let lifePlayer2 = 100;
 
 window.onload = function () {
   fetch(
@@ -52,6 +52,12 @@ const playerAttack = function (player) {
     case "player-1": {
       // Obtener un valor entre el 5 y el 20
       const lifeToSubtract = getRandomNumber(40);
+      // Retirar css por defecto si la barra está al 100%
+      if (lifePlayer2 === 100) {
+        lifeBarRemainingPlayer2.classList.remove("life-bar-complete");
+        lifeBarRemainingPlayer2.classList.add("life-bar-remaining");
+        lifeBarSubtractedPlayer2.classList.add("life-bar-subtracted");
+      }
       // Restar valor obtenido de la vida del jugador contrario
       lifePlayer2 =
         lifePlayer2 - lifeToSubtract <= 0 ? 0 : lifePlayer2 - lifeToSubtract;
@@ -59,17 +65,24 @@ const playerAttack = function (player) {
       buttonPlayer1.setAttribute("disabled", "");
       // Activar botón de jugador contrario
       buttonPlayer2.removeAttribute("disabled");
+
       // Preparar campos html
       lifePercentagePlayer2.innerHTML = `${lifePlayer2}%`;
       lifeBarRemainingPlayer2.style.width = `${lifePlayer2}%`;
       lifeBarSubtractedPlayer2.style.width = `${100 - lifePlayer2}%`;
       // Verificar modal
-      verifyModal("Player 1", lifePlayer1);
+      verifyModal("Player 1", lifePlayer2);
       break;
     }
     case "player-2": {
       // Obtener un valor entre el 5 y el 20
       const lifeToSubtract = getRandomNumber(40);
+      // Retirar css por defecto si la barra está al 100%
+      if (lifePlayer1 === 100) {
+        lifeBarRemainingPlayer1.classList.remove("life-bar-complete");
+        lifeBarRemainingPlayer1.classList.add("life-bar-remaining");
+        lifeBarSubtractedPlayer1.classList.add("life-bar-subtracted");
+      }
       // Restar valor obtenido de la vida del jugador contrario
       lifePlayer1 =
         lifePlayer1 - lifeToSubtract <= 0 ? 0 : lifePlayer1 - lifeToSubtract;
@@ -89,13 +102,47 @@ const playerAttack = function (player) {
 };
 
 const verifyModal = function (player, life) {
-  if (!Number.isNaN(life) && life === 0) {
+  if (!Number.isNaN(life) && life <= 0) {
     // Desactivar scroll de body
     body.style.overflow = "hidden";
     // Asignar el jugador que ganó
     playerWin.innerText = player;
     // Activar modal
     modal.style.display = "flex";
-    console.log("Flex");
+    switch (player) {
+      case "player-1":
+        lifeBarRemainingPlayer2.classList.remove("life-bar-remaining");
+        lifeBarSubtractedPlayer2.classList.remove("life-bar-subtracted");
+        lifeBarRemainingPlayer2.classList.add("life-bar-incomplete");
+        break;
+      case "player-2":
+        lifeBarRemainingPlayer1.classList.remove("life-bar-remaining");
+        lifeBarSubtractedPlayer1.classList.remove("life-bar-subtracted");
+        lifeBarRemainingPlayer1.classList.add("life-bar-incomplete");
+        break;
+    }
   }
+};
+
+const restartGame = function () {
+  body.style.overflow = "initial";
+  modal.style.display = "none";
+  lifePlayer1 = 100;
+  lifePlayer2 = 100;
+
+  lifeBarRemainingPlayer1.classList.remove(["life-bar-incomplete", "life-bar-remaining"]); // prettier-ignore
+  lifeBarRemainingPlayer1.style.width = "100%";
+  lifePercentagePlayer1.innerHTML = "100%";
+  lifeBarRemainingPlayer1.classList.add("life-bar-complete");
+  lifeBarSubtractedPlayer1.classList.remove("life-bar-subtracted");
+  lifeBarSubtractedPlayer1.style.width = "0%";
+  buttonPlayer1.removeAttribute("disabled");
+
+  lifeBarRemainingPlayer2.classList.remove(["life-bar-incomplete", "life-bar-remaining"]); // prettier-ignore
+  lifeBarRemainingPlayer2.style.width = "100%";
+  lifePercentagePlayer2.innerHTML = "100%";
+  lifeBarRemainingPlayer2.classList.add("life-bar-complete");
+  lifeBarSubtractedPlayer2.classList.remove("life-barks-subtracted");
+  lifeBarSubtractedPlayer2.style.width = "0%";
+  buttonPlayer2.setAttribute("disabled", "");
 };

@@ -24,10 +24,10 @@
         <h2 class="card-title">Player 1</h2>
         <div class="card-controls">
           <div class="controls-life">
-            <p class="controls-life-percentage" id="life-percentage-player-1">90%</p>
+            <p class="controls-life-percentage" id="life-percentage-player-1">100%</p>
             <div class="controls-life-bar">
-              <div class="life-bar-remaining" id="life-bar-remaining-player-1"></div>
-              <div class="life-bar-subtracted" id="life-bar-subtracted-player-1"></div>
+              <div class="life-bar-complete" id="life-bar-remaining-player-1"></div>
+              <div id="life-bar-subtracted-player-1"></div>
             </div>
           </div>
           <div class="controls-button">
@@ -62,10 +62,10 @@
         <h2 class="card-title">Player 2</h2>
         <div class="card-controls">
           <div class="controls-life">
-            <p class="controls-life-percentage" id="life-percentage-player-2">90%</p>
+            <p class="controls-life-percentage" id="life-percentage-player-2">100%</p>
             <div class="controls-life-bar">
-              <div class="life-bar-remaining" id="life-bar-remaining-player-2"></div>
-              <div class="life-bar-subtracted" id="life-bar-subtracted-player-2"></div>
+              <div class="life-bar-complete" id="life-bar-remaining-player-2"></div>
+              <div id="life-bar-subtracted-player-2"></div>
             </div>
           </div>
           <div class="controls-button">
@@ -111,7 +111,7 @@
         <div class="modal-restart">
           <span class="restart-title">The winner is:</span>
           <span class="restart-player" id="player-win">Player 1</span>
-          <button class="restart-button">Play again</button>
+          <button class="restart-button" onclick="restartGame()">Play again</button>
         </div>
       </div>
     </section>
