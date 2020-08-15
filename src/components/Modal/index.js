@@ -22,8 +22,8 @@ export const Modal = ({ title, images }) => {
     const bg = document.querySelector('#background');
     const md = document.querySelector('#modal');
     // Hide Modal
-    bg.style.display = 'none';
-    md.style.display = 'none';
+    bg.classList.remove('animated');
+    md.classList.remove('animated');
     // Activate the turn
     attackBtnH1.disabled = false;
     // Change the state

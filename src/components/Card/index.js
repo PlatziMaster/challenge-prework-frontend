@@ -62,8 +62,8 @@ export const Card = ({ bgColor, posCol, title, hero, children }) => {
       // verify if Hero 2 is dead
       if (newLife2 <= 0) {
         setWinner('Player 1');
-        bg.style.display = 'unset';
-        md.style.display = 'flex';
+        bg.classList.add('animated');
+        md.classList.add('animated');
         attackBtnH1.disabled = true;
         attackBtnH2.disabled = true;
       }
@@ -87,8 +87,8 @@ export const Card = ({ bgColor, posCol, title, hero, children }) => {
       // verify if Hero 1 is dead
       if (newLife1 <= 0) {
         setWinner('Player 2');
-        bg.style.display = 'unset';
-        md.style.display = 'flex';
+        bg.classList.add('animated');
+        md.classList.add('animated');
         attackBtnH1.disabled = true;
         attackBtnH2.disabled = true;
       }

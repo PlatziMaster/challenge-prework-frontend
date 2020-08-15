@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 import { colors } from 'styles/variables';
+import { tadaAnimation, bgAnimation } from 'styles/animation';
 
 export const Background = styled.div`
   width: 100vw;
   height: 100%;
-  display: none;
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 8;
+  z-index: -9;
   background-color: ${colors.black}b3;
+  &.animated {
+    ${bgAnimation}
+  }
 `;
 
 export const Container = styled.div`
@@ -20,10 +24,15 @@ export const Container = styled.div`
   border: 0.3rem solid ${colors.black};
   box-sizing: border-box;
   border-radius: 20px;
-  display: none;
+  opacity: 0;
+  display: flex;
   position: absolute;
   z-index: 9;
   background-color: ${colors.white};
+  transform: scale(0);
+  &.animated {
+    ${tadaAnimation}
+  }
 `;
 
 export const ImageContainer = styled.div`
