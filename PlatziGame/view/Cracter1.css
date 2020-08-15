@@ -1,0 +1,227 @@
+
+:root{
+    --pielclara:#fabda5;
+    --pielrosada:#fc8181;
+    --pielbronceada:#fca481;
+    --pantalon:#213c64;
+    --blanco:#FFFFFF;
+    --lengua:#ff2b2b;
+    --negro: #000000;
+    --cuerpo:#570048;
+    --rojo:#d13167;
+    --rojoClaro:#ff518b;
+    --rojoObscuro:#96274c;
+    --azul:#6aafff;
+}
+.fortachon{
+    height: 150px;
+    width: 250px;
+    position: relative;
+}
+
+.fortachon__head{
+    z-index: 3;
+    background-color: var(--pielclara);
+    height: 50px;    
+    width: 50px;  
+    border-radius: 25px;
+    position: absolute;
+    top:35px;
+    left: 100px;
+}
+.fortachon__head::before{
+    z-index:4;
+    position: absolute;
+    background-color: var(--pielrosada);
+    height: 25px;
+    width: 15px;
+    top:15px;
+    left: 15px;
+    border-radius: 10px;
+    content: '';
+}
+.fortachon__head::after{
+    z-index: 2;
+    position: absolute;
+    background-color: var(--pielclara);
+    height: 40px;
+    width: 40px;
+    top: 17px;
+    left: 14px;
+    border-radius: 20px;
+    content: '';
+}
+.fortachon__boca{
+    z-index: 3;
+    position: absolute;
+    background-color: var(--pantalon);
+    height: 25px;
+    width: 25px;
+    top: 25px;
+    left: 22px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.fortachon__boca::before{
+    position: absolute;
+    content: ' ';
+    height: 28px;
+    width: 20px;
+    top:-12px;
+    left: -2px;
+    transform: rotateZ(65deg);
+    background-color: var(--blanco);
+}
+.fortachon__boca::after{
+    position: absolute;
+    background-color: var(--lengua);
+    content: ' ';
+    height: 20px;
+    width: 20px;
+    top:15px;
+    left: 10px;
+    border-radius: 10px;
+}
+.fortachon__oreja{
+    z-index: 1;
+    background-color:var(--pielclara);
+    height: 13px;
+    width: 13px;
+    border-radius: 10px;
+    position: absolute;
+    left: 145px;
+    top: 52px;
+}
+.fortachon__oreja::before{
+    content: '';
+    z-index: 2;
+    height: 9px;
+    width: 9px;
+    border-radius: 10px;
+    top: 2px;
+    left: 1px;
+    position: absolute;
+    background-color: var(--pielrosada);
+}
+.fortachon__ojos{
+    z-index: 3;
+    height: 15px;
+    width: 45px;
+    position: absolute;
+    top: 10px;
+    left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ojo{
+    height: 6px;
+    width: 6px;
+    border-radius: 5px;
+} 
+.ojo::before{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 12px;
+    border-radius: 5px;
+    top: -7px;
+    transform: rotateZ(-13deg);
+    background-color: var(--pantalon);
+}
+.ojo__izquierdo{
+    transform: rotateY(180deg);
+} 
+.ojo__derecho{
+    transform: rotateY(0deg);
+} 
+.black{
+    background-color: var(--negro);
+}
+.fortachon__cuerpo{
+    z-index: 2;
+    height: 50px;    
+    width: 50px; 
+    position: absolute;
+    top:58px;
+    left: 112px;
+    border-radius: 25px;
+    background-color: var(--cuerpo);
+}
+.fortachon__brazos{
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    height: 100px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.fortachon__brazo{
+    height: 25px;
+    width: 35px;
+    background-color: var(--pielrosada);
+}
+.fortachon__brazo::before{
+    z-index: 2;
+    position: absolute;
+    height: 25px;
+    width: 45px;
+    border-radius: 20px;
+    top:-7px;
+    left: 22px;
+    transform: rotateZ(-40deg);
+    background-color: var(--pielrosada);
+    content: '';
+}
+.fortachon__brazo::after{
+    z-index: 3;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    top: -15px;
+    border-radius: 20px;
+    background-color: var(--pielbronceada);
+    content: '';
+}
+.fortachon__brazo--izquierdo{
+    margin-top: 20px;
+    transform: rotateY(180deg) rotateZ(40deg);
+
+}
+.fortachon__brazo--derecho{
+    transform: rotateY(0deg);
+}
+.fortachon__piernas{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    height: 100px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.fortachon__pierna{
+    top: 0px;
+    left: 10px;
+    background-color: var(--pantalon);
+    height: 20px;
+    width: 10px;
+    transform: rotateZ(-20deg);
+}
+.fortachon__pierna::after{
+    position: absolute;
+    height: 20px;
+    width: 10px;
+    top: 16px;
+    left: -2px;
+    content: '';
+    border-radius: 5px;
+    background-color: var(--pantalon);
+    transform: rotateZ(20deg);
+}
+.fortachon__pierna--izquierdo{
+    transform: rotateY(180deg)rotateZ(-20deg);
+}
