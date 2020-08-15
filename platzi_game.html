@@ -14,25 +14,35 @@
       <h1>Platzi Game</h1>
     </header>
     <section id="players">
-      <div class="card">
-        <h3 class="card__title">Player 1</h3>
-        <div class="card__info">
-          <div>50%</div>
-          <div class="total_life">
-            <div class="current_life"></div>
+      <div class="player_card">
+        <h3 class="player_card__title">Player 1</h3>
+        <div class="player_card__info">
+          <div class="player_card__life">
+            <div class="player_card__life_percentage">50%</div>
+            <div class="player_card__life_bar">
+              <div class="player_card__current_life"></div>
+            </div>
           </div>
+          <button class="button play_button">Play</button>
         </div>
-        <button class="button play_button">Play</button>
+        <div class="player_card__character_shelf">
+          <!-- aqui dibujo el personaje del jugador -->
+        </div>
       </div>
-      <div class="card">
-        <h3 class="card__title">Player 2</h3>
-        <div class="card__info">
-          <div>20%</div>
-          <div class="total_life">
-            <div class="current_life"></div>
+      <div class="player_card">
+        <h3 class="player_card__title">Player 2</h3>
+        <div class="player_card__info">
+          <div class="player_card__life">
+            <div class="player_card__life_percentage">20%</div>
+            <div class="total_life">
+              <div class="player_card__current_life"></div>
+            </div>
           </div>
+          <button class="button play_button">Play</button>
         </div>
-        <button class="button play_button">Play</button>
+        <div class="player_card__character_shelf">
+          <!-- aqui dibujo el personaje del jugador -->
+        </div>
       </div>
     </section>
     <footer>

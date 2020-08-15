@@ -1,3 +1,92 @@
-body {
-  background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root {
+  --blue: #1A46E5;
+  --green: #43D8C9;
+  --yellow: #FFBD11;
+  --pink: #FF89BB;
 }
+
+body {
+  border: 1px solid green;
+  font-family: 'Poppins', sans-serif;
+}
+
+.shelf {
+  border: 1px solid magenta;
+  box-sizing: border-box;
+
+  max-width: 1440px;
+  max-height: 1024px;
+  margin: auto;
+
+  padding: 60px;
+}
+
+.header {
+  border: 1px solid greenyellow;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3.75em;
+}
+
+#players {
+  border: 1px solid rebeccapurple;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.player_card {
+  border: 3px solid black;
+  border-radius: 20px;
+
+  width: 467px;
+  height: 582px;
+
+  color: white;
+  text-align: center;
+}
+
+.player_card:first-child {
+  background-color: var(--green);
+}
+
+.player_card:last-child {
+  background-color: var(--yellow);
+}
+
+.player_card__title {
+  border: 1px solid aquamarine; 
+  font-size: 2.25em;
+}
+
+.player_card__info {
+  border: 1px solid orchid;
+}
+
+.player_card__life {
+  border: 1px solid maroon;
+}
+
+.player_card__life_percentage {
+  font-size: 1.875em;
+}
+
+.button {
+  background-color: var(--blue);
+  color: white;
+  width: 120px;
+  height: 120px;
+  border: 3px solid black;
+  box-shadow: 2px 6px black;
+  border-radius: 50%;
+  font-size: 2.25em;
+}
+
+footer {
+  border: 1px solid orangered;
+}
+
