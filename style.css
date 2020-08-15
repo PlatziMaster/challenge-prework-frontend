@@ -87,7 +87,7 @@ a img{
     width: 120px;
     height: 120px;
     left: 125px;
-    top: 300px;
+    top: 50px;
     background: #1A46E5;
     border: 3px solid #000000;
     box-sizing: border-box;
@@ -132,7 +132,7 @@ a img{
 
   .progress-bar-fill1{
       height: 100%;
-      background: #59ea63;
+      background: pink;
       transition: width .5s;
   }
  
@@ -151,11 +151,12 @@ a img{
     width: 150px;
     height: 40px;
     border: 1px solid #000000;
+    top: 200px;
 }
 
 .progress-bar-fill2{
     height: 100%;
-    background: #59ea63;
+    background: pink;
     transition: width .5s;
 }
 
@@ -168,3 +169,47 @@ a img{
     justify-content: center;
     font-weight: bold;
 }
+
+.container {
+    height: 200px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+}
+.character{
+    position: relative;
+    top: 10px;
+    left: 150px
+
+}
+
+.face{
+    background-color: pink;
+    height: 60px;
+    width: 30px;
+    border-radius: 40px;
+}
+
+.gorra{
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.earl, .earr{
+    width: 12px;
+    height: 12px;
+    background-color: pink;
+    border-radius: 50%;
+}
+.earl{
+    position: relative;
+    left: -5px;
+}
+.earr{
+    position: relative;
+    left: 23px;
+    bottom: 12px;
+}
+
