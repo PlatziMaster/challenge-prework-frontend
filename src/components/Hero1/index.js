@@ -1,4 +1,16 @@
-import { Container, Body, Arm, Leg, Eye } from './styles';
+import {
+  Container,
+  Body,
+  Arm,
+  Leg,
+  Large,
+  Eye,
+  Weapon,
+  LineOne,
+  LineTwo,
+  Ball,
+  Floor
+} from './styles';
 
 export const Hero1 = () => {
   return (
@@ -8,43 +20,21 @@ export const Hero1 = () => {
       <Arm className='right' />
       <Leg className='left' />
       <Leg className='right' />
+      <Large className='left' />
+      <Large className='right' />
       <Eye className='left'>
         <div className='center' />
       </Eye>
       <Eye className='right'>
         <div className='center' />
       </Eye>
+      <Weapon>
+        <div className='canyon'></div>
+      </Weapon>
+      <LineOne />
+      <LineTwo />
+      <Ball />
+      <Floor />
     </Container>
   );
 };
-
-{
-  /* <div>
-  <div className='body'></div>
-  <div className='arm'></div>
-  <div className='arm'></div>
-  <div className='arm'></div>
-  <div className='arm'></div>
-  <div className='eye'>
-    <div className='large'></div>
-    <div className='ball'>
-      <div className='point'></div>
-    </div>
-  </div>
-  <div className='eye'>
-    <div className='large'></div>
-    <div className='ball'>
-      <div className='point'></div>
-    </div>
-  </div>
-  <div className='weapon'>
-    <div className='body'></div>
-    <div className='canyon'>
-      <div className='line'></div>
-      <div className='line'></div>
-      <div className='ball'></div>
-    </div>
-  </div>
-  <div className='floor'></div>
-</div>; */
-}

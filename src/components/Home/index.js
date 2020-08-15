@@ -2,6 +2,7 @@ import { Card } from 'components/card';
 import { Footer } from 'components/Footer';
 import { Bubbles } from 'components/Bubbles';
 import { Hero1 } from 'components/Hero1';
+import { Hero2 } from 'components/Hero2';
 import { Modal } from 'components/Modal';
 
 import { GlobalStyle } from 'styles/Globals';
@@ -38,7 +39,9 @@ const Home = ({ image }) => {
           <Card bgColor={'#43D8C9'} title={'Player 1'} hero={'Hero 1'}>
             <Hero1 />
           </Card>
-          <Card bgColor={'#FFBD11'} title={'Player 2'} hero={'Hero 2'} />
+          <Card bgColor={'#FFBD11'} title={'Player 2'} hero={'Hero 2'}>
+            <Hero2 />
+          </Card>
         </Cards>
         <Footer />
         <Modal title={title} images={images} />

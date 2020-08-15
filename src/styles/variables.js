@@ -9,9 +9,14 @@ export const colors = {
 
 export const heros = {
   color1: '#1c3d4b',
-  color2: '#eb726b',
+  color2: '#f15a45',
   color3: '#F9C28D',
   color4: '#419DA1',
   color5: '#9BD3EA',
-  color5: '#D4E0E6'
+  color6: '#D4E0E6',
+  color7: '#372438',
+  color8: '#ef937e',
+  color9: '#f1aa86',
+  color10: '#ee3464',
+  color11: '#ed7074'
 };
