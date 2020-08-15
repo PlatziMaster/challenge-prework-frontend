@@ -24,14 +24,14 @@
         <h2 class="card-title">Player 1</h2>
         <div class="card-controls">
           <div class="controls-life">
-            <p class="controls-life-percentage">50%</p>
+            <p class="controls-life-percentage" id="life-percentage-player-1">90%</p>
             <div class="controls-life-bar">
-              <div class="life-bar-remaining"></div>
-              <div class="life-bar-subtracted"></div>
+              <div class="life-bar-remaining" id="life-bar-remaining-player-1"></div>
+              <div class="life-bar-subtracted" id="life-bar-subtracted-player-1"></div>
             </div>
           </div>
           <div class="controls-button">
-            <div class="controls-button-message">Play</div>
+            <button class="controls-button-message" onclick="playerAttack('player-1')" id="button-player-1">Play</button>
             <div class="controls-button-shadow"></div>
           </div>
         </div>
@@ -62,14 +62,14 @@
         <h2 class="card-title">Player 2</h2>
         <div class="card-controls">
           <div class="controls-life">
-            <p class="controls-life-percentage">50%</p>
+            <p class="controls-life-percentage" id="life-percentage-player-2">90%</p>
             <div class="controls-life-bar">
-              <div class="life-bar-remaining"></div>
-              <div class="life-bar-subtracted"></div>
+              <div class="life-bar-remaining" id="life-bar-remaining-player-2"></div>
+              <div class="life-bar-subtracted" id="life-bar-subtracted-player-2"></div>
             </div>
           </div>
           <div class="controls-button">
-            <div class="controls-button-message">Play</div>
+            <button class="controls-button-message" id="button-player-2" disabled onclick="playerAttack('player-2')">Play</button>
             <div class="controls-button-shadow"></div>
           </div>
         </div>
@@ -103,10 +103,23 @@
         </div>
       </div>
     </section>
+    <section class="modal" id="modal">
+      <div class="modal-container">
+        <div class="modal-gif">
+          <img id="image-gif" src="" alt="Winner" width="400" height="300">
+        </div>
+        <div class="modal-restart">
+          <span class="restart-title">The winner is:</span>
+          <span class="restart-player" id="player-win">Player 1</span>
+          <button class="restart-button">Play again</button>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <h2>Made by <a class="footer-link" target="_blank" href="https://brycatch.me">@brycatch</a></h2>
     <div class="footer-icons">
+      <!-- Poner links a redes -->
       <img src="https://img.icons8.com/windows/32/000000/github.png" />
       <img src="https://img.icons8.com/ios-filled/32/000000/linkedin.png">
       <img src="https://img.icons8.com/ios-filled/32/000000/facebook-new.png">

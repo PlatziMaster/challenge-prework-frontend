@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 :root {
-  --blue: #1A46E5;
+  --blue: #1a46e5;
   --green: #43D8C9;
   --yellow: #FFBD11;
   --rose: #FF89BB;
@@ -12,10 +12,7 @@
   margin: 0;
   padding: 0;
   font-family: Poppins, Arial;
-}
-
-body {
-  height: 100vh;
+  outline: none;
 }
 
 .circle {
@@ -116,14 +113,14 @@ body {
 
 .life-bar-remaining {
   height: 40px;
-  width: 50%;
+  width: 90%;
   border-radius: 30px 0 0 30px;
   background-color: var(--rose);
 }
 
 .life-bar-subtracted {
   height: 40px;
-  width: 50%;
+  width: 10%;
   border-radius: 0 30px 30px 0;
   background-color: var(--blue);
 }
@@ -149,11 +146,20 @@ body {
   z-index: 10;
 }
 
+.controls-button-message:hover {
+  cursor: pointer;
+}
+
+.controls-button-message:disabled {
+  cursor: not-allowed;
+  background-color: var(--rose);
+}
+
 .controls-button-shadow {
   top: 5px;
   position: absolute;
-  height: 107px;
-  width: 107px;
+  height: 100px;
+  width: 102px;
   border-radius: 50%;
   background-color: var(--black);
   z-index: 1;
@@ -497,6 +503,60 @@ body {
   border-radius: 30px;
   background-color: rgb(184, 226, 254);
   z-index: 10;
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(161, 161, 161, 0.5);
+  z-index: 100;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 10px;
+  border: 3px solid black;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.modal-restart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.restart-title, .restart-player {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.restart-button {
+  margin-top: 20px;
+  width: 200px;
+  padding: 10px;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 30px;
+  border: 3px solid var(--black);
+}
+
+.restart-button:hover {
+  cursor: pointer;
 }
 
 .footer {
