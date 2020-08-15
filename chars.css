@@ -1,4 +1,242 @@
-.char1{
+.char {
   width: 90%;
   height: 90%;
+  position: relative;
+}
+.head {
+  position: absolute;
+  top: 41px;
+  right: 106px;
+  height: 120px;
+  width: 120px;
+  border-radius: 20%;
+  background: rgb(8, 54, 80);
+}
+.hand1{
+  position: absolute;
+  top: 74px;
+  right: 208px;
+  height: 72px;
+  width: 34px;
+  border-radius: 50px;
+  background: rgb(16 96 101);
+}
+.hand2 {
+  position: absolute;
+  top: 74px;
+  right: 90px;
+  height: 72px;
+  width: 34px;
+  border-radius: 50px;
+  background: rgb(47, 145, 150);
+}
+
+.horn1 {
+  position: absolute;
+  top: 18px;
+  right: 125px;
+  height: 47px;
+  width: 22px;
+  border-radius: 50px;
+  background: rgb(141, 195, 220);
+}
+
+.horn2 {
+  position: absolute;
+  top: 18px;
+  right: 196px;
+  height: 47px;
+  width: 22px;
+  border-radius: 50px;
+  background: rgb(122, 187, 218);
+}
+
+.foot1{
+  position: absolute;
+  top: 116px;
+  right: 167px;
+  height: 72px;
+  width: 33px;
+  border-radius: 50px;
+  background: rgb(5, 29, 43);
+}
+.foot2{
+  position: absolute;
+  top: 116px;
+  right: 125px;
+  height: 72px;
+  width: 33px;
+  border-radius: 50px;
+  background: rgb(8 ,54 ,80);
+}
+
+.eye1{
+  position: absolute;
+  top: 86px;
+  right: 142px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffff;
+}
+.eye2{
+  position: absolute;
+  top: 86px;
+  right: 192px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffff;
+}
+
+.eye3{
+  position: absolute;
+  top: 51px;
+  right: 191px;
+  height: 7px;
+  width: 19px;
+  border-radius: 50px;
+  background: #d6e220;
+}
+.eye4{
+  position: absolute;
+  top: 51px;
+  right: 158px;
+  height: 7px;
+  width: 19px;
+  border-radius: 50px;
+  background: #d6e220;
+}
+
+.head1 {
+  position: absolute;
+  top: 71px;
+  right: 130px;
+  height: 53px;
+  width: 88px;
+  border-radius: 17px;
+  background: rgb(47 145 150);
+}
+
+.body1{
+  position: absolute;
+  top: 74px;
+  right: 113px;
+  height: 93px;
+  width: 93px;
+  border-radius: 100px;
+  background: rgb(69 183 189);
+}
+
+.foot3{
+  position: absolute;
+  top: 126px;
+  right: 144px;
+  height: 76px;
+  width: 33px;
+  border-radius: 50px;
+  background: rgb(69 183 189);
+  transform: rotate(45deg);
+}
+.foot4{
+  position: absolute;
+  top: 129px;
+  right: 96px;
+  height: 33px;
+  width: 76px;
+  border-radius: 50px;
+  background: rgb(47 145 150);
+}
+
+.hand4{
+  transform: rotate(45deg);
+  position: absolute;
+  top: 102px;
+  right: 81px;
+  height: 27px;
+  width: 53px;
+  border-radius: 50px;
+  background: rgb(107 216 222);
+}
+.hand3{
+  position: absolute;
+  top: 104px;
+  right: 147px;
+  height: 27px;
+  width: 81px;
+  border-radius: 50px;
+  background: rgb(47 145 150);
+}
+.stick5{
+  position: absolute;
+  top: 43px;
+  right: 185px;
+  height: 77px;
+  width: 13px;
+  border-radius: 50px;
+  background: rgb(47 145 150);
+}
+.stick6{
+  position: absolute;
+  top: 43px;
+  right: 132px;
+  height: 77px;
+  width: 13px;
+  border-radius: 50px;
+  background: rgb(69 183 189);
+}
+.eye5{
+  position: absolute;
+  top: 4px;
+  right: 172px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+  background: rgb(47 145 150);
+}
+.eye5w{
+  position: absolute;
+  top: 11px;
+  right: 179px;
+  height: 45px;
+  width: 45px;
+  border-radius: 100px;
+  background: #ffff;
+}
+.eye5b{
+  position: absolute;
+  top: 25px;
+  right: 203px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100px;
+  background: #000;
+}
+
+.eye6{
+  position: absolute;
+  top: 4px;
+  right: 121px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+  background: rgb(69 183 189);
+}
+.eye6w{
+  position: absolute;
+  top: 11px;
+  right: 129px;
+  height: 45px;
+  width: 45px;
+  border-radius: 100px;
+  background: #ffff;
+}
+.eye6b{
+  position: absolute;
+  top: 25px;
+  right: 153px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100px;
+  background: #000;
 }

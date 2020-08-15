@@ -4,8 +4,11 @@ const hp1Bar = document.getElementById("hp1Bar");
 const hp2Bar = document.getElementById("hp2Bar");
 const modal = document.getElementById("finish");
 const winner = document.getElementById("winner");
+const gif = document.getElementById("gif");
 const btn1 = document.getElementById("player1_play");
 const btn2 = document.getElementById("player2_play");
+
+let url= "https://api.giphy.com/v1/gifs/random?api_key=n5wf1ERiBfpQPFw95uWxwl0If7lJrW15&tag=winner"
 
 let turnoActual = 1;
 let vida1 = 100;
@@ -28,6 +31,7 @@ function restarVida(jugador) {
     if(vida1==0){
       modal.style.visibility="visible"
       winner.innerHTML="The winner is Player 2"
+      getGif();
     }
   } else {
     vida2 -= 10;
@@ -36,6 +40,7 @@ function restarVida(jugador) {
     if(vida2==0){
       modal.style.visibility="visible"
       winner.innerHTML="The winner is Player 1"
+      getGif();
     }
   }
 }
@@ -58,6 +63,10 @@ function ruleta() {
   return Math.floor(Math.random() * 2); //Numero aleatorio 1 para acertar 0 para fallar
 }
 
-function reload(){
-  location.reload();
+function getGif(){
+  fetch(url)
+    .then(response=>response.json())
+    .then(content=>{
+      gif.src = content.data.images.downsized_medium.url
+    })
 }
