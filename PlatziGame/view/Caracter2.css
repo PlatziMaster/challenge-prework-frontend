@@ -1,0 +1,189 @@
+.piel{
+    background-color: var(--pielclara);
+}
+.cabello{
+    background-color: var(--pantalon);
+}
+.rojo{
+    background-color: var(--rojo);
+}
+.rojo_claro{
+    background-color: var(--rojoClaro);
+}
+.rojo_obscuro{
+    background-color: var(--rojoObscuro);
+}
+.eboy{
+    height: 150px;
+    width: 250px;
+    position: relative;
+}
+.eboy__head{
+    z-index: 3;
+    height: 45px;
+    width: 45px;
+    border-radius: 6px;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+}
+.eboy__head--lente{
+    position: absolute;
+    width: 45px;
+    height: 21px;
+    top: 10px;
+    left: -5px;
+    border-radius: 10px;
+}
+.eboy__head--lente::after{
+    z-index: 3;
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    top: 3px;
+    left: 2px;
+    border-radius: 10px;
+    background-color: var(--azul);
+    content: '';
+}
+.eboy__head--lente::before{
+    z-index: 1;
+    position: absolute;
+    width: 11px;
+    height: 12px;
+    top: 4px;
+    left: 39px;
+    background-color: var(--pantalon);
+    content: '';
+}
+.eboy__head--oreja{
+    height: 11px;
+    width: 11px;
+    border-radius: 20px;
+    position: absolute;
+    left: 41px;
+    top: 20px;
+    z-index: 2;
+}
+.eboy__head--oreja::before{
+    background-color: var(--pielrosada);
+    height: 7px;
+    width: 7px;
+    border-radius: 20px;
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+.eboy__head--details{
+    position: absolute;
+    height: 17px;
+    width: 45px;
+    border-radius: 20px;
+    top: -9px;
+    left: -7px;
+}
+.eboy__head--details::after{
+    background-color: var(--pantalon);
+    position: absolute;
+    height: 15px;
+    width: 18px;
+    border-radius: 20px;
+    top: 6px;
+    left: 40px;
+    content: '';
+}
+.eboy__head--details::before{
+    background-color: var(--pantalon);
+    position: absolute;
+    height: 5px;
+    width: 12px;
+    border-radius: 20px;
+    top: 45px;
+    left: 33px;
+    content: '';
+}
+.eboy__body{
+    z-index: 2;
+    position: absolute;
+    height: 47px;
+    width: 47px;
+    border-radius: 30px;
+    top: 63px;
+    left: 116px;
+}
+.eboy__body--brazoIzquierdo{
+    position: absolute;
+    height: 14px;
+    width: 24px;
+    top: 9px;
+    left: 31px;
+    border-radius: 10px;
+}
+.eboy__body--brazoIzquierdo::after{
+    background-color: inherit;
+    position: absolute;
+    height: 14px;
+    width: 24px;
+    content: '';
+    top: 4px;
+    left: 11px;
+    border-radius: 10px;
+    transform: rotateZ(45deg);
+}
+.eboy__boy--piernaIzquierda{
+    position: absolute;
+    height: 12px;
+    width: 24px;
+    top: 29px;
+    left: 16px;
+    border-radius: 10px;
+}
+.eboy__boy--piernaIzquierda::after{
+    background-color: inherit;
+    position: absolute;
+    height: 13px;
+    width: 33px;
+    content: '';
+    top: 7px;
+    left: -6px;
+    border-radius: 10px;
+    transform: rotateZ(45deg);
+}
+.eboy__derecho{
+    position: absolute;
+    height: 13px;
+    width: 33px;
+    top: 105px;
+    left: 125px;
+    border-radius: 10px;
+    transform: rotateZ(45deg);
+}
+.eboy__derecho::after{
+
+    background-color: inherit;
+    position: absolute;
+    height: 13px;
+    width: 33px;
+    content: '';
+    top: -1px;
+    left: -32px;
+    border-radius: 10px;
+    transform: rotateZ(135deg);
+
+}
+/*<div class="eboy">
+    <div class="eboy__head piel">
+        <div class="eboy__head--lente"></div>
+        <div class="eboy__head--oreja piel"></div>
+        <div class="eboy__head--details cabello"></div>
+    </div>
+    <div class="eboy__body rojo">
+        <div class="eboy__body--brazoIzquierdo rojo_claro"></div>
+        <div class="eboy__boy--piernaIzquierda rojo_claro"></div>
+    </div>
+    <div class="eboy__derecho">
+        <div class="eboy__body--brazoDerecho rojo_obscuro"></div>
+        <div class="eboy__boy--piernaDerecha rojo_obscuro"></div>
+    </div>
+</div>*/

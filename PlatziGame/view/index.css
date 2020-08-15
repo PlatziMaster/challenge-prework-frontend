@@ -13,6 +13,9 @@ body{
     grid-template-rows: 20% 70% 10%;
     height: 100vh;
 }
+button{
+    outline: none;
+}
 .header{
     display: flex;
     grid-row: 1;
@@ -63,6 +66,7 @@ body{
     align-items: center;
 }
 .modal{
+    z-index: 10;
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
     top: 0;
@@ -73,6 +77,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+.hide{
     display: none;
 }
 .modal__winnerContainer{
@@ -158,18 +165,20 @@ body{
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    background-color: #FF89BB;
 
 }
 .positiveHealt{
     background-color: #FF89BB;
     height: 100%;
-    flex-grow: 100;
 }
+
 .negativeHealt{
     background-color: #1A46E5;
     height: 100%;
-    flex-grow: 0;
+
 }
+
 .playerOptions__playbtn{
     height: 98px;
     width: 98px;
@@ -183,10 +192,13 @@ body{
 .playerOptions__playbtn:hover{
     background-color: #4A6CE4;
 }
-.gameConainer__card--img{
+.caracterContainer{
     height: 40%;
     width: 78%;
     background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #player1{
     background-color: #43D8C9;
