@@ -86,6 +86,15 @@ body {
   margin-right: auto;
   background: white;
 }
+.button-play {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 /* Footer */
 .footer {
