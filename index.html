@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chars.css" />
+    <title>Platzi Game</title>
+  </head>
+  <body>
+    <div class="modal_back" id="finish">
+      <div class="modal">
+        <div class="gif_container"></div>
+        <div class="result">
+          <h1 id="winner"></h1>
+          <button class="btn2"><p class="btn2_text" onclick="reload()">Play again<p></button>
+        </div>
+      </div>
+    </div>
+    <section class="main">
+      <h1 class="title">Platzi Game</h1>
+
+      <div class="main__cards">
+        <div class="card player1">
+          <h2 class="title">Player 1</h2>
+          <div class="controls">
+            <div class="hp_stats">
+              <h2 class="hp_per" id="hp1">100%</h2>
+              <div class="hp_bar">
+                <div class="hp_bar_player1" id="hp1Bar"></div>
+              </div>
+            </div>
+            <button class="btn" id="player1_play" onclick="jugar(2)">
+              <h2>Play</h2>
+            </button>
+          </div>
+          <div class="img_char">
+            <div class="char1"></div>
+          </div>
+        </div>
+        <div class="card player2">
+          <h2 class="title">Player 2</h2>
+          <div class="controls">
+            <div class="hp_stats">
+              <h2 class="hp_per" id="hp2">100%</h2>
+              <div class="hp_bar">
+                <div class="hp_bar_player2" id="hp2Bar"></div>
+              </div>
+            </div>
+            <button class="btn disable" id="player2_play" onclick="jugar(1)">
+              <h2>Play</h2>
+            </button>
+          </div>
+          <div class="img_char"></div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      Made by @fjarauj0
+      <a
+        class="social_link github"
+        href="https://github.com/fjarauj0"
+        target="_blank"
+        rel="noopener"
+        alt="github"
+      ></a>
+      <a
+        class="social_link twitter"
+        href="https://twitter.com/fjarauj0"
+        target="_blank"
+        rel="noopener"
+        alt="twitter"
+      ></a>
+      <a
+        class="social_link instagram"
+        href="https://www.instagram.com/fjarauj0/"
+        target="_blank"
+        rel="noopener"
+        alt="instagram"
+      ></a>
+    </footer>
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+    <div class="circle c4"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
