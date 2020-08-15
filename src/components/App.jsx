@@ -6,6 +6,7 @@ import "../assets/index.css";
 // Components
 import { Header } from "./Header";
 import { PlayerCard } from "./PlayerCard";
+import { Footer } from "./Footer";
 
 const App = () => (
   <div className="app">
@@ -14,6 +15,7 @@ const App = () => (
       <PlayerCard />
       <PlayerCard bgColor="yellow" />
     </div>
+    <Footer />
   </div>
 );
 
