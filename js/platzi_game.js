@@ -1,0 +1,1 @@
+alert('It is connected to platzi_game.js')
