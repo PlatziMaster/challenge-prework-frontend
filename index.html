@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/gameManager.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+</head>
+
+<body>
+
+    <div id="modal" class="modal hide">
+        <h4>El ganador es: <span id="ganador"></span> </h4>
+        <video
+            src="https://media1.giphy.com/media/YnGEtxGLX7ltT32Okq/giphy-downsized-small.mp4?cid=3a1630d4d1ca8e2ee9b0c34570f33cc330009024d1d43444&rid=giphy-downsized-small.mp4"></video>
+        <button onclick="reiniciar()">Play again</button>
+
+    </div>
+
+    <div class="player1">
+        <h1 class="title">Player 1</h1>
+        <img src="images/player1.png" alt="jugador1">
+
+        <div class="progess-bar1">
+            <div class="progess-bar-value1">100%</div>
+            <div class="progress-bar-fill1"></div>
+        </div>
+
+        <h2>Vida: <span id="vida1">100</span> </h2>
+        <button id="play1" class="play1" onclick="juego1()">
+            <h2>Play</h2>
+        </button>
+    </div>
+
+    <div class=" player2">
+        <h1 class="title">Player 2</h1>
+        <img src="images/player2.png" alt="jugador1">
+
+        <div class="progess-bar2">
+            <div class="progess-bar-value2">100%</div>
+            <div class="progress-bar-fill2"></div>
+        </div>
+
+        <h2>Vida: <span id="vida2">100</span> </h2>
+        <button id="play2" class="play2 hide" onclick="juego2()">
+            <h2>Play</h2>
+        </button>
+    </div>
+
+    <div class="footer">
+        <h3>luisglopez7777</h3>
+        <div>
+            <a href="https://twitter.com/luisglopez7777/">
+                <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // let API_KEY = 'E8MSVPKXdgFCMrLPQusBYCCVZgeFmq3U'
+
+        class ProgressBar {
+            constructor(element, initialValue = 100) {
+                this.valueElem = element.querySelector('.progess-bar-value')
+                this.fillElem = element.querySelector('.progress-bar-fill')
+
+                this.setValue(initialValue)
+            }
+            setValue(newValue) {
+                if (newValue < 0) {
+                    newValue = 0
+                }
+
+                if (newValue > 100) {
+                    newValue = 0
+                }
+                this.value = newValue
+                this.update()
+            }
+            update() {
+                const percentage = this.value + '%'
+                this.fillElem.style.width = percentage
+                this.valueElem.textContent = percentage
+            }
+        }
+        const pb1 = new ProgressBar(document.querySelector('.progess-bar1'), 100)
+
+        function Player(attackOn) {
+            this.state = {
+                health: 100
+            }
+            this.attackOn = attackOn
+            this.attack = function (receptor, vida, ganador) {
+                receptor.state.health = player2.state.health - (Math.floor(Math.random() * 50))
+                document.getElementById(vida).innerHTML = receptor.state.health;
+                if (receptor.state.health <= 0) {
+                    modal.classList.remove('hide')
+                    document.getElementById('ganador').innerHTML = ganador;
+                }
+            }
+        }
+
+        function reiniciar() {
+            modal.classList.add('hide')
+            player1.state.health = 100
+            player2.state.health = 100
+            document.getElementById('vida1').innerHTML = 100;
+            document.getElementById('vida2').innerHTML = 100;
+        }
+
+        const player1 = new Player(2)
+        const player2 = new Player(1)
+
+
+        function juego1() {
+            player1.attack(player2, 'vida2', 'player1')
+            play1.classList.add('hide')
+            play2.classList.remove('hide')
+        }
+
+        function juego2() {
+            player2.attack(player1, 'vida1', 'player2')
+            play2.classList.add('hide')
+            play1.classList.remove('hide')
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- Api key: E8MSVPKXdgFCMrLPQusBYCCVZgeFmq3U -->
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/gameManager.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+</head>
+
+<body>
+    <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+
+    <div class="player1">
+        <h1 class="title">Player 1</h1>
+        <img src="images/player1.png" alt="jugador1">
+        <button id="play1" class="play1" onclick="prueba()">
+            <h2>Play</h2>
+        </button>
+    </div>
+
+    <div class=" player2">
+        <h1 class="title">Player 2</h1>
+        <img src="images/player2.png" alt="jugador1">
+        <button id="play2" class="play2" onclick="">
+            <h2>Play</h2>
+        </button>
+    </div>
+
+    <div class="footer">
+        <h3>Link a redes sociales</h3>
+    </div>
+
+    <script>
+
+        class Juego {
+            constructor() {
+                this.inicializar()
+                this.prueba()
+            }
+            inicializar() {
+                console.log('Empezó')
+                play2.classList.add('hide')
+                btnEmpezar.classList.add('hide')
+            }
+
+
+
+        }
+
+        function empezarJuego() {
+            window.juego = new Juego
+        }
+    </script>
+
+</body>
+
+</html> -->
