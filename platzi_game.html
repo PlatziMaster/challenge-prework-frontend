@@ -5,10 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Platzi Game</title>
 
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>Te amo Sara!!!</h1>
+  <div class="shelf">
+    <header class="header">
+      <h1>Platzi Game</h1>
+    </header>
+    <section id="players">
+      <div class="card">
+        <h3 class="card__title">Player 1</h3>
+        <div class="card__info">
+          <div>50%</div>
+          <div class="total_life">
+            <div class="current_life"></div>
+          </div>
+        </div>
+        <button class="button play_button">Play</button>
+      </div>
+      <div class="card">
+        <h3 class="card__title">Player 2</h3>
+        <div class="card__info">
+          <div>20%</div>
+          <div class="total_life">
+            <div class="current_life"></div>
+          </div>
+        </div>
+        <button class="button play_button">Play</button>
+      </div>
+    </section>
+    <footer>
+      <div class="dev_info">
+        Made by @Pipe12 
+      </div>
+    </footer>
+  </div>
 
   <script src="./js/platzi_game.js"></script>
 </body>
