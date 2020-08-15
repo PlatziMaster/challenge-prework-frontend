@@ -22,7 +22,7 @@ body {
   background-color: var(--blue);
   position: absolute;
   border-radius: 50%;
-  z-index: -1;
+  z-index: -10;
 }
 
 .circle--left {
@@ -79,6 +79,84 @@ body {
 
 .card--right {
   background-color: var(--yellow);
+}
+
+.card-title {
+  margin-top: 20px;
+  font-size: 36px;
+  text-align: center;
+  color: var(--white);
+}
+
+.card-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.controls-life {
+  text-align: center;
+}
+
+.controls-life-percentage {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.controls-life-bar {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 165px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+}
+
+.life-bar-remaining {
+  height: 40px;
+  width: 50%;
+  border-radius: 30px 0 0 30px;
+  background-color: var(--rose);
+}
+
+.life-bar-subtracted {
+  height: 40px;
+  width: 50%;
+  border-radius: 0 30px 30px 0;
+  background-color: var(--blue);
+}
+
+.controls-button {
+  position: relative;
+  display: flex;
+}
+
+.controls-button-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  color: var(--white);
+  border: 3px solid var(--black);
+  background-color: var(--blue);
+  z-index: 10;
+}
+
+.controls-button-shadow {
+  top: 5px;
+  position: absolute;
+  height: 107px;
+  width: 107px;
+  border-radius: 50%;
+  background-color: var(--black);
+  z-index: 1;
 }
 
 .footer {
