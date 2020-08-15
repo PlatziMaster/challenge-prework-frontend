@@ -83,6 +83,10 @@ export const Button = styled.button`
     cursor: initial;
     background-color: #667199;
   }
+  &.clicked {
+    box-shadow: unset;
+    transform: translate(0.4rem, 0.8rem);
+  }
 `;
 
 export const Character = styled.div`

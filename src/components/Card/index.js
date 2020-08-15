@@ -18,7 +18,13 @@ export const Card = ({ bgColor, posCol, title, hero, children }) => {
 
   // Get the state
   const generalContext = useContext(GeneralContext);
-  const { lifeHero1, lifeHero2, attackHero1, attackHero2 } = generalContext;
+  const {
+    lifeHero1,
+    lifeHero2,
+    attackHero1,
+    attackHero2,
+    setWinner
+  } = generalContext;
 
   // Calculate random value of attack
   function getRandom(min, max) {
@@ -29,22 +35,35 @@ export const Card = ({ bgColor, posCol, title, hero, children }) => {
   const handleClick = (element) => {
     //  get the button for hero 1
     const attackBtnH1 = document.getElementById('attack-btn-h1');
+
     const isDisabled1 = attackBtnH1.disabled;
 
     //  get the button for hero 2
     const attackBtnH2 = document.getElementById('attack-btn-h2');
+
     const isDisabled2 = attackBtnH2.disabled;
 
-    const attack = getRandom(5, 20);
+    // get the modal & bg
+    const bg = document.querySelector('#background');
+    const md = document.querySelector('#modal');
+
+    const attack = getRandom(5, 30);
 
     if (element === 'Hero 1' && !isDisabled1) {
-      //  Calculate the new life for hero 2
+      //  Animation
+      attackBtnH1.classList.add('clicked');
+      setTimeout(() => {
+        attackBtnH1.classList.remove('clicked');
+      }, 100);
 
+      //  Calculate the new life for hero 2
       const newLife2 = lifeHero2 - attack;
 
       // verify if Hero 2 is dead
       if (newLife2 <= 0) {
-        console.log('Hero 2 is Dead');
+        setWinner('Player 1');
+        bg.style.display = 'unset';
+        md.style.display = 'flex';
         attackBtnH1.disabled = true;
         attackBtnH2.disabled = true;
       }
@@ -58,11 +77,18 @@ export const Card = ({ bgColor, posCol, title, hero, children }) => {
       attackHero1(newLife2);
     }
     if (element === 'Hero 2' && !isDisabled2) {
+      // Animation
+      attackBtnH2.classList.add('clicked');
+      setTimeout(() => {
+        attackBtnH2.classList.remove('clicked');
+      }, 100);
       //  Calculate the new life for hero 1
       const newLife1 = lifeHero1 - attack;
       // verify if Hero 1 is dead
       if (newLife1 <= 0) {
-        console.log('Hero 1 is Dead');
+        setWinner('Player 2');
+        bg.style.display = 'unset';
+        md.style.display = 'flex';
         attackBtnH1.disabled = true;
         attackBtnH2.disabled = true;
       }
@@ -100,7 +126,15 @@ export const Card = ({ bgColor, posCol, title, hero, children }) => {
               ? lifeHero2
               : 0) + '%'
           }
-          eliminated='0%'>
+          eliminated={
+            (hero === 'Hero 1'
+              ? lifeHero1 > 0
+                ? 100 - lifeHero1
+                : 100
+              : lifeHero2 > 0
+              ? 100 - lifeHero2
+              : 100) + '%'
+          }>
           <div className='life-remaining'></div>
           <div className='life-eliminated'></div>
         </LifeBar>

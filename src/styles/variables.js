@@ -3,8 +3,8 @@ export const colors = {
   secondary: '#43D8C9',
   tertiary: '#FFBD11',
   cuaternary: '#FF89BB',
-  white: '#fff',
-  black: '#000'
+  white: '#ffffff',
+  black: '#000000'
 };
 
 export const heros = {

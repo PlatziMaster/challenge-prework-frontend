@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Home from 'components/Home';
 
-const Index = () => {
+const Index = ({ data }) => {
   return (
     <>
       <Head>
@@ -11,9 +11,21 @@ const Index = () => {
           rel='stylesheet'
         />
       </Head>
-      <Home />
+      <Home image={data} />
     </>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetch(
+    `https://api.giphy.com/v1/gifs/random?api_key=${process.env.NEXT_PUBLIC_API_KEY}&tag=winner&rating=g`
+  );
+  const data = await res.json();
+  return {
+    props: {
+      data
+    }
+  };
+}
 
 export default Index;

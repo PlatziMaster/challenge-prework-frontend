@@ -2,11 +2,15 @@ import { Card } from 'components/card';
 import { Footer } from 'components/Footer';
 import { Bubbles } from 'components/Bubbles';
 import { Hero1 } from 'components/Hero1';
+import { Modal } from 'components/Modal';
 
 import { GlobalStyle } from 'styles/Globals';
 import { Main, Heading, Cards } from './styles';
 
-const Home = () => {
+const Home = ({ image }) => {
+  const {
+    data: { title, images }
+  } = image;
   return (
     <>
       <GlobalStyle />
@@ -37,6 +41,7 @@ const Home = () => {
           <Card bgColor={'#FFBD11'} title={'Player 2'} hero={'Hero 2'} />
         </Cards>
         <Footer />
+        <Modal title={title} images={images} />
       </Main>
     </>
   );
