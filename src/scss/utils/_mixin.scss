@@ -19,3 +19,19 @@
   background-color: $background;
   border-radius: $radius;
 }
+
+@mixin forms-character($width, $height, $background, $border-radius) {
+  width: $width;
+  height: $height;
+  background: $background;
+  border-radius: $border-radius;
+}
+@mixin position-character($top, $right, $bottom, $left, $deg, $index) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  transform: $deg;
+  z-index: $index;
+}
