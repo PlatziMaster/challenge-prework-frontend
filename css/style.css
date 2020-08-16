@@ -10,12 +10,12 @@
 }
 
 body {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   font-family: 'Poppins', sans-serif;
 }
 
 .shelf {
-  border: 1px solid magenta;
+  /* border: 1px solid magenta; */
   box-sizing: border-box;
   position: relative;
 
@@ -77,7 +77,8 @@ body {
 }
 
 .header {
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
+
   text-align: center;
 }
 
@@ -88,7 +89,7 @@ body {
 }
 
 #players {
-  border: 1px solid rebeccapurple;
+  /* border: 1px solid rebeccapurple; */
 
   display: flex;
   justify-content: space-around;
@@ -120,12 +121,14 @@ body {
 }
 
 .player_card__title {
-  border: 1px solid aquamarine; 
+  /* border: 1px solid aquamarine;  */
+
   font-size: 2.25em;
 }
 
 .player_card__info {
-  border: 1px solid orchid;
+  /* border: 1px solid orchid; */
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,7 +136,8 @@ body {
 }
 
 .player_card__life {
-  border: 1px solid maroon;
+  /* border: 1px solid maroon; */
+
   padding-right: 2.75em;
   width: 70%;
 }
@@ -197,13 +201,15 @@ body {
 }
 
 footer {
-  border: 1px solid orangered;
+  /* border: 1px solid orangered; */
+
   display: flex;
   justify-content: flex-end;
 }
 
 footer .dev_info {
-  border: 1px solid darkcyan;
+  /* border: 1px solid darkcyan; */
+
   display: flex;
   align-items: center;
 }
@@ -213,7 +219,8 @@ footer .dev_info > * {
 }
 
 footer .dev_info .dev_info__social {
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
+
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -226,6 +233,7 @@ footer .dev_info .dev_info__social:hover {
 }
 
 .dev_info__social img {
-  border: 1px solid navy;
+  /* border: 1px solid navy; */
+  
   width: 100%;
 }
