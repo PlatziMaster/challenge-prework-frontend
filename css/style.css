@@ -7,7 +7,7 @@
   --pink: #FF89BB;
 }
 
-*, body {
+body {
   border: 1px solid green;
   font-family: 'Poppins', sans-serif;
 }
@@ -132,5 +132,28 @@
 
 footer {
   border: 1px solid orangered;
+  display: flex;
+  justify-content: flex-end;
 }
 
+footer .dev_info {
+  border: 1px solid darkcyan;
+  display: flex;
+  align-items: center;
+}
+
+footer .dev_info > * {
+  margin-right: 20px;
+}
+
+footer .dev_info .dev_info__social {
+  border: 1px solid gold;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.dev_info__social img {
+  border: 1px solid navy;
+  width: 100%;
+}
