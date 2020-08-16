@@ -1,5 +1,50 @@
 body {
     font-family: 'Poppins', sans-serif;
+    display: grid;
     margin: 0;
     padding: 0;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.players {
+    display: flex;
+    height: 150px;
+    border: red solid 1px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player1 {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100px;
+    width: 80px;
+    color: white;
+    background-color: #43D8C9;
+    border: #000000 solid 1px;
+    border-radius: 10px;
+}
+
+.player2 {
+    display: flex;
+    height: 100px;
+    width: 80px;
+    font-weight: 500;
+    color: white;
+    background-color: #FFBD11;
+    border: #000000 solid 1px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    justify-content: flex-end;
 }
