@@ -1,0 +1,32 @@
+.winner {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $base-black, $alpha: 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        width: 50%;
+        background-color: $base-white;
+        border: 3px solid $base-black;
+        border-radius: 1rem;
+        padding: 3rem;
+        display: flex;
+        justify-content: space-around;
+        p {
+            margin: 0;
+            padding: 1rem 0;
+        }
+        &__congrats {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}

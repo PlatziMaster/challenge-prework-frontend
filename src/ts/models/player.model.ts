@@ -3,12 +3,14 @@ import { IPlayerOptions } from "../interfaces/playerOptions.interface";
 import { CountUp, CountUpOptions } from "countup.js";
 import { fromEvent, Observable, Subject } from "rxjs";
 import { take } from "rxjs/operators";
+import Swal from 'sweetalert2'
+import generatePlayerCardTemplate from "../templates/player.template";
 
 class Player {
 
     static playerNumber = 1;
 
-    private playerOptions: IPlayerOptions;
+    private _playerOptions: IPlayerOptions;
 
     private playerPlayButton: HTMLDivElement;
     private playerLife: HTMLElement;
@@ -18,78 +20,43 @@ class Player {
     playerAttackAction: Observable<Event>;
 
     constructor() {
-        this.playerOptions =  {
+        this._playerOptions =  {
             name: `Player ${Player.playerNumber}`,
             health: 100,
-            attackDamage: Math.floor(Math.random() * (15 - 10) + 10)
+            attackDamage: Math.floor(Math.random() * (90 - 70) + 70)
         }
         this.generate();
-        Player.playerNumber++;
-        
+        Player.playerNumber++;   
     }
 
-    private prepareAttack(enemy: Player) {
-        console.log('muere!!')
-        enemy.receiveDamage(this.playerOptions.attackDamage)
-        this.playerPlayButton.classList.add('disable')
+    get playerOptions() {
+        return this._playerOptions;
     }
 
-    getReady(enemy: Player, callback?: CallableFunction) {
+    getReady(enemy: Player, callback: CallableFunction) {
         this.playerPlayButton.classList.remove('disable')
         const obs = this.playerAttackAction.pipe(take(1)).subscribe(() => {
-            this.attack(enemy)
-            console.log('ya ataque')
-            callback();
+            const isEnemyAlive = this.attack(enemy)
+            callback(isEnemyAlive);
         })
-        // this.playerPlayButton.addEventListener('click', () => this.prepareAttack(enemy));
     }
 
     attack(enemy: Player) {
-        // this.playerEvents.emit('attack')
         if (!enemy) return;
-        enemy.receiveDamage(this.playerOptions.attackDamage)
         this.playerPlayButton.classList.add('disable')
+        return enemy.receiveDamage(this._playerOptions.attackDamage)
     }
-
-    // endTurn(enemy: Player) {
-    //     // this.playerAttackAction
-    //     // this.playerPlayButton.removeEventListener('click', () => this.prepareAttack(enemy));
-    //     this.unsubscribe$.next();
-    // }
-
     inspect() {
-        console.log(this.playerOptions);
+        console.log(this._playerOptions);
     }
 
-    // attack(enemy: Player) {
-    //     enemy.receiveDamage(this.playerOptions.attackDamage)
-    // }
-
-    receiveDamage(damage: number) {
-        // this.playerOptions.health = this.playerOptions.health - damage;
-    
-        // if (player === 1) {
-        //     playerLifePercentage = firstPlayerLifePercentage;
-        //     playerLifeProgress = firstPlayerLifeProgress
-        //     let initial: string = firstPlayerLifePercentage.innerHTML;
-        //     initialValue = Number(initial.substring(0, initial.length - 1))
-        // } else if (player === 2) {
-        //     playerLifePercentage = secondPlayerLifePercentage;
-        //     playerLifeProgress = secondPlayerLifeProgress
-        //     let initial: string = secondPlayerLifePercentage.innerHTML;
-        //     initialValue = Number(initial.substring(0, initial.length - 1))
-        // }
-        
-        // finalValue = initialValue - 15;
-    
-        // if (finalValue < 0 ) finalValue = 0;
-
-        let finalLife = this.playerOptions.health - damage;
+    receiveDamage(damage: number): boolean {
+        let finalLife = this._playerOptions.health - damage;
 
         if (finalLife < 0) finalLife = 0;
     
         const options: CountUpOptions = {
-            startVal: this.playerOptions.health,
+            startVal: this._playerOptions.health,
             duration: 1.5,
             suffix: '%'
         };
@@ -103,33 +70,33 @@ class Player {
           console.error(lifeChange.error);
         }
 
-        this.playerOptions.health = finalLife;
+        this._playerOptions.health = finalLife;
         
-        if (finalLife === 0) {
-            console.log('perdistes :>> ');
-        }
+        return finalLife !== 0;
     }
 
+
     private generate() {
-        const playerTemplate = `
-            <div class="player">
-                <div id="player-${Player.playerNumber}" class="player__card">
-                    <h2 class="player__card--title">${this.playerOptions.name}</h2>
-                    <div class="player__info-action">
-                        <div class="player__info-action__life">
-                            <div id="p${Player.playerNumber}-life-percentage" class="player__info-action__life__percentage">${this.playerOptions.health}</div>
-                            <div class="player__info-action__life__bar">
-                                <div id="p${Player.playerNumber}-life-progress" class="player__info-action__life__bar--progress"></div>
-                            </div>
-                        </div>
-                        <div id="p${Player.playerNumber}-play-button" class="player__info-action__play disable">
-                            <p class="player__info-action__play--text">Play</p>
-                        </div>
-                    </div>
-                    <div class="player__image"></div>
-                </div>
-            </div>
-        `;
+        const playerTemplate = generatePlayerCardTemplate(Player.playerNumber, this._playerOptions)
+        // `
+        //     <div class="player">
+        //         <div id="player-${Player.playerNumber}" class="player__card">
+        //             <h2 class="player__card--title">${}</h2>
+        //             <div class="player__info-action">
+        //                 <div class="player__info-action__life">
+        //                     <div id="p${Player.playerNumber}-life-percentage" class="player__info-action__life__percentage">${this._playerOptions.health}</div>
+        //                     <div class="player__info-action__life__bar">
+        //                         <div id="p${Player.playerNumber}-life-progress" class="player__info-action__life__bar--progress"></div>
+        //                     </div>
+        //                 </div>
+        //                 <div id="p${Player.playerNumber}-play-button" class="player__info-action__play disable">
+        //                     <p class="player__info-action__play--text">Play</p>
+        //                 </div>
+        //             </div>
+        //             <div class="player__image"></div>
+        //         </div>
+        //     </div>
+        // `;
 
         // Add player to DOM
         this.attachElementToNode(playerTemplate)
