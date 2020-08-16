@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { colors } from 'styles/variables';
+import { colors, size } from 'styles/variables';
 
 export const Container = styled.div`
   width: 46.7rem;
   height: 58.2rem;
   padding: 3.9rem 4.8rem 4.8rem;
   border: 0.3rem solid ${colors.black};
-  margin: 0 7.1rem;
+  margin: 1rem 7.1rem;
   box-sizing: border-box;
   border-radius: 2rem;
   display: grid;
@@ -15,6 +15,9 @@ export const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 0.3fr 0.7fr 1fr;
   background-color: ${(props) => props.bgColor};
+  @media (min-width: ${size.laptop}) {
+    margin: 0 7.1rem;
+  }
 `;
 
 export const Title = styled.h2`

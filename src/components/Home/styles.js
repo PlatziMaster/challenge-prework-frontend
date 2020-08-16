@@ -1,15 +1,14 @@
 import styled from 'styled-components';
-import { colors } from 'styles/variables';
+import { colors, size } from 'styles/variables';
 
 export const Main = styled.main`
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: 23rem 1fr 23rem;
-  grid-template-rows: 25rem 65rem 12rem;
+  grid-template-rows: 25rem 1fr 12rem;
   align-items: center;
   justify-items: center;
-  position: relative;
-  z-index: 0;
 `;
 
 export const Heading = styled.h1`
@@ -29,4 +28,8 @@ export const Cards = styled.section`
   grid-column: 1 / 4;
   grid-row: 2 / 3;
   display: flex;
+  flex-direction: column;
+  @media (min-width: ${size.laptop}) {
+    flex-direction: row;
+  }
 `;

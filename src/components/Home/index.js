@@ -8,10 +8,7 @@ import { Modal } from 'components/Modal';
 import { GlobalStyle } from 'styles/Globals';
 import { Main, Heading, Cards } from './styles';
 
-const Home = ({ image }) => {
-  const {
-    data: { title, images }
-  } = image;
+const Home = ({ image, title }) => {
   return (
     <>
       <GlobalStyle />
@@ -44,8 +41,8 @@ const Home = ({ image }) => {
           </Card>
         </Cards>
         <Footer />
-        <Modal title={title} images={images} />
       </Main>
+      <Modal title={title} image={image} />
     </>
   );
 };

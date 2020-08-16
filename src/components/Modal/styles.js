@@ -1,44 +1,44 @@
 import styled from 'styled-components';
-import { colors } from 'styles/variables';
-import { tadaAnimation, bgAnimation } from 'styles/animation';
+import { colors, size } from 'styles/variables';
+import { tadaAnimation } from 'styles/animation';
 
 export const Background = styled.div`
-  width: 100vw;
+  display: none;
+  width: 100%;
   height: 100%;
-  opacity: 0;
-  position: absolute;
+  padding-top: 10rem;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -9;
+  z-index: 9;
   background-color: ${colors.black}b3;
-  &.animated {
-    ${bgAnimation}
-  }
 `;
 
 export const Container = styled.div`
-  width: 117.7rem;
+  max-width: 117.7rem;
+  width: 90%;
   height: 78rem;
+  margin: 0 auto;
   border: 0.3rem solid ${colors.black};
   box-sizing: border-box;
   border-radius: 20px;
-  opacity: 0;
   display: flex;
-  position: absolute;
-  z-index: 9;
   background-color: ${colors.white};
+  opacity: 0;
   transform: scale(0);
   &.animated {
     ${tadaAnimation}
+  }
+  @media (min-width: ${size.laptop}) {
+    width: 100%;
+    margin: 0 auto;
   }
 `;
 
 export const ImageContainer = styled.div`
   width: 56.4rem;
   height: 57.7rem;
-  margin: 10.2rem 0 10.2rem 10.1rem;
+  margin: 10.2rem 1rem 10.2rem 10.1rem;
   border: 0.3rem solid ${colors.black};
   box-sizing: border-box;
   border-radius: 0.2rem;
@@ -51,7 +51,7 @@ export const ImageContainer = styled.div`
 export const TextContainer = styled.div`
   width: 56.4rem;
   height: 57.7rem;
-  margin: 10.2rem 10.2rem 10.1rem 0;
+  margin: 10.2rem 10.2rem 10.1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

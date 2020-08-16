@@ -11,7 +11,7 @@ import {
   Button
 } from './styles.js';
 
-export const Modal = ({ title, images }) => {
+export const Modal = ({ title, image }) => {
   const generalContext = useContext(GeneralContext);
   const { winner, deleteWinner, restartLife } = generalContext;
 
@@ -22,7 +22,7 @@ export const Modal = ({ title, images }) => {
     const bg = document.querySelector('#background');
     const md = document.querySelector('#modal');
     // Hide Modal
-    bg.classList.remove('animated');
+    bg.style.display = 'none';
     md.classList.remove('animated');
     // Activate the turn
     attackBtnH1.disabled = false;
@@ -33,25 +33,26 @@ export const Modal = ({ title, images }) => {
 
   return (
     <>
-      <Background id='background' />
-      <Container id='modal'>
-        <ImageContainer>
-          <img
-            src={
-              images.fixed_height_downsampled.url
-                ? images.fixed_height_downsampled.url
-                : 'https://media.giphy.com/media/FMapondVtL2Fi/giphy.gif'
-            }
-            alt={title}></img>
-        </ImageContainer>
-        <TextContainer>
-          <Heading>The winner is:</Heading>
-          <Winner>{winner}</Winner>
-          <Button onClick={handlerClick}>
-            <span>Play Again</span>
-          </Button>
-        </TextContainer>
-      </Container>
+      <Background id='background'>
+        <Container id='modal'>
+          <ImageContainer>
+            <img
+              src={
+                image
+                  ? image
+                  : 'https://media.giphy.com/media/FMapondVtL2Fi/giphy.gif'
+              }
+              alt={title}></img>
+          </ImageContainer>
+          <TextContainer>
+            <Heading>The winner is:</Heading>
+            <Winner>{winner}</Winner>
+            <Button onClick={handlerClick}>
+              <span>Play Again</span>
+            </Button>
+          </TextContainer>
+        </Container>
+      </Background>
     </>
   );
 };

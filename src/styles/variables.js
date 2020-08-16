@@ -20,3 +20,13 @@ export const heros = {
   color10: '#ee3464',
   color11: '#ed7074'
 };
+
+export const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1200px',
+  laptopL: '1440px',
+  desktop: '2560px'
+};
