@@ -46,10 +46,11 @@
                 border-radius: 1rem;
 
                 &--progress {
-                    width: 50%;
+                    width: 100%;
                     height: 100%;
                     border-radius: 1rem;
                     background-color: $base-pink;
+                    transition: width 1s ease-in-out;
                 }
             }
         }

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
-@import 'player', 'emoji', 'variables', 'header', 'main', 'footer', 'mixins';
+@import 'player', 'emoji', 'variables', 'header', 'main', 'footer', 'mixins', 'utils';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -34,15 +34,3 @@ h1, h2, h3, h4, h5, h6 {
         @include decorative-circle(50, 50, 75, 0, 1550)
     }
 }
-
-// .decorative-circle--one {
-//     // @include decorative-circle(200px, 200px, -50px, 40px, 40px);
-//     width: 200px;
-//     height: 200px;
-//     border-radius: 50%;
-//     position: absolute;
-//     background-color: $base-blue;
-//     top: -50px;
-//     right: 40px;
-//     left: 40px;
-// }
