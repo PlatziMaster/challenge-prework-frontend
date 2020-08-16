@@ -8,16 +8,25 @@
     <style>
   
         body {
-            background-color: white;
+
+            /* Here we set the background color */
+
+             background-color: white;  
         }
 
         header {
+            
+            /* Here we set the color and font for our "Platzi Game" header             */
+
             color: black;
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
         }     
 
         p {
+            
+            /* Here we set the positioning and style for all our paragraphs under the <p></p> tags */
+            
             position: absolute;
             width: 260px;
             height: 36px;
@@ -32,6 +41,9 @@
         }
 
         h2 {
+
+            /* Here we set style and positioning for the characters names. In this case Hiisi and Kuu. */
+
             position: absolute;
             width: 140px;
             height: 54px;
@@ -47,13 +59,16 @@
         }
 
         .hiisi_card {
+
+            /* Here we set color, borders and position for Hiisi's card */
+
             position: absolute;
-            width: 350px;
+            width: 450px;
             height: 420px;
             left: 182px;
             top: 120px;
 
-            background: blue;
+            background: green;
             border: 3px solid #000000;
             box-sizing: border-box;
             border-radius: 20px;
@@ -61,8 +76,11 @@
         }
 
         .kuu_card {
+
+            /* Here we set color, borders and position for Kuu's card */
+
             position: absolute;
-            width: 350px;
+            width: 450px;
             height: 420px;
             left: 791px;
             top: 120px;
@@ -74,10 +92,13 @@
         }
 
         .hiisi {
+
+            /* Here we integrate Hiisi's pic, while using the appropiate matrix for orientations purposes */
+
             position: absolute;
             width: 250px;
             height: 170px;
-            left: 231px;
+            left: 280px;
             top: 350px;
 
             background: #FFFFFF;
@@ -90,10 +111,13 @@
         }
 
         .kuu {
+
+            /* Here we integrate Kuu's pic, while using the appropiate matrix for orientations purposes */
+
             position: absolute;
             width: 250px;
             height: 170px;
-            left: 850px;
+            left: 900px;
             top: 350px;
 
             background: #FFFFFF;
@@ -105,7 +129,78 @@
             transform: matrix(-1, 0, 0, 1, 0, 0);
         }
 
+        .hiisi_life {
+
+            position: absolute;
+            width: 240px;
+            height: 50px;
+            left: 231px;
+            top: 250px;
+
+            background: #1A46E5;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 30px;
+        }
+
+        .kuu_life {
+            position: absolute;
+            width: 240px;
+            height: 50px;
+            left: 835px;
+            top: 250px;
+
+            background: #1A46E5;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 30px;
+        }
+
+        .hiisi_button {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 480px;
+            top: 200px;
+
+            background: #1A46E5;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 100px;
+        }
+
+        .kuu_button {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 1100px;
+            top: 200px;
+
+            background: #1A46E5;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 100px;
+        }
+
+        h3 {
+            position: absolute;
+            width: 80px;
+            height: 30px;
+            left: 20px;
+            top: 8px;
+
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 54px; 
+        }
+
         .github {
+
+            /* Here we set GitHub's icon in the website's footer */
+
             position: absolute;
             width: 40px;
             height: 40px;
@@ -115,6 +210,9 @@
         }
 
         .twitter {
+
+            /* Here we set Twitter's icon in the website's footer */
+
             position: absolute;
             width: 40px;
             height: 40px;
@@ -126,6 +224,8 @@
     </style>
 <body>
 
+    <script src="logic.js"> 
+    </script>
 
     <header>
         <h1> Platzi Game </h1>
@@ -141,8 +241,21 @@
     <div class="hiisi"></div>
     <div class="kuu"></div>
 
+    <div class="hiisi_life"></div>
+    <div class="kuu_life"></div>
+
+    <button class="hiisi_button">
+        <h3> Play! </h3>
+    </button>
+    <button class="kuu_button">
+        <h3> Play! </h3>
+    </button>
+
     <footer>
-        <p> Hecho por @XaviGrowth </p>
+
+        <!-- In the footer we add the author's name and social's logos, with the appropiate link to his profiles -->
+
+        <p> Made by @XaviGrowth </p>
         <div class="github">
             <a href="https://github.com/XavierCarrera">
                 <img src="icons8-github-24.png">
