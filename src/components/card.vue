@@ -3,15 +3,12 @@
     <h2>{{namePlayer}}</h2>
     <div class="life-atack">
       <div class="life">
-        <p>{{life}}</p>
+        <p>{{life}}%</p>
         <div class="progressbar">
-          <progress
-          class="skill-1"
-          max="100"
-          :value="life"></progress>
+         <div class="bar" :style="{width: life+'%'} "></div>
         </div>
       </div>
-      <div @click.prevent="atack" class="atack">
+      <div @click.prevent="atack(player)" class="atack btn">
         <p>Atack</p>
       </div>
 
@@ -37,10 +34,15 @@ export default {
       type: String,
       default: 'cardContent',
     },
+    player: {
+      type: Number,
+      default: 0,
+    },
   },
   methods: {
     ...mapMutations('Life', [
       'atack',
+      'atack2',
     ]),
   },
 };
@@ -57,7 +59,8 @@ export default {
   flex-direction: column;
   align-items: center;
   border-radius: 30px;
-  border: 1px solid black;
+  @include border;
+  animation: showCards 0.4s cubic-bezier(0.76, 0.18, 0.45, 0.94);
 }
  h2{
   margin: 0;
@@ -65,18 +68,54 @@ export default {
   color: white;
   padding-bottom: 45px;
 }
-
 .life-atack{
-  width: 80%;
+  width: 100%;
+  height: auto;
   padding-bottom: 45px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+.life{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.life>p{
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+.progressbar{
+  @include basic(50px, 80%);
+  background-color: var(--btn-blue);
+  border-radius: 30px;
+  overflow: hidden;
+  @include border;
+  &>.bar{
+    height: 100%;
+    width: 100%;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    background-color: var(--pink);
+  }
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--pink);
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--pink);
+  border-radius: 30px;
+}
 
 .atack{
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   @include radius-50;
   background-color: var(--btn-blue);
   color: white;
@@ -92,4 +131,13 @@ export default {
 .yellow{
   background-color:var(--yellow-card);
 }
+@keyframes showCards {
+  0%{
+    transform: translateY(100vh);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
 </style>

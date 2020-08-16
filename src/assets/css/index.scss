@@ -1,5 +1,6 @@
 *{
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root{
@@ -22,13 +23,16 @@
   border-radius: 50%;
 }
 
+@mixin border {
+  border: 3px solid black;
+}
 @mixin shadow ($x:-3px, $y:2px, $b:6px, $c: #7b7b7bab){
   box-shadow: $x $y $b $c;
 }
 
 @mixin basic ($h, $w, $t: initial, $r: initial, $l: initial, $b: initial){
-  height: $h;
   width: $w;
+  height: $h;
   top: $t;
   right: $r;
   bottom: $b;
@@ -73,4 +77,8 @@
 
 .s{
   box-shadow: -4px 5px 14px grey
+}
+
+.btn{
+  cursor: pointer;
 }

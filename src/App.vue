@@ -12,9 +12,10 @@
       <div class="cards">
         <div class="card1">
           <card
-          :life="player1.life"
-          :namePlayer="player1.name"
+          :life="players[0].life"
+          :namePlayer="players[0].name"
           background="cardContent green"
+          v-bind:player="parseInt(0)"
           >
             <template v-slot:avatar>
               <Personage />
@@ -23,9 +24,10 @@
         </div>
         <div class="card2">
           <card
-          :life="player2.life"
-          :namePlayer="player2.name"
+          :life="players[1].life"
+          :namePlayer="players[1].name"
           background="cardContent yellow"
+           v-bind:player="parseInt(1)"
           >
             <template v-slot:avatar>
               <Personage2 />
@@ -49,8 +51,7 @@ export default {
 
   computed: {
     ...mapState('Life', [
-      'player1',
-      'player2',
+      'players',
       'modal',
     ]),
   },
@@ -69,6 +70,10 @@ export default {
 <style lang="scss">
 @import './assets/css/index.scss';
 
+#main{
+  @include center;
+  flex-direction: column;
+}
 .circle{
   position: fixed;
   @include radius-50;
@@ -100,6 +105,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 82vh;
+  width: 80vw;
+  max-width: 1820px;
 }
 .card1, .card2{
   display: flex;
