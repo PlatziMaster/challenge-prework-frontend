@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Challenge prework: frontend</title>
+</head>
+
+<body>
+  <header>
+    <div class="circles-container">
+      <div class="circle circle--left"></div>
+      <div class="circle circle--top-left"></div>
+      <div class="circle circle--top-right"></div>
+      <div class="circle circle--right"></div>
+    </div>
+    <h1 class="title">Platzi Game</h1>
+  </header>
+  <main>
+    <section class="cards-container">
+      <div class="card card--left">
+        <h2 class="card-title">Player 1</h2>
+        <div class="card-controls">
+          <div class="controls-life">
+            <p class="controls-life-percentage" id="life-percentage-player-1">100%</p>
+            <div class="controls-life-bar">
+              <div class="life-bar-complete" id="life-bar-remaining-player-1"></div>
+              <div id="life-bar-subtracted-player-1"></div>
+            </div>
+          </div>
+          <div class="controls-button">
+            <button class="controls-button-message" onclick="playerAttack('player-1')" id="button-player-1">Play</button>
+            <div class="controls-button-shadow"></div>
+          </div>
+        </div>
+        <div class="card-character card-character-1">
+          <div class="character-1-head"></div>
+          <div class="character-1-face"></div>
+          <div class="character-1-eye-1"></div>
+          <div class="character-1-eye-2"></div>
+          <div class="character-1-ear-1"></div>
+          <div class="character-1-ear-2"></div>
+          <div class="character-1-arm-1"></div>
+          <div class="character-1-arm-2"></div>
+          <div class="character-1-foot-1"></div>
+          <div class="character-1-foot-2"></div>
+          <div class="character-decoration-1">
+            <div class="decoration-1-element-1"></div>
+            <div class="decoration-1-element-2"></div>
+          </div>
+          <div class="character-decoration-2">
+            <div class="decoration-2-element-1"></div>
+            <div class="decoration-2-element-2"></div>
+            <div class="decoration-2-element-3"></div>
+          </div>
+          <div class="character-1-floor"></div>
+        </div>
+      </div>
+      <div class="card card--right">
+        <h2 class="card-title">Player 2</h2>
+        <div class="card-controls">
+          <div class="controls-life">
+            <p class="controls-life-percentage" id="life-percentage-player-2">100%</p>
+            <div class="controls-life-bar">
+              <div class="life-bar-complete" id="life-bar-remaining-player-2"></div>
+              <div id="life-bar-subtracted-player-2"></div>
+            </div>
+          </div>
+          <div class="controls-button">
+            <button class="controls-button-message" id="button-player-2" disabled onclick="playerAttack('player-2')">Play</button>
+            <div class="controls-button-shadow"></div>
+          </div>
+        </div>
+        <div class="card-character card-character-2">
+          <div class="character-2-head"></div>
+          <div class="character-2-ear-1"></div>
+          <div class="character-2-ear-2"></div>
+          <div class="character-2-face">
+            <div class="character-2-face-up">
+              <div class="face-circle face-circle__up"></div>
+              <div class="face-circle face-circle__up"></div>
+              <div class="face-circle face-circle__up"></div>
+              <div class="face-circle face-circle__up"></div>
+              <div class="face-circle face-circle__up"></div>
+            </div>
+            <div class="character-2-eye character-2-eye-left"></div>
+            <div class="character-2-eye character-2-eye-right"></div>
+            <div class="character-2-face-down">
+              <div class="face-circle face-circle__down"></div>
+              <div class="face-circle face-circle__down"></div>
+              <div class="face-circle face-circle__down"></div>
+              <div class="face-circle face-circle__down"></div>
+              <div class="face-circle face-circle__down"></div>
+            </div>
+          </div>
+          <div class="character-2-arm-1"></div>
+          <div class="character-2-arm-2"></div>
+          <div class="character-2-foot-1"></div>
+          <div class="character-2-foot-2"></div>
+          <div class="character-2-floor"></div>
+        </div>
+      </div>
+    </section>
+    <section class="modal" id="modal">
+      <div class="modal-container">
+        <div class="modal-gif">
+          <img id="image-gif" src="" alt="Winner" width="400" height="300">
+        </div>
+        <div class="modal-restart">
+          <span class="restart-title">The winner is:</span>
+          <span class="restart-player" id="player-win">Player 1</span>
+          <button class="restart-button" onclick="restartGame()">Play again</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <h2>Made by <a class="footer-link" target="_blank" href="https://brycatch.me">@brycatch</a></h2>
+    <div class="footer-icons">
+      <a href="https://www.github.com/brycatch" target="_blank" class="footer-link">
+        <img src="https://img.icons8.com/windows/32/000000/github.png" />
+      </a>
+      <a href="https://www.linkedin.com/in/brycatch" target="_blank" class="footer-link">
+        <img src="https://img.icons8.com/ios-filled/32/000000/linkedin.png">
+      </a>
+      <a href="https://www.instagram.com/brycatch" target="_blank" class="footer-link">
+        <img src="https://img.icons8.com/ios-filled/32/000000/instagram-new.png">
+      </a>
+    </div>
+  </footer>
+</body>
+<script src="./scripts.js"></script>
+
+</html>
