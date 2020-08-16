@@ -1,3 +1,5 @@
+window.onload = loadGifs;
+
 // Image in modal
 const defaultGif = "https://media0.giphy.com/media/2gtoSIzdrSMFO/giphy.gif?cid=9db78988qor3f5tm6gxbc57x0tlm7wmqph04gjl6vvivzrau&rid=giphy.gif"; // prettier-ignore
 const imageGif = document.getElementById("image-gif");
@@ -22,8 +24,7 @@ const lifeBarSubtractedPlayer2 = document.getElementById("life-bar-subtracted-pl
 
 let lifePlayer1 = 100;
 let lifePlayer2 = 100;
-
-window.onload = function () {
+function loadGifs() {
   fetch(
     "https://api.giphy.com/v1/gifs/search?api_key=GHZIuiSfEe6iTt3wL79r2VgmB1kd2UH5&q=winner&limit=10"
   )
@@ -31,7 +32,7 @@ window.onload = function () {
       return response.json();
     })
     .then(function (gifs) {
-      const randomIndex = getRandomNumber(10);
+      const randomIndex = getRandomNumber(10, 1);
       const gif = gifs.data[randomIndex];
       const url = gif.images.original.url;
       imageGif.src = url;
@@ -39,19 +40,21 @@ window.onload = function () {
     .catch(function (error) {
       imageGif.src = defaultGif;
     });
-};
+}
 
-const getRandomNumber = function (limit) {
-  return Number.isNaN(limit)
+const getRandomNumber = function (limit, min) {
+  const randomNumber = Number.isNaN(limit)
     ? Math.round(Math.random() * 10)
     : Math.round(Math.random() * limit);
+
+  return randomNumber >= min ? randomNumber : min;
 };
 
 const playerAttack = function (player) {
   switch (player) {
     case "player-1": {
       // Obtener un valor entre el 5 y el 20
-      const lifeToSubtract = getRandomNumber(40);
+      const lifeToSubtract = getRandomNumber(40, 10);
       // Retirar css por defecto si la barra está al 100%
       if (lifePlayer2 === 100) {
         lifeBarRemainingPlayer2.classList.remove("life-bar-complete");
@@ -76,7 +79,7 @@ const playerAttack = function (player) {
     }
     case "player-2": {
       // Obtener un valor entre el 5 y el 20
-      const lifeToSubtract = getRandomNumber(40);
+      const lifeToSubtract = getRandomNumber(40, 10);
       // Retirar css por defecto si la barra está al 100%
       if (lifePlayer1 === 100) {
         lifeBarRemainingPlayer1.classList.remove("life-bar-complete");
@@ -145,4 +148,6 @@ const restartGame = function () {
   lifeBarSubtractedPlayer2.classList.remove("life-barks-subtracted");
   lifeBarSubtractedPlayer2.style.width = "0%";
   buttonPlayer2.setAttribute("disabled", "");
+
+  loadGifs();
 };
