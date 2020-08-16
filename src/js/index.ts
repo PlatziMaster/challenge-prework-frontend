@@ -1,39 +1,66 @@
 import Player from './models/player.model';
-import sleep from './utils/sleep.utility';
+import init from './init';
+import PlatziGame from './models/platziGame.model';
 
-const firstPlayerRef: HTMLElement = document.getElementById('first-player');
-const firstPlayerLifePercentage: HTMLElement = document.getElementById('p1-life-percentage');
-const firstPlayerLifeProgress: HTMLElement = document.getElementById('p1-life-progress');
-const firstPlayerPlayButton: HTMLElement = document.getElementById('p1-play-button');
+init();
 
-const secondPlayerRef: HTMLElement = document.getElementById('second-player');
-const secondPlayerLifePercentage: HTMLElement = document.getElementById('p2-life-percentage');
-const secondPlayerLifeProgress: HTMLElement = document.getElementById('p2-life-progress');
-const secondPlayerPlayButton: HTMLElement = document.getElementById('p2-play-button');
+// const firstPlayer: Player = new Player();
+// const secondPlayer: Player = new Player();
 
-const firstPlayer: Player = new Player(firstPlayerRef);
-const secondPlayer: Player = new Player(firstPlayerRef);
+const platziGame = PlatziGame.gameInstance();
 
-firstPlayer.inspect()
+platziGame.addNewPlayer(new Player);
+platziGame.addNewPlayer(new Player);
 
-function fillPercentage(value: number): void {
-    firstPlayerLifePercentage.innerHTML = `${value}%`
-    firstPlayerLifeProgress.style.width = `${value}%`
-}
+platziGame.startGame();
 
-setTimeout(() => {
-    console.log('firstPlayerLifePercentage :>> ', firstPlayerLifePercentage);
-    console.log('firstPlayerLifePercentage :>> ', firstPlayerLifePercentage.innerHTML);
-    let initialvalue: string = firstPlayerLifePercentage.innerHTML;
-    initialvalue = initialvalue.substring(0, initialvalue.length - 1)
-    console.log('initialvalue :>> ', initialvalue);
-    const finalValue: number = 75;
-    for (let index = Number(initialvalue); index >= finalValue; index--) {
-        console.log('index :>> ', index);
-        fillPercentage(index)
-        sleep(300);
-    }
-    console.log('firstPlayerLifeProgress :>> ', firstPlayerLifeProgress);
-    // firstPlayerLifeProgress.innerHTML = "75%"
-    // firstPlayerLifeProgress.style.width ="75%"
-}, 2500);
+// firstPlayer.inspect()
+// secondPlayer.inspect()
+
+// firstPlayer.getReady(secondPlayer);
+
+// firstPlayer.inspect()
+// secondPlayer.inspect()
+
+
+
+// function makeDamage(player: number) {
+
+//     let initialValue: number;
+//     let finalValue: number;
+//     let playerLifePercentage: HTMLElement;
+//     let playerLifeProgress: HTMLElement;
+
+//     console.log(player)
+
+//     if (player === 1) {
+//         playerLifePercentage = firstPlayerLifePercentage;
+//         playerLifeProgress = firstPlayerLifeProgress
+//         let initial: string = firstPlayerLifePercentage.innerHTML;
+//         initialValue = Number(initial.substring(0, initial.length - 1))
+//     } else if (player === 2) {
+//         playerLifePercentage = secondPlayerLifePercentage;
+//         playerLifeProgress = secondPlayerLifeProgress
+//         let initial: string = secondPlayerLifePercentage.innerHTML;
+//         initialValue = Number(initial.substring(0, initial.length - 1))
+//     }
+    
+//     finalValue = initialValue - 15;
+
+//     if (finalValue < 0 ) finalValue = 0;
+
+//     const options: CountUpOptions = {
+//         startVal: initialValue,
+//         duration: 1.5,
+//         suffix: '%'
+//     };
+//     let lifeChange = new CountUp(playerLifePercentage, finalValue, options);
+//     if (!lifeChange.error) {
+//         playerLifeProgress.style.width = `${finalValue}%`
+//         lifeChange.start();
+//     } else {
+//       console.error(lifeChange.error);
+//     }
+    
+// }
+
