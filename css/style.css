@@ -2,9 +2,11 @@
 
 :root {
   --blue: #1A46E5;
+  --blue_ligth: #328CE5;
   --green: #43D8C9;
   --yellow: #FFBD11;
   --pink: #FF89BB;
+  --gray: #808080;
 }
 
 body {
@@ -147,6 +149,7 @@ body {
 
 .player_card__life_bar--total {
   background-color: var(--blue);
+  pointer-events: none;
 }
 
 .player_card__life_bar--current {
@@ -159,6 +162,16 @@ body {
   background-color: var(--blue);
   color: white;
   border: 3px solid black;
+  transition: ease, ;
+}
+
+.button:hover {
+  background-color: var(--blue_ligth);
+}
+
+.blocked {
+  background-color: var(--gray);
+  pointer-events: none;
 }
 
 .play_button {
@@ -175,6 +188,12 @@ body {
   background-color: white ;
   border: 3px solid black;
   border-radius: 20px;
+  position: relative;
+}
+
+.player_card__character_shelf img{
+  width: auto;
+  height: 100%;
 }
 
 footer {
@@ -198,6 +217,12 @@ footer .dev_info .dev_info__social {
   display: inline-block;
   width: 40px;
   height: 40px;
+  transition: ease;
+}
+
+footer .dev_info .dev_info__social:hover {
+  width: 43px;
+  height: 43px;
 }
 
 .dev_info__social img {
