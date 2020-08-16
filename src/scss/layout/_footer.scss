@@ -12,6 +12,10 @@
   p {
     margin-right: 10px;
     font-size: 20px;
+    a {
+      color: var(--color-dark);
+      text-decoration: none;
+    }
   }
   img {
     margin-left: 10px;

@@ -1,4 +1,4 @@
 import './scss/index.scss';
-import game from './js/game';
+import index from './js/index';
 
-game();
+index();
