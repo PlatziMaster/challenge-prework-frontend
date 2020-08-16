@@ -9,10 +9,10 @@ const game = () => {
   const atackDos = document.getElementById('play-2');
 
   const playerWin = document.getElementById('player-win');
-
+  //Vida Player Uno
   let lifePerUno = 100;
   let lifeFillUno = 200;
-
+  //Vida Player Dos
   let lifePerDos = 100;
   let lifeFillDos = 200;
 
@@ -28,8 +28,6 @@ const game = () => {
       if(percent < 0) {
         perLifeDos.innerHTML = `${0}%`;
         lifeDos.style.width = `${ 0}px`;
-
-        console.log('Ganaste');
         //Abre modal cuando termina el juego
         modal.classList.add('in');
         overlay.classList.add('in');
@@ -41,10 +39,14 @@ const game = () => {
       } else {
         perLifeDos.innerHTML = `${percent}%`;
         lifeDos.style.width = `${ fill}px`;
+        //Guardamos vida restante
+        lifePerDos = percent;
+        lifeFillDos = fill;
       }
     } else {
       perLifeDos.innerHTML = `${percent}%`;
       lifeDos.style.width = `${ fill}px`;
+      //Guardamos vida restante
       lifePerDos = percent;
       lifeFillDos = fill;
     }
@@ -62,18 +64,22 @@ const game = () => {
 
   //Ataque Player 2
   function figthDos(e) {
-
     const randomNum = Math.random()
 
     let percent = lifePerUno - Math.floor(randomNum * 100);
     let fill =  lifeFillUno - Math.floor(randomNum * 100 * 2);
 
+    console.log(lifePerUno, 'variable global');
+    console.log(Math.floor(randomNum * 100), 'formula random');
+    console.log(percent, 'per life');
+    console.log(lifePerUno - Math.floor(randomNum * 100), 'formula per life -----------');
+
     if (lifePerUno < 100 && lifeFillUno < 200) {
-      if(percent < 0) {
+      if(percent <= 0) {
+
         perLifeUno.innerHTML = `${0}%`;
         lifeUno.style.width = `${ 0}px`;
 
-        console.log('Perdiste');
         //Abre modal cuando termina el juego
         modal.classList.add('in');
         overlay.classList.add('in');
@@ -85,10 +91,14 @@ const game = () => {
       } else {
         perLifeUno.innerHTML = `${percent}%`;
         lifeUno.style.width = `${ fill}px`;
+        //Guardamos vida restante
+        lifePerUno = percent;
+        lifeFillUno = fill;
       }
     } else {
       perLifeUno.innerHTML = `${percent}%`;
       lifeUno.style.width = `${ fill}px`;
+      //Guardamos vida restante
       lifePerUno = percent;
       lifeFillUno = fill;
     }

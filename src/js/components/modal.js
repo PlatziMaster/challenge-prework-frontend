@@ -10,7 +10,6 @@ const modal = async () => {
   const GIPHY_API_KEY = `f5aTC4X3IB91phUNWUuEKHPqPxVNVqBz`;
   const API_URL = `http://api.giphy.com/v1/gifs/random?api_key=${GIPHY_API_KEY}`;
   const gif = await getData(API_URL);
-  console.log(gif.data.fixed_height_downsampled_url, 'este');
 
   const modalManager = e => {
 
