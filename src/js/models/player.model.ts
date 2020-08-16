@@ -1,5 +1,9 @@
 import { CountUp, CountUpOptions } from "countup.js";
 
+import { fromEvent, Observable, Subject } from "rxjs";
+import { take } from "rxjs/operators"
+;
+
 class Player {
 
     static playerNumber = 1;
@@ -15,33 +19,49 @@ class Player {
     private playerProgress: HTMLElement;
     private playerNode: HTMLDivElement;
 
+    playerAttackAction: Observable<Event>;
+
     constructor() {
         this.generate();
         Player.playerNumber++;
     }
 
-    private prepareAttack(enemy: Player, callback: CallableFunction) {
+    private prepareAttack(enemy: Player) {
+        console.log('muere!!')
         enemy.receiveDamage(this.playerOptions.attackDamage)
         this.playerPlayButton.classList.add('disable')
-        if (callback) callback();
     }
 
-    getReady(enemy: Player, callback: CallableFunction) {
+    getReady(enemy: Player, callback?: CallableFunction) {
         this.playerPlayButton.classList.remove('disable')
-        this.playerPlayButton.addEventListener('click', () => this.prepareAttack(enemy, callback));
+        const obs = this.playerAttackAction.pipe(take(1)).subscribe(() => {
+            this.attack(enemy)
+            console.log('ya ataque')
+            callback();
+        })
+        // this.playerPlayButton.addEventListener('click', () => this.prepareAttack(enemy));
     }
 
-    endTurn(enemy: Player, callback: CallableFunction) {
-        this.playerPlayButton.removeEventListener('click', () => this.prepareAttack(enemy, callback));
+    attack(enemy: Player) {
+        // this.playerEvents.emit('attack')
+        if (!enemy) return;
+        enemy.receiveDamage(this.playerOptions.attackDamage)
+        this.playerPlayButton.classList.add('disable')
     }
+
+    // endTurn(enemy: Player) {
+    //     // this.playerAttackAction
+    //     // this.playerPlayButton.removeEventListener('click', () => this.prepareAttack(enemy));
+    //     this.unsubscribe$.next();
+    // }
 
     inspect() {
         console.log(this.playerOptions);
     }
 
-    attack(enemy: Player) {
-        enemy.receiveDamage(this.playerOptions.attackDamage)
-    }
+    // attack(enemy: Player) {
+    //     enemy.receiveDamage(this.playerOptions.attackDamage)
+    // }
 
     receiveDamage(damage: number) {
         // this.playerOptions.health = this.playerOptions.health - damage;
@@ -107,6 +127,9 @@ class Player {
 
         // Register elements
         this.registerPlayerDOMElements();
+
+        // Generate Listener
+        this.listerForPlayerEvents();
     }
 
     private attachElementToNode(element: string) {
@@ -120,6 +143,10 @@ class Player {
         this.playerLife = document.getElementById(`p${Player.playerNumber}-life-percentage`);
         this.playerProgress = document.getElementById(`p${Player.playerNumber}-life-progress`);
         this.playerPlayButton = document.getElementById(`p${Player.playerNumber}-play-button`) as HTMLDivElement;
+    }
+
+    listerForPlayerEvents() {
+        this.playerAttackAction = fromEvent(this.playerPlayButton, 'click');
     }
 
 

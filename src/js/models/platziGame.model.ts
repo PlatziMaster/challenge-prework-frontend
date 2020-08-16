@@ -34,11 +34,22 @@ class PlatziGame {
     }
 
     startGame() {
-        this.activePlayers = PlatziGame.players.length;
+        this.activePlayers = PlatziGame.players.length - 1;
 
-        this.currentPlayer = this.getPlayer(this.playerTurn)
-        this.currentPlayer.getReady(this.getPlayer(this.playerTurn + 1), () => {
-            this.currentPlayer.endTurn()
+        this.nextPlayer(0);
+    }
+
+    nextPlayer(playerIndex: number) {
+        let nextPlayer;
+
+        if (playerIndex > this.activePlayers) playerIndex = 0;
+
+        nextPlayer = playerIndex + 1;
+        if (nextPlayer > this.activePlayers) nextPlayer = 0;
+        
+        this.currentPlayer = this.getPlayer(playerIndex)
+        this.currentPlayer.getReady(this.getPlayer(nextPlayer), () => {
+            this.nextPlayer(playerIndex + 1);
         })
     }
 
