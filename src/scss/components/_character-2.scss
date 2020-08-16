@@ -1,0 +1,113 @@
+/*Character-2----------Character-2*/
+
+/*Body*/
+
+.character-dos-body {
+  position: relative;
+  z-index: 9;
+  @include forms-character(90px, 90px, var(--color-blue-dark), 20px);
+}
+.character-dos-arm1 {
+  @include position-character(130px, 127px, initial, initial, unset, 1);
+  @include forms-character(25px, 38px, var(--color-blue-dark), 20px);
+}
+.character-dos-arm2 {
+  @include position-character(130px, 166px, initial, initial, unset, 1);
+  @include forms-character(25px, 38px, var(--color-dark), 20px);
+}
+.character-dos-leg1 {
+  @include position-character(85px, 190px, initial, initial, unset, 1);
+  @include forms-character(25px, 50px, var(--color-sky-ligth), 20px);
+}
+.character-dos-leg2 {
+  @include position-character(85px, 102px, initial, initial, unset, 10);
+  @include forms-character(25px, 50px, var(--colord-sky), 20px);
+}
+.character-dos-antenna1 {
+  @include position-character(40px, 132px, initial, initial, unset, 10);
+  @include forms-character(15px, 30px, var(--color-blue-light), 20px);
+}
+.character-dos-antenna2 {
+  @include position-character(40px, 185px, initial, initial, unset, 1);
+  @include forms-character(15px, 30px, var(--color-sky-ligth), 20px);
+}
+
+/*Face*/
+
+.charater-dos-face {
+  @include position-character(77px, 131px, initial, initial, unset, 11);
+  @include forms-character(70px, 40px, var(--colord-sky), 10px);
+}
+.charater-dos-eye1 {
+  @include position-character(94px, 186px, initial, initial, unset, 12);
+  @include forms-character(7px, 7px, var(--color-white), 10px);
+}
+.charater-dos-eye2 {
+  @include position-character(94px, 151px, initial, initial, unset, 12);
+  @include forms-character(7px, 7px, var(--color-white), 10px);
+}
+.charater-dos-eyebrow1 {
+  @include position-character(65px, 158px, initial, initial, unset, 12);
+  @include forms-character(10px, 3px, var(--color-yellow), 10px);
+}
+.charater-dos-eyebrow2 {
+  @include position-character(65px, 184px, initial, initial, unset, 12);
+  @include forms-character(10px, 3px, var(--color-yellow), 10px);
+}
+
+.charater-dos-teeth1 {
+  &::after {
+    content: "";
+    @include position-character(initial, initial, initial, 11px, unset, 12);
+    @include forms-character(9px, 7px, var(--color-blue-transp),  0 0 10px 10px);
+  }
+  &::before {
+    content: "";
+    @include position-character(initial, initial, initial, -11px, unset, 12);
+    @include forms-character(9px, 7px, var(--color-blue-transp),  0 0 10px 10px);
+  }
+  @include position-character(77px, 172px, initial, initial, unset, 12);
+  @include forms-character(9px, 7px, var(--color-blue-transp),  0 0 10px 10px);
+}
+.charater-dos-teeth2 {
+
+  &::before {
+    content: "";
+    @include position-character(initial, initial, initial, -11px, unset, 12);
+    @include forms-character(9px, 7px, var(--color-blue-transp),  0 0 10px 10px);
+  }
+  @include position-character(77px, 139px, initial, initial, unset, 12);
+  @include forms-character(9px, 7px, var(--color-blue-transp),  0 2px 10px 10px);
+}
+
+.charater-dos-teeth1-down {
+  &::after {
+    content: "";
+    @include position-character(initial, initial, initial, 11px, unset, 12);
+    @include forms-character(9px, 7px, var(--color-blue-transp),  10px 10px 0 0);
+  }
+  &::before {
+    content: "";
+    @include position-character(initial, initial, initial, -11px, unset, 12);
+    @include forms-character(9px, 7px, var(--color-blue-transp),  10px 10px 0 0);
+  }
+  @include position-character(110px, 171px, initial, initial, unset, 12);
+  @include forms-character(9px, 7px, var(--color-blue-transp),  10px 10px 0 0);
+}
+.charater-dos-teeth2-down {
+
+  &::before {
+    content: "";
+    @include position-character(initial, initial, initial, -11px, unset, 12);
+    @include forms-character(9px, 7px, var(--color-blue-transp),  10px 10px 0 0);
+  }
+  @include position-character(110px, 138px, initial, initial, unset, 12);
+  @include forms-character(9px, 7px, var(--color-blue-transp),  10px 10px 2.5px 0);
+}
+
+.character-dos-floor-card2 {
+  @include position-character(150px, initial, initial, 135px, unset, 0);
+  @include forms-character(100px, 12px, var(--color-gray), 20px);
+  top: 161px;
+  left: 118px;
+}

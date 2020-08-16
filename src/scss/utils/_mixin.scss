@@ -1,0 +1,37 @@
+/*Mixin----------Mixin*/
+
+@mixin ball($size, $top, $right, $bottom, $left) {
+  width: $size;
+  height: $size;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  background-color: var(--color-primary);
+  border-radius: 100%;
+}
+
+@mixin bar-life($width, $background, $radius) {
+  width: $width;
+  display: block;
+  height: 40px;
+  background-color: $background;
+  border-radius: $radius;
+}
+
+@mixin forms-character($width, $height, $background, $border-radius) {
+  width: $width;
+  height: $height;
+  background: $background;
+  border-radius: $border-radius;
+}
+@mixin position-character($top, $right, $bottom, $left, $deg, $index) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  transform: $deg;
+  z-index: $index;
+}

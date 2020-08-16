@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlatziGame</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container container">
+      <h1>Platzi Game</h1>
+    </div>
+    <div class="header__decoration-ball-uno"></div>
+    <div class="header__decoration-ball-dos"></div>
+    <div class="header__decoration-ball-tres"></div>
+    <div class="header__decoration-ball-cuatro"></div>
+  </header>
+
+  <main class="main">
+
+      <div class="main__container container">
+
+        <div class="main__cards">
+          <h2>Player 1</h2>
+
+          <div class="main__cards-abilities">
+            <div>
+              <p id="life-percent-1">100%</p>
+              <span class="main__cards-abilities-life-bar">
+                <span class="main__cards-abilities-life-fill" id="life-player-1"></span>
+              </span>
+            </div>
+            <button class="main__cards-abilities-play" id="play-1">Play</button>
+          </div>
+
+          <div class="main__cards-character">
+            <div class="character-uno">
+
+              <div class="head-container">
+                <div class="character-uno-head"></div>
+                <div class="character-uno-nose"></div>
+                <div class="character-uno-eyebrow1"></div>
+                <div class="character-uno-eyebrow2"></div>
+                <div class="character-uno-eye1"></div>
+                <div class="character-uno-eye2"></div>
+                <div class="character-uno-mouth"></div>
+                <div class="character-uno-mouth-in"></div>
+                <div class="character-uno-tongue"></div>
+                <div class="character-uno-teeth"></div>
+              </div>
+
+              <div class="body-container">
+                <div class="character-uno-body"></div>
+                <div class="character-uno-hip"></div>
+                <div class="character-uno-arm1"></div>
+                <div class="character-uno-arm2"></div>
+                <div class="character-uno-leg1"></div>
+                <div class="character-uno-leg2"></div>
+                <div class="character-uno-hand1"></div>
+                <div class="character-uno-hand1-finger1"></div>
+                <div class="character-uno-hand1-finger2"></div>
+                <div class="character-uno-hand2"></div>
+                <div class="character-uno-hand2-finger1"></div>
+                <div class="character-uno-hand2-finger2"></div>
+              </div>
+
+              <div class="gun1-container">
+                <div class="character-uno-gun1"></div>
+                <div class="character-uno-gun1-trigger"></div>
+                <div class="character-uno-gun1-handgrip"></div>
+                <div class="character-uno-gun1-decoration"></div>
+                <div class="character-uno-gun1-decoration2"></div>
+                <div class="character-uno-gun1-decoration3"></div>
+                <div class="character-uno-gun1-munition"></div>
+              </div>
+
+              <div class="gun2-container">
+                <div class="character-uno-gun2"></div>
+                <div class="character-uno-gun2-trigger"></div>
+                <div class="character-uno-gun2-handgrip"></div>
+                <div class="character-uno-gun2-decoration"></div>
+                <div class="character-uno-gun2-decoration2"></div>
+                <div class="character-uno-gun2-decoration3"></div>
+                <div class="character-uno-gun2-munition"></div>
+              </div>
+
+              <div class="character-uno-floor"></div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="main__cards main__cards--background-card2">
+          <h2>Player 2</h2>
+
+          <div class="main__cards-abilities">
+            <div class="main__cards-abilities-life">
+              <p id="life-percent-2">100%</p>
+              <span class="main__cards-abilities-life-bar">
+                <span class="main__cards-abilities-life-fill--card2 " id="life-player-2"></span>
+              </span>
+            </div>
+            <button class="main__cards-abilities-play" id="play-2">Play</button>
+          </div>
+
+          <div class="main__cards-character">
+            <div class="character-dos">
+
+              <div class="body-container">
+                <div class="character-dos-body"></div>
+                <div class="character-dos-arm1"></div>
+                <div class="character-dos-arm2"></div>
+                <div class="character-dos-leg1"></div>
+                <div class="character-dos-leg2"></div>
+                <div class="character-dos-antenna1"></div>
+                <div class="character-dos-antenna2"></div>
+              </div>
+
+              <div class="face-container">
+                <div class="charater-dos-face"></div>
+                <div class="charater-dos-eye1"></div>
+                <div class="charater-dos-eye2"></div>
+                <div class="charater-dos-eyebrow1"></div>
+                <div class="charater-dos-eyebrow2"></div>
+
+                <div class="charater-dos-teeth1"></div>
+                <div class="charater-dos-teeth2"></div>
+                <div class="charater-dos-teeth1-down"></div>
+                <div class="charater-dos-teeth2-down"></div>
+              </div>
+
+              <div class="character-dos-floor-card2"></div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <p>
+        Made by <a href="https://github.com/DanielSantos495">@DanielSantos495</a>
+      </p>
+      <div>
+        <a href="https://github.com/DanielSantos495"><img src="https://img.icons8.com/windows/45/000000/github.png"/></a>
+        <a href="https://twitter.com/Danielsantos495"><img src="https://img.icons8.com/android/40/000000/twitter.png"/></a>
+        <a href="https://www.instagram.com/danielsantos7946/"><img src="https://img.icons8.com/ios-glyphs/40/000000/instagram-new.png"/></a>
+      </div>
+    </div>
+  </footer>
+
+       <!-- Modal -->
+       <div class="overlay " id="overlay">
+        <div class="modal " id="modal">
+
+          <div class="modal-giphy">
+            <img src="" alt="Gif" class="modal-gif"id="gif">
+          </div>
+          <div class="modal-message">
+            <p>The winner is: player <span id="player-win"></span></p>
+            <button class="modal-play-again" id="play-again">Play again</button>
+          </div>
+
+        </div>
+      </div>
+
+
+</body>
+</html>
