@@ -41,7 +41,6 @@
 .player-card__life {
   width: 60%;
   height: 100%;  
-  padding-right: .5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,20 +61,17 @@
   border: 3px solid var(--black);
 }
 
-.player-card__progress::after {
-  position: absolute;
-  content: '';
-  width: 50%;
+.player-card__health-indicator {
   height: 100%;
-  border-radius: 2rem;
   background-color: var(--pink);
+  border-radius: 2rem;
 }
 
 .player-card__button {
   width: 40%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .player-card__button button {
