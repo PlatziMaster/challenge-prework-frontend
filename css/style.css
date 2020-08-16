@@ -15,6 +15,7 @@ body {
 .shelf {
   border: 1px solid magenta;
   box-sizing: border-box;
+  position: relative;
 
   max-width: 1440px;
   height: 100vh;
@@ -28,6 +29,51 @@ body {
   justify-content: space-around;
 }
 
+.background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.circle {
+  background-color: var(--blue);
+  border-radius: 50%;
+  display: inline-block;
+  position: inherit;
+}
+
+.sm {
+  width: 49px;
+  height: 49px;
+  left: 1314px;
+  top: 99px;
+}
+
+.md {
+  width: 97px;
+  height: 97px;
+  left: 162px;
+  top: 16px;
+}
+
+.lg {
+  width: 195px;
+  height: 195px;
+  left: -48px;
+  top: 26px;
+}
+
+.xl {
+  width: 335px;
+  height: 335px;
+  left: 1004px;
+  top: -222px;
+}
+
 .header {
   border: 1px solid greenyellow;
   text-align: center;
@@ -36,6 +82,7 @@ body {
 .header h1 {
   font-size: 3.75em;
   margin: 0;
+  
 }
 
 #players {
