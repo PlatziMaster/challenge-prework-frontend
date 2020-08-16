@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Colores: #1A46E5 (azul), #43D8C9 (verde), #FFBD11 (amarillo), #FF89BB (rosado), #FFFFFF (blanco) y #000000 (negro). */
+
+:root {
+  --blue-color: #1A46E5;
+  --green-color: #43D8C9;
+  --yellow-color: #FFBD11;
+  --pink-color: #FF89BB;
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  height: 90px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: #100303;
+}
+
+.circle {
+  position: absolute;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+}
+
+.t1 {
+  top: 26px;
+  left: -38px;
+  width: 120px;
+  height: 120px;
+}
+
+.t2 {
+  top: 16px;
+  left: 100px;
+  width: 60px;
+  height: 60px;
+}
+
+.t3 {
+  top: -160px;
+  right: 80px;
+  width: 220px;
+  height: 220px;
+}
+
+.t4 {
+  top: 60px;
+  right: 60px;
+  width: 40px;
+  height: 40px;
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 320px;
+  height: 400px;
+  background-color: var(--green-color);
+  border: 3px solid var(--black-color);
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.player_2 {
+  background-color: var(--yellow-color);
+}
+
+.card_title {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 50px;
+  color: var(--white-color);
+}
+
+.card_actions {
+  margin: 30px;
+  height: 80px;
+}
+
+.card_actions--button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border: 3px solid #000000;
+  box-sizing: border-box;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;  
+}
+
+.card_body {
+  margin: 0 auto;
+  width: 85%;
+  height: 150px;
+  background-color: var(--white-color);
+  border-radius: 20px;
+  border: 3px solid var(--black-color);
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: right;
+  margin-right: 50px;
+}
