@@ -1,10 +1,10 @@
 @import 'variables';
 
-#first-player {
+#player-1 {
     background-color: $base-green;
 }
 
-#second-player {
+#player-2 {
     background-color: $base-yellow;
 }
 
@@ -14,7 +14,7 @@
     &__card {
         width: 30vw;
         height: 35rem;
-        border: 2px solid black;
+        border: 2px solid $base-black;
         border-radius: 1rem;
         display: flex;
         flex-direction: column;

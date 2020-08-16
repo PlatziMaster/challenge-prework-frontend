@@ -1,18 +1,14 @@
-import { CountUp, CountUpOptions } from "countup.js";
+import { IPlayerOptions } from "../interfaces/playerOptions.interface";
 
+import { CountUp, CountUpOptions } from "countup.js";
 import { fromEvent, Observable, Subject } from "rxjs";
-import { take } from "rxjs/operators"
-;
+import { take } from "rxjs/operators";
 
 class Player {
 
     static playerNumber = 1;
 
-    private playerOptions = {
-        name: `Player ${Player.playerNumber}`,
-        health: 100,
-        attackDamage: Math.floor(Math.random() * (15 - 10) + 10)
-    }
+    private playerOptions: IPlayerOptions;
 
     private playerPlayButton: HTMLDivElement;
     private playerLife: HTMLElement;
@@ -22,8 +18,14 @@ class Player {
     playerAttackAction: Observable<Event>;
 
     constructor() {
+        this.playerOptions =  {
+            name: `Player ${Player.playerNumber}`,
+            health: 100,
+            attackDamage: Math.floor(Math.random() * (15 - 10) + 10)
+        }
         this.generate();
         Player.playerNumber++;
+        
     }
 
     private prepareAttack(enemy: Player) {
@@ -81,6 +83,10 @@ class Player {
         // finalValue = initialValue - 15;
     
         // if (finalValue < 0 ) finalValue = 0;
+
+        let finalLife = this.playerOptions.health - damage;
+
+        if (finalLife < 0) finalLife = 0;
     
         const options: CountUpOptions = {
             startVal: this.playerOptions.health,
@@ -88,23 +94,26 @@ class Player {
             suffix: '%'
         };
 
-        let lifeChange = new CountUp(this.playerLife, this.playerOptions.health - damage, options);
+        let lifeChange = new CountUp(this.playerLife, finalLife, options);
 
         if (!lifeChange.error) {
-            this.playerProgress.style.width = `${this.playerOptions.health - damage}%`
+            this.playerProgress.style.width = `${finalLife}%`
             lifeChange.start();
         } else {
           console.error(lifeChange.error);
         }
 
-        this.playerOptions.health = this.playerOptions.health - damage;
+        this.playerOptions.health = finalLife;
         
+        if (finalLife === 0) {
+            console.log('perdistes :>> ');
+        }
     }
 
     private generate() {
         const playerTemplate = `
             <div class="player">
-                <div id="second-player" class="player__card">
+                <div id="player-${Player.playerNumber}" class="player__card">
                     <h2 class="player__card--title">${this.playerOptions.name}</h2>
                     <div class="player__info-action">
                         <div class="player__info-action__life">
