@@ -1,4 +1,4 @@
-import { Card } from 'components/card';
+import { Card } from 'components/Card';
 import { Footer } from 'components/Footer';
 import { Bubbles } from 'components/Bubbles';
 import { Hero1 } from 'components/Hero1';
