@@ -11,7 +11,7 @@
 .player {
     color: $base-white;
     &__card {
-        width: 35vw;
+        width: 30vw;
         height: 35rem;
         border: 2px solid black;
         border-radius: 1rem;
@@ -40,7 +40,7 @@
                 font-size: 2rem;
             }
             &__bar {
-                width: 23vw;
+                width: 20vw;
                 height: 2rem;
                 border: 2px solid $base-black;
                 border-radius: 1rem;
