@@ -72,7 +72,13 @@ main section .rect_player {
     border: 5px solid black;
     border-radius: 20px;
     display: grid;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "titulo titulo"
+                         "cargando boton"
+                         "player player";
+    
 }
 
 main section .rect_player1{
@@ -83,20 +89,32 @@ main section .rect_player2 {
     background-color:  #FFBD11;
 }
 
+.titulo_player {
+    grid-area: titulo;
+    
+}
 
+.cargando {
+    grid-area:cargando;
+    
+}
 
 .boton {
     width: 120px;
     height: 120px;
     border-radius: 100%;
     background-color: #1A46E5;
+    grid-area: boton;
+    
 }
 
-main section .player {
+.player {
     /* width: 10%; */
     height: 250px;
     border: 3px solid black;
     border-radius: 15px;
+    grid-area: player;
+    
 }
 
 footer {
