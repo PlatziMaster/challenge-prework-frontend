@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platzi Game 🎮</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="modal" id="modal">
+      <div class="sub-modal">
+        <div class="gif" id="gif"></div>
+        <div class="winner">
+          <label for="">The winner is:</label>
+          <label id="winner"></label>
+          <button id="play-again">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Platzi Game</h1>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+      </header>
+      <section class="main">
+        <div class="card-player1">
+          <h2>Player 1</h2>
+          <div class="life-play">
+            <div class="container-life">
+              <label class="labelpercent" id="percent1">50%</label>
+              <div class="life">
+                <div id="cant-life1"></div>
+              </div>
+            </div>
+            <div class="play" id="play1">
+              <label>Play</label>
+            </div>
+          </div>
+          <div class="draw">
+            <img src="player1.png" alt="no_se_dibujar_en_CSS">
+          </div>
+        </div>
+        <div class="card-player2">
+          <h2>Player 2</h2>
+          <div class="life-play">
+            <div class="container-life">
+              <label class="labelpercent" id="percent2">70%</label>
+              <div class="life">
+                <div id="cant-life2"></div>
+              </div>
+            </div>
+            <div class="play" id="play2">
+              <label>Play</label>
+            </div>
+          </div>
+          <div class="draw">
+            <img src="player2.png" alt="no_se_dibujar_en_CSS">
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <label for="">Made by @jesuslgarciah</label>
+        <a href="https://github.com/jesuslgarciah" target="_blank">
+          <img src="./github.png" alt="github">
+        </a>
+        <a href="https://twitter.com/jesuslgarciah" target="_blank">
+          <img src="./twitter.png" alt="twitter">
+        </a>
+        <a href="https://instagram.com/jesuslgarciah" target="_blank">
+          <img src="./instagram.png" alt="instagram">
+        </a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
