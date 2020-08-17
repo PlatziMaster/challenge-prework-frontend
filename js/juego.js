@@ -38,14 +38,14 @@ var ataque = 0;
           $('#modal').show();
           $("#modal-content_winner-text-an").text("Player 2");
           $("#play-again").click(function(){
-            $('#modal').hide();
+            $('#modal').fadeOut();
           });
         } else {
           console.log("El jugador 1 ha ganado!! ");
           $('#modal').show();
           $("#modal-content_winner-text-an").text("Player 1");
           $("#play-again").click(function(){
-            $('#modal').hide();
+            $('#modal').fadeOut();
           });
 
         }
