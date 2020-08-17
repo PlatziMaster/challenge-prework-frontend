@@ -5,6 +5,11 @@ var max = 10;
 var min = 1;
 var ataque = 0;
 
+var barrap1 = (vidap1*215)/100;
+var barrap2 = (vidap2*215)/100;
+
+
+
 
 
         while ((vidap1 > 0) || (vidap2 > 0)){
@@ -17,7 +22,9 @@ var ataque = 0;
                 console.log(`el jugador 2 recibe ${ataque}`);
                 turno = 2;
                 console.log(`El jugador 2 le quedan ${vidap2}`);
-                
+                var barrap2 = Math.floor((vidap1*215)/100);
+                $("#saludp2").width(barrap2)
+
            
           } else {
             
@@ -27,8 +34,8 @@ var ataque = 0;
               console.log(`el jugador 1 recibe ${ataque}`);
               turno = 1;
               console.log(`El jugador 1 le quedan ${vidap1}`);
-              
-
+              var barrap1 = Math.floor((vidap2*215)/100);
+              $("#saludp1").width(barrap1)
           }
 
         }
@@ -55,6 +62,7 @@ var ataque = 0;
 
           $("#player1-healt_avg-txt").text(vidap1);
           $("#player2-healt_avg-txt").text(vidap2);
+          
           $("#btn-player1").click(function(){ $("#player2-healt_avg-txt").text(vidap2);});
           $("#btn-player2").click(function(){$("#player1-healt_avg-txt").text(vidap1);});
         });
