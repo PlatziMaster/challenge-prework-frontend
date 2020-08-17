@@ -1,0 +1,585 @@
+body{
+    background-color: aliceblue;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: poppins;
+    font-weight: bold;
+}
+.header{
+    width: 100%;
+}
+footer{
+    width: 100%;
+    text-align: right;
+    font-family: poppins;
+    font-size: 20px;
+    padding-top: 5%;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 5%;
+}
+.circle1{
+    position: absolute;
+    background-color: #1A46E5;
+    border-radius: 90px;
+    width: 120px;
+    height: 120px;
+    top: 30px;
+    left: -40px;
+}
+.circle2{
+    position: absolute;
+    background-color: #1A46E5;
+    border-radius: 90px;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 80px;
+}
+.circle3{
+    position: absolute;
+    background-color: #1A46E5;
+    border-radius: 90px;
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    left: 980px;
+}.circle4{
+    position: absolute;
+    background-color: #1A46E5;
+    border-radius: 90px;
+    width: 30px;
+    height:30px;
+    top: 100px;
+    left: 1160px;
+}
+.content1{display: flex;}
+.content2{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.jugador{
+    width: 350px;
+    height: 420px;
+    border: solid 3px #000;
+    border-radius: 15px;
+    background-color: #43D8C9;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.jugador1{
+    background-color: #43D8C9;
+}
+.jugador2{
+    margin-left: 5%;
+    background-color: #FFBD11;
+
+}
+.nombreJugador{
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+
+
+.play{
+    width: 50%;
+    place-self: center;
+    text-align: right;
+    
+}
+.botonPlay{
+    background-color: #1A46E5;
+    width: 90px;
+    height: 90px;
+    color: #fff;
+    font-size: 20px;
+    border: solid 3px #000;
+    border-radius: 90px;
+    box-shadow: 1px 5px 0 1px #000;
+    font-weight: bold;
+}
+.vida{width: 50%;}
+.textVida{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+.barraVida{
+    width: 100%;
+    height: 25px;
+    border-radius: 90px;
+    background-color: #000;
+}
+#porcentaje-vida-j1 {
+    height: 25px;
+    border-radius: 90px;
+    width: 100%;
+    background-color: #FF89BB;
+}
+#porcentaje-vida-j2 {
+    height: 25px;
+    border-radius: 90px;
+    width: 100%;
+    background-color: #FF89BB;
+}
+.avatar{
+    place-self: center;
+    text-align: center;
+    background-color: #fff;
+    border:solid 3px #000;
+    margin-top: 10%;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+
+/*  Primer Jugador */
+.j1-ojo-1{
+    position: relative;
+    top: 10px;
+    left: 120px;
+    background-color:#14868f;
+}
+.j1-ojo-2{
+    position: relative;
+    top: -20px;
+    left: 100px;
+    background-color:#1cb6aa;
+}
+.j1-ojo-1-1{
+    width: 30px;
+    height: 30px;
+    border-radius: 90px;
+}
+.j1-ojo-1-2{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color:#fff;
+    border-radius: 90px;
+}
+.j1-ojo-1-3{
+    position: relative;
+    top: 6px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    background-color:#162d3b;
+    border-radius: 90px;
+}
+.j1-tentaculo{
+    width: 5px;
+    height: 35px;
+}
+.j1-tentaculo-1{
+    position: relative;
+    top: 0px;
+    left: 3px;
+    background-color: #14868f;
+}
+.j1-tentaculo-2{
+    position: relative;
+    top: 0px;
+    left: 1px;
+    background-color: #1cb6aa;
+}
+.j1-cuerpo{
+    position: relative;
+    top: -20px;
+    left: 93px;
+    width: 40px;
+    height: 40px;
+    background-color: #1cb6aa;
+    border-radius: 90px;
+}
+
+.j1-pierna{
+    position: relative;
+    width: 15px;
+    height: 35px;
+    border-radius: 90px;
+}
+.j1-pierna-1{
+    top:-73px;
+    left: 107px;
+    transform: rotate(-45deg);
+    background-color: #1cb6aa;
+}
+.j1-pierna-2{
+    top:-36px;
+    left: 98px;
+    transform: rotate(90deg);
+    background-color: #117e84;
+}
+.j1-brazo-1{
+    position: relative;
+    top: 10px;
+    left: 120px;
+    width: 30px;
+    height: 15px;
+    border-radius: 90px;
+    background-color: #117e84;
+}
+.j1-brazo-2{
+    position: relative;
+    top: -120px;
+    left: 90px;
+    width: 15px;
+    height: 23px;
+    border-radius: 80px;
+    background-color: #5ec3c0;
+    transform: rotate(30deg);
+}
+.j1-mano{
+    position: relative;
+    top: -49px;
+    left: 18px;
+    width: 17px;
+    height: 17px;
+    background-color: #1cb6aa;
+    border-radius: 90px;
+}
+.j1-dedo{
+    position: relative;
+    top: -1px;
+    left: 1px;
+    width: 7px;
+    height: 12px;
+    background-color: #5ec3c0;
+    border-radius: 80px;
+}
+.j1-pistola-cuerpo{
+    position: relative;
+    top: -25px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: #182e3b;
+    border-radius: 90px;
+}
+.j1-cacha{
+    position: relative;
+    top:-25px;
+    left:22px;
+    width: 10px;
+    height: 10px;
+    background-color: #182e3b;
+    border-radius: 80px;
+}
+.j1-punta{
+    position: relative;
+    top:-55px;
+    left: 55px;
+    width: 25px;
+    height: 3px;
+    background-color: #182e3b;
+
+}
+.j1-punta-circulo{
+    position:relative;
+    top: -3px;
+    left: 20px;
+    width: 9px;
+    height: 9px;
+    background-color: #182e3b;
+    border-radius: 90px;
+}
+.j1-lazer{
+    position: relative;
+    width: 3px;
+    background-color: #e55241;
+    border-radius: 90px;
+}
+.j1-lazer-1{
+    top: -157px;
+    left: 188px;
+    height: 20px;
+}
+.j1-lazer-2{
+    top: -182px;
+    left: 180px;
+    height: 30px;
+}
+.j1-piso{
+    position: relative;
+    top:-140px;
+    left: 70px;
+    width: 120px;
+    height: 15px;
+    background-color: rgb(17,126,132,0.5);
+    border-radius: 90px;
+}
+
+
+/*  Jugador 2  */
+.cara{
+    position: relative;
+    top: -55px;
+    left: 120px;
+    width: 30px;
+    height: 43px;
+    background-color: #f2bf9b;
+    border-radius: 18px;
+}
+
+.ceja{
+    position: relative;
+    width: 6px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 90px;
+}
+.cejas-1{
+    top: 12px;
+    left: 3px;
+    transform: rotate(20deg);
+}
+.cejas-2{
+    top: 10px;
+    left: 15px;
+    transform: rotate(-30deg);
+}
+.ojo{
+    position: relative;
+    width: 3px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 90px;
+}
+.ojo-1{
+    top: 12px;
+    left: 4px;
+}
+.ojo-2{
+    top: 9px;
+    left: 16px;
+}
+.nariz{
+    position: relative;
+    top: 7px;
+    left: 8px;
+    width: 7px;
+    height: 10px;
+    background-color: #de6c6f;
+    border-radius: 30px;
+}
+.boca{
+    position: relative;
+    top: 9px;
+    left: 15px;
+    width: 14px;
+    height: 16px;
+    background-color: #182f3b;
+    border-radius: 10px;
+}
+.boca-dientes{
+    position: relative;
+    top: 0px;
+    left: -2px;
+    width: 12px;
+    height: 4px;
+    background-color: #fff;
+    transform: rotate(-25deg);  
+}
+.boca-lengua{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: #b81055;
+    border-radius: 50px;
+}
+.boca-contorno{
+    position: relative;
+    top: -17px;
+    left: -4px;
+    width: 12px;
+    height: 14px;
+    border-radius: 30px;
+    border: solid 4px #f2bf9b;
+}
+
+.cuerpo{
+    position: relative;
+    top: 5px;
+    left: 125px;
+    width: 40px;
+    height: 40px;
+    border-radius: 80px;
+    background-color: #e2523c;
+}
+.cuerpo-1{
+    position: relative;
+    top: 53px;
+    left: 128px;
+    width: 28px;
+    height: 28px;
+    background-color: #000;
+    border-radius: 80px;
+}
+.brazo{
+    position: relative;
+    width: 30px;
+    height: 12px;
+    background-color: #e0003c;
+}
+.brazo-1{
+    top:70px;
+    left:97px;
+}
+.brazo-2{
+    top: 48px;
+    left: 145px;
+    border-radius: 90px;
+}
+.pierna{
+    position: relative;
+    width: 12px;
+    background-color: #000;
+    border-radius: 90px;
+}
+.pierna-1{
+    height: 30px;
+    top: -40px;
+    left: 123px;
+    transform: rotate(30deg);
+}
+.pierna-2{
+    height: 20px;
+    top: -70px;
+    left: 147px;
+    transform: rotate(-50deg);
+}
+.pierna-2-1{
+    height: 20px;
+    top: 8px;
+    left: -5px;
+    transform: rotate(50deg);
+}
+
+.pistola{
+    position: relative;
+    width: 65px;
+    height: 30px;
+    background-color: #152f3d;
+    border-radius: 5px;
+    top: -130px;
+    left: 38px;
+}
+.adorno-1{
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: #396273;
+    border-radius: 90px;
+    top: 3px;
+    left: 5px;
+}
+.adorno-2{
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: #396273;
+    border-radius: 90px;
+    top: 6px;
+    left: 5px;
+}
+.adorno-3{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-color: #011b29;
+    border-radius: 10;
+    top: 0;
+    left: -5;
+}
+.adorno-4{
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-color: #011b29;
+    border-radius: 10;
+    top: 3px;
+    left: -5;
+}
+.adorno-5{
+    position: relative;
+    width: 25px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 30px;
+    top: 2px;
+    left: 30px;
+}
+.cacha{
+    position: relative;
+    width: 12px;
+    height: 20px;
+    background-color: #15303b;
+    border-radius: 30px;
+    top: -5px;
+    left: 48px;
+}
+.mano{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #e4917b;
+    border-radius: 30px;
+    top: -35px;
+    left: 45px;
+}
+.dedo-1{
+    position: relative;
+    width: 6px;
+    height: 10px;
+    background-color: #f0bfa2;
+    border-radius: 30px;
+    top: 1px;
+    left: 15px;
+}
+.dedo-2{
+    position: relative;
+    width: 8px;
+    height: 8px;
+    background-color: #e68f80;
+    border-radius: 30px;
+    top: -2px;
+    left: -12px;
+}
+.brazo-2-1{
+    top: -70px;
+    left: 125;
+    transform: rotate(-45deg);
+}
+.mano-2{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #e4917b;
+    border-radius: 30px;
+    top: -98px;
+    left: 140px;
+}
+.piso{
+    position: relative;
+    top:-25px;
+    left: 40px;
+    width: 120px;
+    height: 15px;
+    background-color: rgb(17,126,132,0.5);
+    border-radius: 90px;
+}

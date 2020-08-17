@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <title>Reto Frontend</title>
+    </head>
+    <body>
+        <header><p class="title">Platzi Game</p></header>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="content1">
+            <!--Jugador 1-->
+            <div class="jugador1 jugador">
+                <p class="nombreJugador">Jugador 1</p>   
+                <div class="content2">
+                    <div class="vida">
+                        <p class="textVida" id="textLife1">100%</p>
+                        <div class="barraVida">
+                            <div id="porcentaje-vida-j1"></div>
+                        </div>
+                    </div>
+                    <div class="play">
+                        <button class="botonPlay" onclick="play1()" name="play1" id="b1">Play</button>
+                    </div>
+                </div> 
+                <div class="avatar">
+                    <div class="j1-ojo-1-1 j1-ojo-1">
+                        <div class="j1-ojo-1-2">
+                            <div class="j1-ojo-1-3"></div>
+                        </div>
+                        <div class="j1-tentaculo j1-tentaculo-1"></div>
+                    </div>
+                        
+                    <div class="j1-ojo-1-1 j1-ojo-2">
+                        <div class="j1-ojo-1-2">
+                            <div class="j1-ojo-1-3"></div>
+                        </div>
+                        <div class="j1-tentaculo j1-tentaculo-2"></div>
+                    </div>
+                    <div class="j1-brazo-1">
+                        <div class="j1-pistola">
+                            <div class="j1-pistola-cuerpo">
+                            </div>
+                            <div class="j1-cacha"></div>
+                            <div class="j1-punta"><div class="j1-punta-circulo"></div></div>
+                        </div>
+                        <div class="j1-mano">
+                            <div class="j1-dedo"></div>
+                        </div>
+                    </div>
+                    <div class="j1-cuerpo"></div>
+                    <div class="j1-piernas">
+                        <div class="j1-pierna j1-pierna-2"></div>
+                        <div class="j1-pierna j1-pierna-1"></div>
+                    </div>
+                    <div class="j1-brazo-2"></div>
+                    <div class="j1-lazer-1 j1-lazer"></div>
+                    <div class="j1-lazer-2 j1-lazer"></div>
+                    <div class="j1-piso"></div>
+                </div>
+            </div>
+
+            
+            <!--Jugador 2-->
+            <div class="jugador2 jugador">
+                <p class="nombreJugador">Jugador 2</p>
+                <div class="content2">
+                    <div class="vida">
+                        <p class="textVida" id="textLife2">100%</p>
+                        <div class="barraVida">
+                            <div id="porcentaje-vida-j2"></div>
+                        </div>
+                    </div>
+                    <div class="play">
+                        <button class="botonPlay" onclick="play2()" name="play2" id="b2" disabled>Play</button>
+                    </div>
+                </div> 
+                <div class="avatar">
+                    <div class="brazo brazo-1"></div>
+                    <div class="brazo brazo-2"></div>
+                    <div class="cuerpo-1"></div>
+                    <div class="cuerpo"></div>
+                    
+                    <div class="cara">
+                        <div class="ceja cejas-1"></div>
+                        <div class="ceja cejas-2"></div>
+                        <div class="ojo ojo-1"></div>
+                        <div class="ojo ojo-2"></div>
+                        <div class="nariz"></div>
+                        <div class="boca">
+                            
+                            <div class="boca-dientes"></div>
+                            <div class="boca-lengua"></div>
+                            <div class="boca-contorno"></div>
+                        </div>
+                    </div>
+                    <div class="pierna pierna-1"></div>
+                    <div class="pierna pierna-2"> <div class="pierna pierna-2-1"></div></div>
+                    <div class="pistola">
+                        <div class="adorno-1"></div>
+                        <div class="adorno-2"></div>
+                        <div class="adorno-3"></div>
+                        <div class="adorno-4"></div>
+                        <div class="adorno-5"></div>
+                        <div class="cacha"></div>
+                        <div class="mano">
+                            <div class="dedo-1"></div>
+                            <div class="dedo-2"></div>
+                        </div>
+                        <div class="brazo brazo-2-1"> </div>
+                        <div class="mano-2"></div>
+                        <div class="piso"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <script>
+            var v1=100, v2=100;
+            function play1(){
+                var ataque= Math.floor(Math.random() * ((20+1) - 1) + 1);
+                v2-=ataque;
+                changeLife("porcentaje-vida-j2",v2);
+                document.getElementById("textLife2").innerHTML = v2+"%";
+                document.getElementById('b1').disabled = true;
+                document.getElementById('b2').disabled = false;
+                if(v2<=0){
+                    win("Player 1");
+                }
+            }
+            function play2(){
+                var ataque= Math.floor(Math.random() * ((20+1) - 1) + 1);
+                v1-=ataque;
+                changeLife("porcentaje-vida-j1",v1);
+
+                document.getElementById("textLife1").innerHTML = v1+"%";
+                document.getElementById('b2').disabled = true;
+                document.getElementById('b1').disabled = false;
+                if(v1<=0){
+                    win("Player 2");
+                }
+            }
+            function win(jugador){
+                alert("The winer is "+jugador);
+                location.reload();
+            }
+            function changeLife(id,vida) {
+                var element = document.getElementById(id);
+                element.style.width = vida+"%";
+            }
+            
+
+
+        </script>
+        <footer>Made By: @cesarsalasmx &nbsp;&nbsp;<a href="https://github.com/cesarsalasmx/" target="_blank"><img src="icons/github.png" class="icon"></a>&nbsp;&nbsp;<a href="https://www.instagram.com/cesarsalasmx/" target="_blank"><img src="icons/insta.png" class="icon"></a>&nbsp;&nbsp;<a href="https://twitter.com/cesarsalasmx" target="_blank"><img src="icons/twitter.png" class="icon"></a>nbsp;&nbsp;&nbsp;</footer>
+    </body>
+</html>
