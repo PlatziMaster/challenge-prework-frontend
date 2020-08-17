@@ -68,6 +68,7 @@ export default {
   color: white;
   padding-bottom: 45px;
 }
+
 .life-atack{
   width: 100%;
   height: auto;
@@ -140,4 +141,12 @@ progress[value]::-webkit-progress-bar {
   }
 }
 
+@media screen and (max-width: 1366px){
+  h2{
+    padding-bottom: 16px;
+  }
+  .life-atack{
+    padding-bottom: 24px;
+  }
+}
 </style>

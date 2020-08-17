@@ -2,6 +2,7 @@
 node_modules
 /dist
 /src/assets/images
+/src/assets/keys
 
 
 # local env files

@@ -82,3 +82,14 @@
 .btn{
   cursor: pointer;
 }
+
+@media screen and (min-width: 1300px){
+ 
+  .main-personage{
+    width: 46vmin;
+  }
+  .titleM h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+}

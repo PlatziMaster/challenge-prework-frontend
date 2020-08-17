@@ -3,7 +3,7 @@
     <div class="content">
       <div class="grid">
         <figure>
-          <img src="../assets/images/modal.png" alt="">
+          <img :src="urlGif || urlgif" alt="">
         </figure>
         <div class="pic">
           <p>The winnwe is: <br>
@@ -25,9 +25,18 @@ export default {
   props: {
     user: String,
   },
+  data() {
+    return {
+      urlgif: '../assets/images/modal.png',
+    };
+  },
+  created() {
+    this.$store.dispatch('Life/gif');
+  },
   computed: {
     ...mapState('Life', [
       'winner',
+      'urlGif',
     ]),
   },
   methods: {
@@ -72,6 +81,7 @@ export default {
     height: 100%;
     grid-column: 1 / 2;
     text-align: center;
+    padding: 0 32px;
   }
   & img{
     margin: auto;

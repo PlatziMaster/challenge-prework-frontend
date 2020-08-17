@@ -36,6 +36,9 @@
         </div>
       </div>
     </div>
+    <div class="tag">
+      <p>Made by <a href="https://github.com/circuandante/" target="_blank">@circuandante</a></p>
+    </div>
   </div>
 </template>
 
@@ -54,6 +57,12 @@ export default {
       'players',
       'modal',
     ]),
+  },
+  methods: {
+    s() {
+      // eslint-disable-next-line no-console
+      console.log('hello');
+    },
   },
 
   components: {
@@ -112,5 +121,17 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.tag{
+  position: fixed;
+  right: -67px;
+  bottom: 109px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: black;
+  transform: rotate(-90deg);
+  & a{
+    color: black;
+  }
 }
 </style>
