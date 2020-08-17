@@ -2,6 +2,8 @@
 
 Platzi Game
 
+Link al juego: https://juanfea98.github.io/challenge-prework-frontend/index.html
+
 ## 🎮 Contenido
 
 1. [Descripción](#1-descripción)
