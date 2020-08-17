@@ -7,6 +7,11 @@ function juego(){
   var ataque = 0;
 
 
+  // p1 = document.getElementById('#payer1-healt_avg-txt');
+  // p1.innerHTML = p1.vida;
+
+  $('#payer1-healt_avg-txt').text(p1.vida)
+
 // Comparando si tienen vida o no
   
 while ((p1.vida > 0) || (p2.vida > 0)){

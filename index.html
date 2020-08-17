@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platzi Game</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        
+    <script src="./js/juego.js"></script>
 </head>
 <body>
     <span class="f1 bg"></span>
@@ -20,13 +24,14 @@
                 <h3 class="player-title">Player 1</h3>
                 <div class="status-area">
                     <div class="status">
-                        <span class="healt_avg">50%</span>
+                        <span class=" healt_avg " id="payer1-healt_avg-txt">20</span>
+                        <span class="healt_avg">%</span>
                         <div class="vida">
                             <div class="salud"></div>
                         </div>
                     </div>
                     <div class="btn-play">
-                        <h3>Play</h3>
+                        <a>Play</a>
                     </div>
                 </div>
                 <div class="char">
@@ -37,26 +42,47 @@
                 <h3 class="player-title">Player 2</h3>
                 <div class="status-area">
                     <div class="status">
-                        <span class="healt_avg">20%</span>
+                        <span class="healt_avg payer2-healt_avg-txt">20</span>
+                        <span class="healt_avg">%</span>
                         <div class="vida">
                             <div class="salud"></div>
                         </div>
                     </div>
-                    <div class="btn-play">
-                        <h3>Play</h3>
-                    </div>
+                    <a class="btn-play">Play</a>
+                    
                 </div>
                 <div class="char">
 
                 </div>
             </div>
         </section>
+        <div class="footer">
+            <span>Made by <a href="https://github.com/cemeza">@cemeza</a></span>
+            <a href="https://github.com/cemeza"><img src="https://img.icons8.com/fluent/24/000000/github.png"/></a>
+            <a href="https://twitter.com/Cesar_Meza_C"><img src="https://img.icons8.com/android/24/000000/twitter.png"/></a>
+            <a href="https://www.instagram.com/c3m3z4/"><img src="https://img.icons8.com/ios-glyphs/24/000000/instagram-new.png"/></a>
+        </div>
     </div>
-    <footer>
-        <span>Made by <a href="https://github.com/cemeza">@cemeza</a></span>
-        <img src="https://img.icons8.com/fluent/24/000000/github.png"/>
-        <img src="https://img.icons8.com/android/24/000000/twitter.png"/>
-        <img src="https://img.icons8.com/ios-glyphs/24/000000/instagram-new.png"/>
-    </footer>
+    <div class="modal" id="modal">
+        <div class="flex" id="flex">
+            <div class="modal-content flex">
+                <div class="modal_content-avatar">
+                    <img src="" class="modal-avatar-img" alt="Avatar Image">
+                </div>
+                <div class="modal-content_winner">
+                    <div class="modal-content_winner-text">                        
+                        <p>The winner is:</p>
+                        <span>Player 1</span>
+                    </div>
+
+                    <a class="modal-content_winner-button" href="#">Play again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+    <script src="./js/giphy.js"></script>
+
 </body>
 </html>
