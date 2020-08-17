@@ -1,0 +1,84 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+    font-weight: 500;
+    
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+main header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main header h1 {
+    position: relative;
+    top: 150px;
+}
+
+.circulo{
+    background-color: #1A46E5;
+}
+
+.circulo__diminuto{
+    width: 49px;
+    height: 49px;
+    border-radius: 100%;
+    position: relative;
+    top: 99px;
+    left: -40px;
+
+}
+
+.circulo__pequeño{
+    width: 97px;
+    height: 97px;
+    border-radius: 100%;
+    position: relative;
+    top: 16px;
+    left: -60px;
+}
+
+.circulo__mediano{
+    width: 195px;
+    height: 195px;
+    border-radius: 100%;
+    position: relative;
+    top: 26px;
+    left: -48px;
+    
+}
+
+.circulo__grande{
+    width: 335px;
+    height: 335px;
+    border-radius: 100%;
+    position: relative;
+    top: -222px;
+}
+
+main section{
+    display: flex;
+    justify-content: space-around;
+}
+
+section .rect_player {
+    width: 467px;
+    height: 582px;
+    border: 5px solid black;
+    border-radius: 20px;
+    
+    
+}
+
+
+
+footer {
+    
+}
