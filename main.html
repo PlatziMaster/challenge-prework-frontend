@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Platzi Game</title>
+    </head> 
+    <style>
+  
+        body {
+
+            /* Here we set the background color */
+
+             background-color: white;  
+        }
+
+        header {
+            
+            /* Here we set the color and font for our "Platzi Game" header             */
+
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }     
+
+        p {
+            
+            /* Here we set the positioning and style for all our paragraphs under the <p></p> tags */
+            
+            position: absolute;
+            width: 260px;
+            height: 36px;
+            left: 950px;
+            top: 600px;
+            
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-align: right;
+
+        }
+
+        h2 {
+
+            /* Here we set style and positioning for the characters names. In this case Hiisi and Kuu. */
+
+            position: absolute;
+            width: 140px;
+            height: 54px;
+            left: 120px;
+            top: 0px;
+
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px; 
+        }
+
+        .hiisi_card {
+
+            /* Here we set color, borders and position for Hiisi's card */
+
+            position: absolute;
+            width: 450px;
+            height: 420px;
+            left: 182px;
+            top: 120px;
+
+            background: green;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 20px;
+
+        }
+
+        .kuu_card {
+
+            /* Here we set color, borders and position for Kuu's card */
+
+            position: absolute;
+            width: 450px;
+            height: 420px;
+            left: 791px;
+            top: 120px;
+
+            background: red;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+
+        .hiisi {
+
+            /* Here we integrate Hiisi's pic, while using the appropiate matrix for orientations purposes */
+
+            position: absolute;
+            width: 250px;
+            height: 170px;
+            left: 280px;
+            top: 350px;
+
+            background: #FFFFFF;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 20px;
+
+            background: url(hiisi.png);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+
+        .kuu {
+
+            /* Here we integrate Kuu's pic, while using the appropiate matrix for orientations purposes */
+
+            position: absolute;
+            width: 250px;
+            height: 170px;
+            left: 900px;
+            top: 350px;
+
+            background: #FFFFFF;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 20px;
+
+            background: url(kuu.png);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+
+        .hiisi_life {
+
+            /* Here we set the empty life bar of Hiisi */
+
+            position: absolute;
+            width: 240px;
+            height: 50px;
+            left: 231px;
+            top: 250px;
+
+            background: #1A46E5;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 30px;
+        }
+
+        .kuu_life {
+
+            /* Here we set the empty life bar of Kuu */
+
+            position: absolute;
+            width: 240px;
+            height: 50px;
+            left: 835px;
+            top: 250px;
+
+            background: #1A46E5;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 30px;
+        }
+
+        .hiisi_button {
+
+            /* Here we set the button for Hiisi's attack */
+
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 480px;
+            top: 200px;
+
+            background: #1A46E5;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 100px;
+        }
+
+        .kuu_button {
+
+            /* Here we set the button for Kuu's attack */
+
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 1100px;
+            top: 200px;
+
+            background: #1A46E5;
+            border: 3px solid #000000;
+            box-sizing: border-box;
+            border-radius: 100px;
+        }
+
+        h3 {
+
+            /* Here we set set an h3 which is going to be inside the buttons, so that it appears in the same fashion in both of them */
+
+            position: absolute;
+            width: 80px;
+            height: 30px;
+            left: 20px;
+            top: 8px;
+
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 54px; 
+        }
+
+        .github {
+
+            /* Here we set GitHub's icon in the website's footer */
+
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 1230px;
+            top: 610px;
+
+        }
+
+        .twitter {
+
+            /* Here we set Twitter's icon in the website's footer */
+
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 1270px;
+            top: 610px;
+        }
+
+
+    </style>
+<body>
+
+    <!-- Here we have the structure of our website, where we embed the CSS functions from before.  -->
+
+    <header>
+        <h1> Platzi Game </h1>
+    </header>
+
+    <div class="hiisi_card">
+        <p><h2>HIISI</h2></p>
+    </div>
+    <div class="kuu_card">
+        <p><h2>KUU</h2></p>
+    </div>
+
+    <div class="hiisi"></div>
+    <div class="kuu"></div>
+
+    <div class="hiisi_life"></div>
+    <div class="kuu_life"></div>
+
+    <button class="hiisi_button">
+        <h3> Play! </h3>
+    </button>
+    <button class="kuu_button">
+        <h3> Play! </h3>
+    </button>
+
+    <footer>
+
+        <!-- In the footer we add the author's name and social's logos, with the appropiate link to his profiles -->
+
+        <p> Made by @XaviGrowth </p>
+        <div class="github">
+            <a href="https://github.com/XavierCarrera">
+                <img src="icons8-github-24.png">
+            </a>
+        </div>
+        <div class="twitter">
+            <a href="https://twitter.com/XaviGrowth">
+                <img src="icons8-twitter-squared-24.png">
+            </a>
+        </div>
+    </footer>
+    
+</body>
+</html> 
+
+<!-- Thanks for reviewing my code. This the first time I ever layout a website and implement a DOM -->
