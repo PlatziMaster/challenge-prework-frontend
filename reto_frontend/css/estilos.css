@@ -1,0 +1,93 @@
+body, h1 {
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+}
+/* ---------------------- ---------------------- ----------------------- header start here */
+
+h1 {
+  font-size: 60px;
+  line-height: 90px;
+  color: #100303;
+  padding-top: 60px;
+  text-align: center;
+}
+
+/* ---------------------- ---------------------- ----------------------- Section start here */
+.section_container {
+  display: flex;
+  margin-top: 28px;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+}
+
+.buttons_container {
+  display: flex;
+  width: 215px;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.button_play {
+  background: #1A46E5;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+
+.image_container {
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  width: 370px;
+  height: 231px;
+  overflow: hidden;
+  display: flex;
+}
+
+.image_container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+
+}
+
+.section_player_one {
+  background-color: #43D8C9;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  margin: 0 71px;
+  width: 467px;
+  height: 582px;
+}
+
+.section_player_two {
+  background-color: #FFBD11;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  margin: 0 71px;
+  width: 467px;
+  height: 582px;
+}
+
+
+
+
+/* ---------------------- ---------------------- ----------------------- Footer start here */
+.footer_cotainer {
+  display: flex;
+  justify-content:flex-end;
+  margin-right: 30px;
+}
+
+.footer_cotainer p {
+  margin-right: 35px;
+}
+
+.footer_link_github {
+  text-decoration: none;
+}
