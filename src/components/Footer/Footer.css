@@ -1,0 +1,33 @@
+.footer { 
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 1rem;
+  padding-right: 1.75rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer__legend {
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+
+.footer__icons-list {
+  display: flex;
+  list-style: none;
+}
+
+.footer__icons-list li:not(:first-of-type) {
+  margin-left: 0.75rem;
+}
+
+.footer__icons-list li a {
+  display: flex;
+  align-items: center;
+}
