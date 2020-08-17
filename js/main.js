@@ -23,7 +23,7 @@ function player1() {
     
     document.getElementById("progress-life-player2").style.backgroundColor = "#1A46E5"  
 
-    var player1 = document.getElementById("progress-life-por-player2").innerHTML = Math.floor(Math.random() * 100 ) + '%'
+    var player1 = document.getElementById("progress-life-por-player2").innerHTML = Math.floor(Math.random() * 100) + '%'
 
     if (player1 === "0%") {    
         open("#miModal", "width=120,height=300,scrollbars=NO")     
