@@ -1,0 +1,190 @@
+.character__container {
+  margin: 0 auto;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.character__body {
+  position: relative;
+  width: 10rem;
+  height: 11rem;
+  background-color: #0e3441;
+  border-radius: 2rem;
+}
+
+.character__body::before {
+  position: absolute;
+  content: '';
+  right: -1rem;
+  bottom: 1rem;
+  width: 2rem;
+  height: 6rem;
+  background-color: #00b0ad;
+  border-radius: 50px;
+}
+
+.character__body::after {
+  position: absolute;
+  content: '';
+  left: -0.75rem;
+  bottom: 1rem;
+  width: 2rem;
+  height: 6rem;
+  background-color: #008790;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.character__antenna--left {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  width: 1.5rem;
+  height: 4rem;
+  border-radius: 50px;
+  background-color: #a8d2e8;
+}
+
+.character__antenna--right {
+  width: 1.5rem;
+  height: 4rem;
+  margin-bottom: -1.5rem;
+  margin-left: 0.5rem;
+  border-radius: 50px;
+  background-color: #5cbee3;
+}
+
+.character__eyes {
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+  width: 1.5rem;
+  height: 0.5rem;
+  background-color: #cad422;
+  border-radius: 50px;
+}
+
+.character__eyes::before {
+  position: absolute;
+  content: '';
+  left: 4rem;
+  width: 1.5rem;
+  height: 0.5rem;
+  background-color: #cad422;
+  border-radius: 50px;
+}
+
+.character__mouth {
+  position: absolute;
+  top: 5.5rem;
+  left: 0.5rem;
+  width: 8rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: #00b0ad;
+}
+
+.points__mouth {
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 50px;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.points__mouth::before {
+  position: absolute;
+  content: '';
+  left: 5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.teeth__container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.teeth__container--down {
+  position: absolute;
+  bottom: 0rem;
+  left: 0.75rem;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  transform: rotate(180deg);
+}
+
+.teeth__1 {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0 0 50% 50%;
+  background-color: #55c7d9;
+}
+
+.teeth__2 {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0 0 50% 50%;
+  background-color: #55c7d9;
+}
+
+.teeth__3 {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0 0 50% 50%;
+  background-color: #55c7d9;
+}
+
+.teeth__4 {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0 0 50% 50%;
+  background-color: #55c7d9;
+}
+
+.teeth__5 {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0 0 50% 50%;
+  background-color: #55c7d9;
+}
+
+.character__feets {
+  position: absolute;
+  width: 2rem;
+  height: 2.5rem;
+  bottom: -2.5rem;
+  left: 2.5rem;
+  border-radius: 0 0 50px 50px;
+  background-color: #001623;
+}
+
+.character__feets::before {
+  position: absolute;
+  content: '';
+  width: 2rem;
+  height: 2.5rem;
+  left: 3rem;
+  border-radius: 0 0 50px 50px;
+  background-color: #0e3441;
+}
+
+.character__feets::after {
+  position: absolute;
+  content: '';
+  width: 7.5rem;
+  height: 1rem;
+  left: -0.75rem;
+  bottom: -0.25rem;
+  border-radius: 50px;
+  background-color: #a8d2e7;
+  z-index: -1;
+}

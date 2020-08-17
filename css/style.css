@@ -11,6 +11,10 @@
   --black-color: #000000;
 }
 
+html {
+  font-size: 8px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   max-width: 1440px;
@@ -23,7 +27,7 @@ header {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 5rem;
   line-height: 50px;
   color: #100303;
 }
@@ -94,6 +98,74 @@ header {
 .card_actions {
   margin: 30px;
   height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_actions__live {
+  width: 18rem;
+  height: 10rem;
+  text-align: center;
+}
+
+.card_actions__percentage {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 5rem;
+  color: var(--white-color);
+}
+
+.card_actions__percentage--graphic {
+  width: 100%;
+  height: 3.5rem;
+  border-radius: 50px;
+  border: 3px solid var(--black-color);
+}
+
+.card_actions__percentage--graphic.life_100 {
+  background: var(--pink-color);
+}
+
+.card_actions__percentage--graphic.life_90 {
+  background: linear-gradient(to right, var(--pink-color) 90%, var(--blue-color) 10%);
+}
+
+.card_actions__percentage--graphic.life_80 {
+  background: linear-gradient(to right, var(--pink-color) 80%, var(--blue-color) 20%);
+}
+
+.card_actions__percentage--graphic.life_70 {
+  background: linear-gradient(to right, var(--pink-color) 70%, var(--blue-color) 30%);
+}
+
+.card_actions__percentage--graphic.life_60 {
+  background: linear-gradient(to right, var(--pink-color) 60%, var(--blue-color) 40%);
+}
+
+.card_actions__percentage--graphic.life_50 {
+  background: linear-gradient(to right, var(--pink-color) 50%, var(--blue-color) 50%);
+}
+
+.card_actions__percentage--graphic.life_40 {
+  background: linear-gradient(to left, var(--blue-color) 60%, var(--pink-color) 40%);
+}
+
+.card_actions__percentage--graphic.life_30 {
+  background: linear-gradient(to left, var(--blue-color) 70%, var(--pink-color) 30%);
+}
+
+.card_actions__percentage--graphic.life_20 {
+  background: linear-gradient(to left, var(--blue-color) 80%, var(--pink-color) 20%);
+}
+
+.card_actions__percentage--graphic.life_10 {
+  background: linear-gradient(to left, var(--blue-color) 90%, var(--pink-color) 10%);
+}
+
+.card_actions__percentage--graphic.life_0 {
+  background: var(--blue-color);
 }
 
 .card_actions--button {
@@ -104,12 +176,17 @@ header {
   color: var(--white-color);
   border: 3px solid #000000;
   box-sizing: border-box;
-
+  outline: none;
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 30px;  
+  box-shadow: 1px 3px 0px 0px rgba(0,0,0);
+}
+
+.card_actions--button.disabled {
+  background-color: grey;
 }
 
 .card_body {
@@ -121,10 +198,86 @@ header {
   border: 3px solid var(--black-color);
   box-sizing: border-box;
   border-radius: 20px;
+  display: flex;
 }
 
-footer {
-  margin-top: 30px;
-  text-align: right;
+.footer {
+
+  margin-top: 20px;
   margin-right: 50px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
+
+.footer_icon {
+  margin: 0 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal__container {
+  background-color: #fefefe;
+  margin: 6% auto;
+  padding: 20px;
+  border: 3px solid var(--black-color);
+  width: 70%;
+  height: 65%;
+  border-radius: 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.card-winner {
+  display: flex;
+  padding: 5% 10%;
+  justify-content: space-around;
+}
+
+.card__gif {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 20px;
+  border: 2px solid var(--black-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card__info {
+  margin: auto 0;
+  text-align: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.btn__play--again {
+  background-color: var(--blue-color);
+  color: white;
+  padding: 14px 40px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3rem;
+  border-radius: 50px;
+  border: 3px solid var(--black-color);  
+  outline: none;
+}
+
