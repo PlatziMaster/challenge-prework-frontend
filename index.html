@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/Estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <div class="content">
+            <h1>Platzi Game</h1>
+            <div class="gamers">
+                <div class="card one">
+                    <h2>Player 1</h2>
+                    <div class="controles">
+                        <p id="life_count_one">100%</p>
+                        <div class="barra">
+                            <div class="progress" id="progressone"></div>
+                        </div>
+                        <div class="boton botone" onclick="botonesJuegoOne()">
+                            Play
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="./Imagenes/character001.png" alt="">
+                    </div>
+                </div>
+                <div class="card two">
+                    <h2>Player 2</h2>
+                    <div class="controles">
+                        <p id="life_count_two">100%</p>
+                        <div class="barra">
+                            <div class="progress" id="progresstwo"></div>
+                        </div>
+                        <div class="boton bottwo" onclick="botonesJuegoTwo()">
+                            Play
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="./Imagenes/character002.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="firma">
+        <p>Hecho por @JuanFe98</p>
+        <ul>
+            <li>
+                <a href="https://github.com/JuanFeA98">
+                    <img src="./Imagenes/github.png" alt="Icono de github">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/JuanFeAngel98">
+                    <img src="./Imagenes/twitter.png" alt="Icono de twitter">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/juanfean/?hl=es-la">
+                    <img src="./Imagenes/instagram.png" alt="Icono de instragram">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <section class="resultado">
+        <img src="./Imagenes/message001.png" alt="">
+        <div class="message">
+            <p>The winner is</p>
+            <p id="winner">Player 1</p>
+            <button>
+                <a href="./index.html">
+                    Play Again
+                </a>
+            </button>
+        </div>
+    </section>
+
+    <script src="./JS/index.js">
+    </script>
+</body>
+</html>
