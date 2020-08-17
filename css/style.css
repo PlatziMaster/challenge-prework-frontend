@@ -195,6 +195,21 @@ header{
     grid-row: 3;
 }
 
+.p1{
+    background-image: url("../assets/player1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: inherit;
+}
+.p2{
+    background-image: url("../assets/player2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+    
+}
+
+
 
 .flex{
 	width: 100%;

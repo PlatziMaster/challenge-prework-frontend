@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platzi Game</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        
-    <script src="./js/juego.js"></script>
 </head>
 <body>
     <span class="f1 bg"></span>
@@ -24,35 +20,35 @@
                 <h3 class="player-title">Player 1</h3>
                 <div class="status-area">
                     <div class="status">
-                        <span class=" healt_avg " id="payer1-healt_avg-txt">20</span>
+                        <span class="healt_avg" id="player1-healt_avg-txt">66</span>
                         <span class="healt_avg">%</span>
                         <div class="vida">
                             <div class="salud"></div>
                         </div>
                     </div>
-                    <div class="btn-play">
+                    <div class="btn-play" id="btn-player1">
                         <a>Play</a>
                     </div>
                 </div>
-                <div class="char">
-
+                <div class="char p1">
+                    
                 </div>
             </div>
             <div class="player2 player-space">
                 <h3 class="player-title">Player 2</h3>
                 <div class="status-area">
                     <div class="status">
-                        <span class="healt_avg payer2-healt_avg-txt">20</span>
+                        <span class="healt_avg" id="player2-healt_avg-txt">22</span>
                         <span class="healt_avg">%</span>
                         <div class="vida">
                             <div class="salud"></div>
                         </div>
                     </div>
-                    <a class="btn-play">Play</a>
+                    <a class="btn-play" id="btn-player2">Play</a>
                     
                 </div>
-                <div class="char">
-
+                <div class="char p2">
+                    
                 </div>
             </div>
         </section>
@@ -80,8 +76,8 @@
             </div>
         </div>
     </div>
-  
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/juego.js"></script>
     <script src="./js/giphy.js"></script>
 
 </body>
