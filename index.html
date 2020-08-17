@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+      <link rel="stylesheet" href="css/characters.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Challege Master Platzi</title>
   </head>
 
@@ -18,25 +25,136 @@
     <section id="lienzo" class="container">
       <div class="player1">
         <h3>Player 1</h3>
-        <div>
-          <div class="action-bar">
-            <div id="bar">
-              <div id="life"></div>
+        
+        <div class="porcent-life">
+          <h4 id="porcent">100%</h4>
+        </div>
+
+        <div class="action-bar">
+
+          <div id="bar">
+            <div id="life"></div>
+          </div>
+
+          <div id="button-circle">
+            <a class="button-play" onclick="accion()">Play</a>
+          </div>
+        </div>
+
+        <div class="character-box">
+          <div class="content-draw"></div>
+          <div class="face"></div>
+          <div class="nose"></div>
+          <div class="beard"></div>
+          <div class="mouth"></div>
+          <div class="smile"></div>
+          <div class="hair"></div>
+          <div class="circles"></div>
+          <div class="circles2"></div>
+          <div class="hair5"></div>
+
+          <div class="eyes-content">
+            <div class="eyebow"></div>
+            <div class="eyes"></div>
+            <div class="eyebow"></div>
+            <div class="eyes"></div>
+          </div>
+
+          <div class="body-character"></div>
+          <div class="arm"></div>
+
+          <div class="arm-right">
+            <div class="arm2"></div>
+            <div class="arm3"></div>
+          </div>
+          <div class="leg"></div>
+          <div class="leg2"></div>
+          <div class="sword"></div>
+          <div class="sword1"></div>
+          <div class="sword2"></div>
+          <div class="sword3"></div>
+          <div class="sword4"></div>
+        </div>
+      </div>
+
+      <div class="player2">
+        <h3>Player 2</h3>
+
+        <div class="porcent-life">
+          <h4 id="porcent2">100%</h4>
+        </div>
+
+        <div class="action-bar">
+
+          <div id="bar">
+            <div id="life2"></div>
+          </div>
+
+          <div id="button-circle2">
+            <a class="button-play" onclick="accion2()">Play</a>
+          </div>
+        </div>
+
+        <div class="character-box">
+          <div class="content-draw"></div>
+          <div class="face"></div>
+          <div class="nose"></div>
+          <div class="beard"></div>
+          <div class="mouth"></div>
+          <div class="smile"></div>
+          <div class="hair"></div>
+          <div class="circles"></div>
+          <div class="circles2"></div>
+          <div class="hair5"></div>
+
+          <div class="eyes-content">
+            <div class="eyebow"></div>
+            <div class="eyes"></div>
+            <div class="eyebow"></div>
+            <div class="eyes"></div>
+          </div>
+
+          <div class="body-character"></div>
+          <div class="arm"></div>
+
+          <div class="arm-right">
+            <div class="arm2"></div>
+            <div class="arm3"></div>
+          </div>
+          <div class="leg"></div>
+          <div class="leg2"></div>
+          <div class="sword"></div>
+          <div class="sword1"></div>
+          <div class="sword2"></div>
+          <div class="sword3"></div>
+          <div class="sword4"></div>
+        </div>
+      </div>
+    </section>
+    <!--Seccion de modal-->
+    <section id="modal">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>The winner is:</p>
+              <img id="imgModal" src="" alt="Imagen">
             </div>
-            <!-- <a href="#"></a> -->
-            <div id="button-circle">
-              <a class="button-play" href="#">PLAY</a>
             </div>
           </div>
         </div>
-        <div class="character-box"></div>
-      </div>
-      <div class="player2">
-        <h3>Player 2</h3>
       </div>
     </section>
     <footer class="footer">
-      <div>Made with ♥ by <a href="https://twitter.com">@raystarkey</a></div>
+      <div class="footer-content">
+        Made with ♥ by
+        <a href="https://platzi.com/@raymundo-sp/">@raymundo-sp</a>
+        <a href="https://github.com/raytho" class="logo-github"></a>
+        <a href="https://twitter.com/raystarkey" class="logo-twitter"></a>
+      </div>
     </footer>
   </body>
+  <script type="application/javascript" src="/js/index.js"></script>
 </html>
