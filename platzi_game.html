@@ -17,18 +17,18 @@
       <div class="circle xl"></div>
     </div>
 
-    <div class="modal hidden">
+    <div id="modal" class="modal">
       <div class="modal__info">
         <div class="modal__gif">
           <div class="gif_flexible">
-            <iframe class="giphy" src="https://giphy.com/embed/Y2sh5TrypYRbo4PAu8" width="480" height="446" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <!-- <iframe class="giphy" src="https://giphy.com/embed/Y2sh5TrypYRbo4PAu8" width="480" height="446" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> -->
           </div>
         </div>
         <div class="modal__texts">
           <div class="wraper">
             <h1>The winner is:</h1>
             <h1>Player 1</h1>
-            <button class="button">Play again</button>
+            <button id="again_btn" class="button">Play again</button>
           </div>
         </div>
       </div>
@@ -42,12 +42,12 @@
         <h3 class="player_card__title">Player 1</h3>
         <div class="player_card__info">
           <div class="player_card__life">
-            <div class=" player_card__life_percentage">50%</div>
+            <div id="player_one_number" class=" player_card__life_percentage">50%</div>
             <div class="button player_card__life_bar player_card__life_bar--total">
-              <div class="player_card__life_bar player_card__life_bar--current"></div>
+              <div id="player_one_bar" class="player_card__life_bar player_card__life_bar--current"></div>
             </div>
           </div>
-          <button class="button play_button">Play</button>
+          <button id="player_one_btn" class="button play_button">Play</button>
         </div>
         <div class="player_card__character_shelf">
           <!-- aqui dibujo el personaje del jugador -->
@@ -58,12 +58,12 @@
         <h3 class="player_card__title">Player 2</h3>
         <div class="player_card__info">
           <div class="player_card__life">
-            <div class=" player_card__life_percentage">20%</div>
+            <div id="player_two_number" class=" player_card__life_percentage">20%</div>
             <div class="button player_card__life_bar player_card__life_bar--total">
-              <div class="player_card__life_bar player_card__life_bar--current"></div>
+              <div id="player_two_bar" class="player_card__life_bar player_card__life_bar--current"></div>
             </div>
           </div>
-          <button class="button play_button blocked">Play</button>
+          <button id="player_two_btn" class="button play_button">Play</button>
         </div>
         <div class="player_card__character_shelf">
           <!-- aqui dibujo el personaje del jugador -->
