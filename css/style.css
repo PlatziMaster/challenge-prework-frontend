@@ -1,0 +1,122 @@
+h1, h2 {
+    font-family: "Poppins";
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+main header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main header h1 {
+    position: relative;
+    top: 150px;
+}
+
+.circulo{
+    background-color: #1A46E5;
+}
+
+.circulo__diminuto{
+    width: 49px;
+    height: 49px;
+    border-radius: 100%;
+    position: relative;
+    top: 99px;
+    left: -40px;
+
+}
+
+.circulo__pequeño{
+    width: 97px;
+    height: 97px;
+    border-radius: 100%;
+    position: relative;
+    top: 16px;
+    left: -40px;
+}
+
+.circulo__mediano{
+    width: 195px;
+    height: 195px;
+    border-radius: 100%;
+    position: relative;
+    top: 26px;
+    left: -48px;
+    
+}
+
+.circulo__grande{
+    width: 335px;
+    height: 335px;
+    border-radius: 100%;
+    position: relative;
+    top: -222px;
+}
+
+main section{
+    display: flex;
+    justify-content: space-around;
+}
+
+main section .rect_player {
+    width: 45%;
+    height: 582px;
+    border: 5px solid black;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "titulo titulo"
+                         "cargando boton"
+                         "player player";
+    
+}
+
+main section .rect_player1{
+    background-color: #43D8C9;
+}
+
+main section .rect_player2 {
+    background-color:  #FFBD11;
+}
+
+.titulo_player {
+    grid-area: titulo;
+    
+}
+
+.cargando {
+    grid-area:cargando;
+    
+}
+
+.boton {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #1A46E5;
+    grid-area: boton;
+    
+}
+
+.player {
+    /* width: 10%; */
+    height: 250px;
+    border: 3px solid black;
+    border-radius: 15px;
+    grid-area: player;
+    
+}
+
+footer {
+    
+}
