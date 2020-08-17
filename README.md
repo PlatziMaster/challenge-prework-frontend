@@ -71,4 +71,6 @@ Platzi Game es un juego en el que compiten 2 personajes. Cada personaje comienza
 
 ## 7. Licencia
 
-challenge-frontend-01 se lanza bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+/d/Evo/2020/platzi/platzi_master/retos/challenge-prework-frontend/index.htmlchallenge-frontend-01 se lanza bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+
+
