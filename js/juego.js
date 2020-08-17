@@ -35,9 +35,19 @@ var ataque = 0;
 
         if (vidap1 <= 0) {
           console.log("El jugador 2 ha ganado");
-          
+          $('#modal').show();
+          $("#modal-content_winner-text-an").text("Player 2");
+          $("#play-again").click(function(){
+            $('#modal').hide();
+          });
         } else {
-          console.log("El jugador 1 ha ganado!! ")
+          console.log("El jugador 1 ha ganado!! ");
+          $('#modal').show();
+          $("#modal-content_winner-text-an").text("Player 1");
+          $("#play-again").click(function(){
+            $('#modal').hide();
+          });
+
         }
 
     
