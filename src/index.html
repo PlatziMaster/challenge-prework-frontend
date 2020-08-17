@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <title>Platzi Game</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <div id="modal--back" class="modal--back"></div>
+  <header>
+    <div class="circle-one"></div>
+    <div class="circle-two"></div>
+    <div class="circle-three"></div>
+    <div class="circle-four"></div>
+    <h1>Platzi Game</h1>
+  </header>
+  <div class="main">
+    <div class="player--container player--one">
+      <h2 class="player--name">Player 1</h2>
+      <span id="livePercent-playerOne" class="player--live-percent">100%</span>
+      <button id="player-one" class="button--play">Play</button>
+      <div class="progress--bar-background">
+        <div id="liveBar-playerOne" class="progress--bar-live_indicator"></div>
+      </div>
+      <div class="card--container">
+        <img src="./assets/images/player1.png" class="card--container-image image--one"></img>
+      </div>
+    </div>
+    <div class="player--container player--two">
+      <h2 class="player--name">Player 2</h2>
+      <span id="livePercent-playerTwo" class="player--live-percent">100%</span>
+      <button disabled id="player-two" class="button--play button--play-disabled">Play</button>
+      <div class="progress--bar-background">
+        <div id="liveBar-playerTwo" class="progress--bar-live_indicator"></div>
+      </div>
+      <div class="card--container">
+        <img src="./assets/images/player2.png" class="card--container-image"></img>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <span class="github--account">Made by @george28cs</span>
+    <a href="https://github.com/george28cs" class="social--media icon--one">
+      <i class="github-icon"></i>
+    </a>
+    <a href="https://www.facebook.com/Manuelito50/" class="social--media icon--two">
+      <i class="fb-icon"></i>
+    </a>
+  </footer>
+
+  <div id="modal" class="modal">
+    <img id="random-gif" class="random-gif">
+    </img>
+    <span class="winner-is">The winner is:</span>
+    <span id="winner" class="winner--name">Player 2</span>
+    <button id="button-reset" class="button--play-again">Play again</button>
+  </div>
+
+  
+  <script src="./assets/scripts/index.js"></script>
+</body>
+</html>
