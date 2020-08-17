@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Platzi Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+     
+    <main class="container">
+
+        <div class="circle-one" ></div>
+        <div class="circle-two" ></div>
+        <div class="circle-three" ></div>
+        <div class="circle-four" ></div>
+
+        <div class="titulo">
+            <h1>Platzi Game</h1>
+        </div>
+
+        <section class="players">
+
+            <div class="player1">
+
+               <div class="player-title">
+                   <h2>Player 1</h2>
+               </div>
+
+               <section class="player-progress">
+
+                   <section class="progress-life">
+                        <div class="progress-life-por">
+                            <h2 id="progress-life-por-player1">100%</h2>
+                        </div>
+
+                        <div class="progress-vida-por-barra" id="progress-life-player1">
+                            
+                        </div>
+                   </section>
+
+                   <section class="progress-play" id="player1">                        
+                        <div id="player1"  class="progress-play-title">
+                            <h2>Play</h2>
+                        </div>
+                   </section>
+
+               </section>
+
+               <figure class="figure-container" id="figure-container">
+                   <img src="img/personaje1.png" alt="">
+               </figure>
+
+            </div>
+
+            <div class="player1">
+
+                <div class="player-title">
+                    <h2>Player 2</h2>
+                </div>
+ 
+                <section class="player-progress">
+ 
+                    <section class="progress-life">
+                         <div class="progress-life-por">
+                             <h2 id="progress-life-por-player2">100%</h2>
+                         </div>
+ 
+                         <div class="progress-vida-por-barra" id="progress-life-player2" max="100">
+                             
+                         </div>
+
+                    </section>
+
+                    <section class="progress-play" id="player2">                        
+                         <div class="progress-play-title">
+                             <h2>Play</h2>
+                         </div>
+                    </section>
+ 
+                </section>
+ 
+                <figure class="figure-container">
+                    <img src="img/personaje2.png" alt="">
+                </figure>
+             </div>
+        </section> 
+    </main>
+
+    
+    <div id="miModal" class="modal">
+
+        <div class="modal-contenido">
+            
+            <figure class="modal-contenido-img">
+                <img id="modal-image" class="modal-image" src="" width="100%" height="100%">
+            </figure>
+
+            <div class="modal-contenido-winner">
+                <h2>the winner is:</h2>
+                <h3>Player 1</h3>
+                <button id="btn-closed">Play again</button>
+            </div>            
+
+        </div>  
+
+    </div>
+ 
+
+    <footer  class="footer">
+        <div class="footer-container">
+            <h4>Made by</h4>
+            <p>@Rijutope06</p>
+            <a href="https://github.com/Rijutope06" target="_blank"> <img src="img/icons8-github-48.png" width="40px" height="40px" alt="" srcset=""></a>
+            <a href="https://www.linkedin.com/in/ricardojuniortorresperez/" target="_blank"> <img src="img/icons8-linkedin-2-50.png" width="40px" height="40px" alt="" srcset=""></a>  
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
