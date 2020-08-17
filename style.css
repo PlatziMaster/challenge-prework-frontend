@@ -177,7 +177,6 @@ a img{
 .container {
     height: 200px;
     width: 400px;
-    background-color: white;
     position: absolute;
 }
 .character{
@@ -185,6 +184,192 @@ a img{
     top: 10px;
     left: 150px
 
+}
+
+.face-2{
+    background-color: pink;
+    height: 60px;
+    width: 30px;
+    border-radius: 40px;
+}
+
+.gorra-2{
+    background-color: yellow;
+    width: 30px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.earl-2, .earr-2{
+    width: 12px;
+    height: 12px;
+    background-color: pink;
+    border-radius: 50%;
+}
+.earl-2{
+    position: relative;
+    left: -5px;
+}
+.earr-2{
+    position: relative;
+    left: 23px;
+    bottom: 12px;
+}
+
+.earr-center-2{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: hotpink;
+    position: relative;
+    left: 6px;
+    top: 3px;
+}
+
+.earl-center-2{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: hotpink;
+    position: relative;
+    left: 3px;
+    top: 4px;
+}
+
+.ojo-r-2{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    left: 8px;
+    top: 7px;
+}
+
+.ojo-l-2{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    left: 18px;
+    top: 5px;
+}
+.nariz-2{
+    width: 5px;
+    height: 10px;
+    background-color: rgb(235, 57, 146);
+    position: relative;
+    left: 11px;
+    bottom: 22px;
+}
+.sonrisa-2{
+    width: 15px;
+    height: 5px;
+    background-color: hotpink;
+    position: absolute;
+    left: 8px;
+    bottom: 3px;
+    z-index: 3;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.barba1-2{
+    width: 33px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    right: 3px;
+    top: 4px;
+    z-index: 1;
+}
+.barba2-2{
+    width: 12px;
+    height: 12px;
+    /* background-color: yellow; */
+    position: relative;
+    border-radius: 50%;
+    bottom: 43px;
+    right: 5px;
+}
+.barba3-2{
+    width: 12px;
+    height: 12px;
+    /* background-color: black; */
+    position: relative;
+    border-radius: 50%;
+    bottom: 53px;
+    left: 22px;
+}
+.cuello-2{
+    width: 12px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    left: 8px;
+    bottom: 50px;
+}
+.playera-2{
+    width: 40px;
+    height: 75px;
+    background-color: white;
+    position: relative;
+    bottom: 60px;
+    right: 5px;
+    border-radius: -2px;
+}
+.manga-left-2{
+    width: 15px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    bottom: 135px;
+    right: 20px;
+    border-radius: 5px;
+}
+.manga-right-2 {
+    width: 15px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    bottom: 156px;
+    left: 32px;
+    border-radius: 5px;
+}
+.brazo-right-2 {
+    width: 9px;
+    height: 39px;
+    background-color: pink;
+    position: relative;
+    bottom: 162px;
+    left: 35px;
+    border-radius: 5px;
+    box-shadow: 0 0 black;
+}
+.brazo-left-2 {
+    width: 9px;
+    height: 38px;
+    background-color: pink;
+    position: relative;
+    bottom: 202px;
+    left: -14px;
+    border-radius: 5px
+}
+.pantalon-2{
+    width: 20px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    bottom: 188px;
+    left: -5px;
+}
+.line-2{
+    width: 20px;
+    height: 50px;
+    background-color: gray;
+    position: relative;
+    bottom: 238px;
+    left: 15px;
 }
 
 .face{
