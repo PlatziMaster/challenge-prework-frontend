@@ -68,7 +68,9 @@ Platzi Game es un juego en el que compiten 2 personajes. Cada personaje comienza
 1. Hacer un "Fork" de este proyecto.
 2. Revolver el reto.
 3. Crear un Pull Request hacia este repositorio.
-
+/d/programacion/PlatziGame/PlatziGame.html
+/d/programacion/PlatziGame/css  
+Aun me falta aprender el Javascript ♥/d/programacion/PlatziGame/images
 ## 7. Licencia
 
 challenge-frontend-01 se lanza bajo la licencia [MIT](https://opensource.org/licenses/MIT).
