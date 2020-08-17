@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const barPlayerTwo = document.getElementById('player_two_bar')
   const againBtn = document.getElementById('again_btn')
   const modal = document.getElementById('modal')
+  const winner = document.getElementById('winner')
 
   class Player {
     constructor(name, life = 100) {
@@ -27,6 +28,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
       btnPlayerTwo.classList.add('blocked')
     }
     let players = [ new Player('Player 1'), new Player('Player 2')]
+    numberPlayerOne.innerHTML = `${players[0].life} %`
+    numberPlayerTwo.innerHTML = `${players[1].life} %`
+    barPlayerOne.style.width = `${players[0].life}%`
+    barPlayerTwo.style.width = `${players[1].life}%`
     let turn = 0
     let play = [ players, turn ]
     return play
@@ -61,11 +66,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   }
 
+  function updateLife(player) {
+    console.log(player)
+    if(turn === 0) {
+      numberPlayerOne.innerHTML = `${player.life} %`
+      barPlayerOne.style.width = `${player.life}%`
+    }else {
+      numberPlayerTwo.innerHTML = `${player.life} %`
+      barPlayerTwo.style.width = `${players[1].life}%`
+    }
+  }
+
   function youWin() {
     console.log('youWin')
     if(players[turn].life <= 0) {
       changeTurn()
       console.log(`The winner is: ${players[turn].name}`)
+      winner.innerHTML = `${players[turn].name}`
       modal.classList.remove('hidden')
     }
   }
@@ -78,6 +95,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     console.log(players)
     changeTurn()
     console.log(turn)
+    updateLife(players[turn])
     youWin()
   }
 
