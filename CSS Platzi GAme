@@ -1,0 +1,106 @@
+# challenge-prework-frontend
+🎮 Platzi Game css
+
+body {
+    background: #E5E5E5
+}
+
+a {
+    position: absolute;
+    color: #100303;
+    font-weight: bold;
+    font-family: poppins;
+}
+
+main .main-tex a{
+    width: 368px;
+    height: 90px;
+    left: 536px;
+    top: 103px;
+    font-size: 60px;
+    line-height: 90px;
+    color: #100303;
+}
+
+main .main-rect {
+    position: absolute;
+    background: #1A46E5;
+    border-radius: 100px;
+}
+
+main .main-rect div{
+    width: 49px;
+    height: 49px;
+    left: 1314;
+    top: 99px;
+}
+
+main .main-input .search-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    opacity:.45;
+}
+
+main .main-input .micro-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+main .main-buttons {
+    width: 530px;
+    margin: 0 auto;
+}
+main .main-buttons div {
+    display: inline-block;
+       
+}
+
+main .main-buttons button {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    left: 481px;
+    top: 407px;
+    background-color: #1A46E5;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+main .main-buttons button:hover {
+    left: 1090px;
+}
+
+main .main-buttons button:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: #000001;
+    color: #222;
+}
+
+footer {
+    bottom: 0;
+}
+
+footer .footer-right {
+    position: right;
+    width: 260;
+    height: 36px;
+    left: 931px;
+    top: 933px;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+footer .footer-img {
+    width: 40px;
+    height: 40px;
+    left: 1342;
+    top: 929px;
+}
