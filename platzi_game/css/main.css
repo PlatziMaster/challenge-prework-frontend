@@ -1,0 +1,123 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "circle1 game circle2";
+    width: 100vw;
+    justify-content: center;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    grid-area: game;
+}
+
+.game {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    /* border: red solid 1px; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 25% 50%;
+    grid-template-areas: "name name"
+                         "progress_bar Play"
+                         "character character";
+    justify-content: center;
+    justify-items: center;
+    /* align-items: center; */
+    height: 250px;
+    width: 180px;
+    padding: 10px;
+    color: white;
+    background-color: #43D8C9;
+    border: #000000 solid 1px;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.player1 {
+    background-color: #43D8C9;
+}
+
+.player2 {
+    background-color: #FFBD11;
+}
+
+.name {
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress_bar {
+    grid-area: progress_bar;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: 0 0 0 10px; */
+    font-size: 15px;
+}
+
+    .porcentaje {
+        display: flex;
+        justify-content: center;
+    }
+    .barra {
+        width: 100%;
+        height: 30%;
+        background-color: #FF89BB;
+        border: #000000 solid 1px;
+        border-radius: 20px;
+    }
+
+.buttom {
+    display: flex;
+    grid-area: Play;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A46E5;
+    width: 50px;
+    height: 50px;
+    border: #000000 solid 1px;
+    border-radius: 50%;
+    box-shadow: 0 2px #000000;
+}
+
+.character {
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    border: #000000 solid 1px;
+    border-radius: 10px;
+    grid-area: character;
+    margin: 10px;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.socialmedia {
+    display: flex;
+    
+}
