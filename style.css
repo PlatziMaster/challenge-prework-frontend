@@ -1,0 +1,559 @@
+body {
+    margin: 0;
+    background: #dedede;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+button {
+        background-color: #1A46E5; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 50%;
+}
+a img{
+    width: 30px;
+    height: 30px;
+}
+.vidaPlayer1{
+    position: relative;
+    top: 193px;
+}
+
+.btn-start {
+    width: 400px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 200px);
+    z-index: 2;
+}
+
+.player1 {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 182px;
+    top: 100px;
+    background: #43D8C9;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.player2 {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 791px;
+    top: 100px;
+    background: #FFBD11;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.play1 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 125px;
+    top: 333px;
+    background: #1A46E5;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+.play2 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 125px;
+    top: 50px;
+    background: #1A46E5;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+.hide {
+    display: none
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.modal {
+    width: 400px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 200px);
+    z-index: 3;
+  }
+
+
+
+  .progess-bar1{
+      position: relative;
+      width: 150px;
+      height: 40px;
+      border: 1px solid #000000;
+      top: 200px;
+  }
+
+  .progress-bar-fill1{
+      height: 100%;
+      background: pink;
+      transition: width .5s;
+  }
+ 
+  .progess-bar-value1{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+  }
+
+  .progess-bar2{
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #000000;
+    top: 200px;
+}
+
+.progress-bar-fill2{
+    height: 100%;
+    background: pink;
+    transition: width .5s;
+}
+
+.progess-bar-value2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.container {
+    height: 200px;
+    width: 400px;
+    position: absolute;
+}
+.character{
+    position: relative;
+    top: 10px;
+    left: 150px
+
+}
+
+.face-2{
+    background-color: pink;
+    height: 60px;
+    width: 30px;
+    border-radius: 40px;
+}
+
+.gorra-2{
+    background-color: yellow;
+    width: 30px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.earl-2, .earr-2{
+    width: 12px;
+    height: 12px;
+    background-color: pink;
+    border-radius: 50%;
+}
+.earl-2{
+    position: relative;
+    left: -5px;
+}
+.earr-2{
+    position: relative;
+    left: 23px;
+    bottom: 12px;
+}
+
+.earr-center-2{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: hotpink;
+    position: relative;
+    left: 6px;
+    top: 3px;
+}
+
+.earl-center-2{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: hotpink;
+    position: relative;
+    left: 3px;
+    top: 4px;
+}
+
+.ojo-r-2{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    left: 8px;
+    top: 7px;
+}
+
+.ojo-l-2{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    left: 18px;
+    top: 5px;
+}
+.nariz-2{
+    width: 5px;
+    height: 10px;
+    background-color: rgb(235, 57, 146);
+    position: relative;
+    left: 11px;
+    bottom: 22px;
+}
+.sonrisa-2{
+    width: 15px;
+    height: 5px;
+    background-color: hotpink;
+    position: absolute;
+    left: 8px;
+    bottom: 3px;
+    z-index: 3;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.barba1-2{
+    width: 33px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    right: 3px;
+    top: 4px;
+    z-index: 1;
+}
+.barba2-2{
+    width: 12px;
+    height: 12px;
+    /* background-color: yellow; */
+    position: relative;
+    border-radius: 50%;
+    bottom: 43px;
+    right: 5px;
+}
+.barba3-2{
+    width: 12px;
+    height: 12px;
+    /* background-color: black; */
+    position: relative;
+    border-radius: 50%;
+    bottom: 53px;
+    left: 22px;
+}
+.cuello-2{
+    width: 12px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    left: 8px;
+    bottom: 50px;
+}
+.playera-2{
+    width: 40px;
+    height: 75px;
+    background-color: white;
+    position: relative;
+    bottom: 60px;
+    right: 5px;
+    border-radius: -2px;
+}
+.manga-left-2{
+    width: 15px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    bottom: 135px;
+    right: 20px;
+    border-radius: 5px;
+}
+.manga-right-2 {
+    width: 15px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    bottom: 156px;
+    left: 32px;
+    border-radius: 5px;
+}
+.brazo-right-2 {
+    width: 9px;
+    height: 39px;
+    background-color: pink;
+    position: relative;
+    bottom: 162px;
+    left: 35px;
+    border-radius: 5px;
+    box-shadow: 0 0 black;
+}
+.brazo-left-2 {
+    width: 9px;
+    height: 38px;
+    background-color: pink;
+    position: relative;
+    bottom: 202px;
+    left: -14px;
+    border-radius: 5px
+}
+.pantalon-2{
+    width: 20px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    bottom: 188px;
+    left: -5px;
+}
+.line-2{
+    width: 20px;
+    height: 50px;
+    background-color: gray;
+    position: relative;
+    bottom: 238px;
+    left: 15px;
+}
+
+.face{
+    background-color: pink;
+    height: 60px;
+    width: 30px;
+    border-radius: 40px;
+}
+
+.gorra{
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.earl, .earr{
+    width: 12px;
+    height: 12px;
+    background-color: pink;
+    border-radius: 50%;
+}
+.earl{
+    position: relative;
+    left: -5px;
+}
+.earr{
+    position: relative;
+    left: 23px;
+    bottom: 12px;
+}
+
+.earr-center{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: hotpink;
+    position: relative;
+    left: 6px;
+    top: 3px;
+}
+
+.earl-center{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: hotpink;
+    position: relative;
+    left: 3px;
+    top: 4px;
+}
+
+.ojo-r{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    left: 8px;
+    top: 7px;
+}
+
+.ojo-l{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    left: 18px;
+    top: 5px;
+}
+.nariz{
+    width: 5px;
+    height: 10px;
+    background-color: rgb(243, 151, 197);
+    position: relative;
+    left: 11px;
+    bottom: 22px;
+}
+.sonrisa{
+    width: 15px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    left: 8px;
+    bottom: -0px;
+    z-index: 3;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.barba1{
+    width: 30px;
+    height: 20px;
+    background-color: black;
+    position: relative;
+    border-radius: 40%;
+    bottom: 21px;
+    z-index: 1;
+}
+.barba2{
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    position: relative;
+    border-radius: 50%;
+    bottom: 43px;
+    right: 5px;
+}
+.barba3{
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    position: relative;
+    border-radius: 50%;
+    bottom: 53px;
+    left: 22px;
+}
+.cuello{
+    width: 12px;
+    height: 20px;
+    background-color: pink;
+    position: relative;
+    left: 8px;
+    bottom: 50px;
+}
+.playera{
+    width: 40px;
+    height: 70px;
+    background-color: rgb(236, 236, 49);
+    position: relative;
+    bottom: 60px;
+    right: 5px;
+    border-radius: 5px;
+}
+.manga-left{
+    width: 15px;
+    height: 20px;
+    background-color: rgb(236, 236, 49);
+    position: relative;
+    bottom: 130px;
+    right: 13px;
+    border-radius: 5px
+}
+.manga-right{
+    width: 15px;
+    height: 20px;
+    background-color: rgb(236, 236, 49);
+    position: relative;
+    bottom: 150px;
+    left: 28px;
+    border-radius: 5px;
+}
+.brazo-right {
+    width: 9px;
+    height: 39px;
+    background-color: pink;
+    position: relative;
+    bottom: 162px;
+    left: 35px;
+    border-radius: 5px;
+    box-shadow: 0 0 black;
+}
+.brazo-left {
+    width: 9px;
+    height: 38px;
+    background-color: pink;
+    position: relative;
+    bottom: 202px;
+    left: -14px;
+    border-radius: 5px
+}
+.pantalon{
+    width: 40px;
+    height: 50px;
+    background-color: rgb(0, 195, 255);
+    position: relative;
+    bottom: 188px;
+    left: -5px;
+}
+.line{
+    width: 1px;
+    height: 40px;
+    background-color: black;
+    position: relative;
+    bottom: 233px;
+    left: 15px;
+}

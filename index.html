@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="modal" class="modal hide">
+        <h4>El ganador es: <span id="ganador"></span> </h4>
+        <!-- <video
+        src="https://api.giphy.com/v1/gifs/random?api_key=E8MSVPKXdgFCMrLPQusBYCCVZgeFmq3U&tag=&rating=g"></video> -->
+        <!-- <video
+            src="https://media1.giphy.com/media/3ohzdJIUn477Vc1zUc/giphy.gif?cid=3a1630d4f960a40e74989806f616133dde9b4059c251737c&rid=giphy.gif"></video>
+        <button onclick="reiniciar()">Play again</button> -->
+        <button onclick="reiniciar()">Play again</button>
+
+        <div class="out"></div>
+
+    </div>
+
+    <div class="player1">
+        <h1 class="title">Player 1</h1>
+        <!-- <img src="images/player1.png" alt="jugador1"> -->
+        <div class="container">
+            <div class="character">
+                <div class="face">
+                    <div class="gorra"></div>
+                    <div class="pelo"></div>
+                    <div class="ojo-r"></div>
+                    <div class="ojo-l"></div>
+                    <div class="earl">
+                        <div class="earl-center"></div>
+                    </div>
+                    <div class="earr">
+                        <div class="earr-center"></div>
+                    </div>
+                    <div class="nariz"></div>
+                    <div class="sonrisa"></div>
+                    <div class="barba1"></div>
+                    <div class="barba2"></div>
+                    <div class="barba3"></div>
+                    <div class="cuello"></div>
+                    <div class="playera"></div>
+                    <div class="manga-left"></div>
+                    <div class="manga-right"></div>
+                    <div class="brazo-right"></div>
+                    <div class="brazo-left"></div>
+                    <div class="pantalon"></div>
+                    <div class="line"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="progess-bar1">
+            <div class="progess-bar-value1">100%</div>
+            <div class="progress-bar-fill1"></div>
+        </div>
+
+        <h2 class="vidaPlayer1">Vida: <span id="vida1">100</span> </h2>
+        <button id="play1" class="play1" onclick="juego1()">
+            <h2>Play</h2>
+        </button>
+    </div>
+
+    <div class=" player2">
+        <h1 class="title">Player 2</h1>
+        <!-- <img src="images/player2.png" alt="jugador1"> -->
+        <div class="container">
+            <div class="character">
+                <div class="face-2">
+                    <div class="gorra-2"></div>
+                    <div class="pelo-2"></div>
+                    <div class="ojo-r-2"></div>
+                    <div class="ojo-l-2"></div>
+                    <div class="earl-2">
+                        <div class="earl-center-2"></div>
+                    </div>
+                    <div class="earr-2">
+                        <div class="earr-center-2"></div>
+                    </div>
+                    <div class="nariz-2"></div>
+                    <div class="sonrisa-2"></div>
+                    <div class="barba1-2"></div>
+                    <div class="barba2-2"></div>
+                    <div class="barba3-2"></div>
+                    <div class="cuello-2"></div>
+                    <div class="playera-2"></div>
+                    <div class="manga-left-2"></div>
+                    <div class="manga-right-2"></div>
+                    <div class="brazo-right-2"></div>
+                    <div class="brazo-left-2"></div>
+                    <div class="pantalon-2"></div>
+                    <div class="line-2"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="progess-bar2">
+            <div class="progess-bar-value2">100%</div>
+            <div class="progress-bar-fill2"></div>
+
+            <h2>Vida: <span id="vida2">100</span> </h2>
+            <button id="play2" class="play2 hide" onclick="juego2()">
+                <h2>Play</h2>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <h3>luisglopez7777</h3>
+        <div>
+            <a href="https://twitter.com/luisglopez7777/">
+                <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // let API_KEY = 'E8MSVPKXdgFCMrLPQusBYCCVZgeFmq3U'
+        let api = 'https://api.giphy.com/v1/gifs/random'
+        let apiKey = '?api_key=E8MSVPKXdgFCMrLPQusBYCCVZgeFmq3U'
+        // function setup() {
+        //     // noCanvas()
+        //     let url = api + apiKey
+        //     loadJSON(url, gotData)
+        // }
+        // function gotData(data) {
+        //     console.log(data)
+        // }
+        // setup()
+        function setup() {
+            fetch(api + apiKey)
+                .then(response => response.json())
+                .then(content => {
+                    console.log(content.data)
+                    let fig = document.createElement('figure')
+                    let img = document.createElement('img')
+                    let fc = document.createElement('figcaption')
+                    img.src = content.data.fixed_height_downsampled_url
+                    img.alt = content.data.id
+                    fig.appendChild(img)
+                    fig.appendChild(fc)
+
+                    let out = document.querySelector('.out')
+                    out.insertAdjacentElement('afterbegin', fig)
+
+                })
+                // .then()
+                .catch(err => {
+                    console.log(err)
+                })
+        }
+        setup()
+
+        class ProgressBar {
+            constructor(element, initialValue = 100, numero) {
+                this.valueElem = element.querySelector(`.progess-bar-value${numero}`)
+                this.fillElem = element.querySelector(`.progress-bar-fill${numero}`)
+
+                this.setValue(initialValue)
+            }
+            setValue(newValue) {
+                if (newValue < 0) {
+                    newValue = 0
+                }
+
+                if (newValue > 100) {
+                    newValue = 0
+                }
+                this.value = newValue
+                this.update()
+            }
+            update() {
+                const percentage = this.value + '%'
+                this.fillElem.style.width = percentage
+                this.valueElem.textContent = percentage
+            }
+        }
+
+        function Player(attackOn) {
+            this.state = {
+                health: 100
+            }
+            const pb = new ProgressBar(document.querySelector(`.progess-bar${attackOn}`), 100, attackOn)
+
+
+            this.attackOn = attackOn
+            this.attack = function (receptor, vida, ganador) {
+                receptor.state.health -= Math.floor(Math.random() * 90)
+
+                pb.setValue(receptor.state.health)
+                document.getElementById(vida).innerHTML = receptor.state.health;
+                if (receptor.state.health <= 0) {
+                    pb.setValue(100)
+                    modal.classList.remove('hide')
+                    document.getElementById('ganador').innerHTML = ganador;
+                }
+            }
+        }
+
+        function reiniciar() {
+            modal.classList.add('hide')
+            player1.state.health = 100
+            player2.state.health = 100
+            document.getElementById('vida1').innerHTML = 100;
+            document.getElementById('vida2').innerHTML = 100;
+            play2.classList.add('hide')
+            play1.classList.remove('hide')
+
+        }
+
+        const player1 = new Player(2)
+        const player2 = new Player(1)
+
+
+        function juego1() {
+            player1.attack(player2, 'vida2', 'player1')
+            play1.classList.add('hide')
+            play2.classList.remove('hide')
+        }
+
+        function juego2() {
+            player2.attack(player1, 'vida1', 'player2')
+            play2.classList.add('hide')
+            play1.classList.remove('hide')
+        }
+
+    </script>
+
+</body>
+
+</html>
