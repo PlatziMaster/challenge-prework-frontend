@@ -12,9 +12,12 @@
 
     <div id="modal" class="modal hide">
         <h4>El ganador es: <span id="ganador"></span> </h4>
-        <video
-            src="https://media1.giphy.com/media/YnGEtxGLX7ltT32Okq/giphy-downsized-small.mp4?cid=3a1630d4d1ca8e2ee9b0c34570f33cc330009024d1d43444&rid=giphy-downsized-small.mp4"></video>
-        <button onclick="reiniciar()">Play again</button>
+        <!-- <video
+        src="https://api.giphy.com/v1/gifs/random?api_key=E8MSVPKXdgFCMrLPQusBYCCVZgeFmq3U&tag=&rating=g"></video> -->
+        <!-- <video
+            src="https://media1.giphy.com/media/3ohzdJIUn477Vc1zUc/giphy.gif?cid=3a1630d4f960a40e74989806f616133dde9b4059c251737c&rid=giphy.gif"></video>
+        <button onclick="reiniciar()">Play again</button> -->
+        <div class="out"></div>
 
     </div>
 
@@ -123,6 +126,40 @@
 
     <script>
         // let API_KEY = 'E8MSVPKXdgFCMrLPQusBYCCVZgeFmq3U'
+        let api = 'https://api.giphy.com/v1/gifs/random'
+        let apiKey = '?api_key=E8MSVPKXdgFCMrLPQusBYCCVZgeFmq3U'
+        // function setup() {
+        //     // noCanvas()
+        //     let url = api + apiKey
+        //     loadJSON(url, gotData)
+        // }
+        // function gotData(data) {
+        //     console.log(data)
+        // }
+        // setup()
+        function setup() {
+            fetch(api + apiKey)
+                .then(response => response.json())
+                .then(content => {
+                    console.log(content.data)
+                    let fig = document.createElement('figure')
+                    let img = document.createElement('img')
+                    let fc = document.createElement('figcaption')
+                    img.src = content.data.fixed_height_downsampled_url
+                    img.alt = content.data.id
+                    fig.appendChild(img)
+                    fig.appendChild(fc)
+
+                    let out = document.querySelector('.out')
+                    out.insertAdjacentElement('afterbegin', fig)
+
+                })
+                // .then()
+                .catch(err => {
+                    console.log(err)
+                })
+        }
+        setup()
 
         class ProgressBar {
             constructor(element, initialValue = 100, numero) {
@@ -158,7 +195,7 @@
 
             this.attackOn = attackOn
             this.attack = function (receptor, vida, ganador) {
-                receptor.state.health -= Math.floor(Math.random() * 20)
+                receptor.state.health -= Math.floor(Math.random() * 90)
 
                 pb.setValue(receptor.state.health)
                 document.getElementById(vida).innerHTML = receptor.state.health;
