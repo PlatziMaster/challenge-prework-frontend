@@ -1,46 +1,84 @@
 body {
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     display: grid;
     margin: 0;
     padding: 0;
 }
 
-header {
-    display: flex;
-    width: 100%;
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100vw;
     justify-content: center;
 }
 
-.players {
+header h1 {
+    
+}
+
+.game {
     display: flex;
-    height: 150px;
+    height: 300px;
+    width: 100%;
     border: red solid 1px;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.player1 {
-    display: flex;
+.players {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 30% 40%;
+    grid-template-areas: "name name"
+                         "progress_bar Play"
+                         "character character";
     justify-content: center;
     /* align-items: center; */
-    height: 100px;
-    width: 80px;
+    height: 250px;
+    width: 180px;
+    padding: 10px;
     color: white;
     background-color: #43D8C9;
     border: #000000 solid 1px;
     border-radius: 10px;
+    gap: 5px;
+}
+
+.player1 {
+    background-color: #43D8C9;
 }
 
 .player2 {
-    display: flex;
-    height: 100px;
-    width: 80px;
-    font-weight: 500;
-    color: white;
     background-color: #FFBD11;
+}
+
+.name {
+    grid-area: name;
+}
+
+.progress_bar {
+    grid-area: progress_bar;
+}
+
+.buttom {
+    display: flex;
+    grid-area: Play;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A46E5;
+    width: 50px;
+    height: 50px;
+    border: #000000 solid 1px;
+    border-radius: 50%;
+}
+
+.character {
+    background-color: #fff;
     border: #000000 solid 1px;
     border-radius: 10px;
-    justify-content: center;
+    grid-area: character;
+    margin: 10px;
 }
 
 .footer {
