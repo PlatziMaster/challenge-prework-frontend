@@ -25,7 +25,7 @@ class Player {
         this._playerOptions =  {
             name: `Player ${Player.playerNumber}`,
             health: 100,
-            attackDamage: Math.floor(Math.random() * (90 - 70) + 70)
+            attackDamage: Math.floor(Math.random() * (30 - 20) + 20)
         }
         this.generate();
         Player.playerNumber++;   
