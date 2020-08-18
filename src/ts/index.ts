@@ -6,7 +6,4 @@ init();
 
 const platziGame = PlatziGame.gameInstance();
 
-platziGame.addNewPlayer(new Player);
-platziGame.addNewPlayer(new Player);
-
 platziGame.startGame();

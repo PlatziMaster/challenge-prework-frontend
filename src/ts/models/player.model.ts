@@ -15,6 +15,8 @@ class Player {
     private playerPlayButton: HTMLDivElement;
     private playerLife: HTMLElement;
     private playerProgress: HTMLElement;
+
+    private playersContainer: HTMLElement;
     private playerNode: HTMLDivElement;
 
     playerAttackAction: Observable<Event>;
@@ -109,16 +111,20 @@ class Player {
     }
 
     private attachElementToNode(element: string) {
-        const playersContainer: HTMLElement = document.getElementById('players');
+        this.playersContainer= document.getElementById('players');
         this.playerNode = document.createElement('div');
         this.playerNode.innerHTML = element;
-        playersContainer.appendChild(this.playerNode)
+        this.playersContainer.appendChild(this.playerNode)
     }
 
     private registerPlayerDOMElements(): void {
         this.playerLife = document.getElementById(`p${Player.playerNumber}-life-percentage`);
         this.playerProgress = document.getElementById(`p${Player.playerNumber}-life-progress`);
         this.playerPlayButton = document.getElementById(`p${Player.playerNumber}-play-button`) as HTMLDivElement;
+    }
+
+    unregisterPlayerDOMElements(): void {
+        this.playersContainer.removeChild(this.playerNode)
     }
 
     listerForPlayerEvents() {

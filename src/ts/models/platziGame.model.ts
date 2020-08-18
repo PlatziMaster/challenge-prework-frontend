@@ -3,22 +3,27 @@ import Swal from "sweetalert2";
 import { environment } from "../env";
 import generateWinnerModalTemplate from "../templates/winner.template";
 import { IPlayerOptions } from "../interfaces/playerOptions.interface";
+import { take } from "rxjs/operators";
+import { Observable, fromEvent } from "rxjs";
 
 class PlatziGame {
 
     private static GAME_INSTANCE: PlatziGame;
     private static players: Player[];
-    static isGameRunning;
     activePlayers: number;
-    playerTurn: number;
+    currentTurn: number;
     currentPlayer: Player;
+
+    modalContainer: HTMLElement
+    playAgainButton: HTMLElement;
+
+    playAgainAction: Observable<Event>;
 
 
     private constructor() {
         PlatziGame.players = []
-        PlatziGame.isGameRunning = true;
         this.activePlayers = 0;
-        this.playerTurn = 0;
+        this.currentTurn = 0;
     }
 
     static gameInstance() {
@@ -48,15 +53,36 @@ class PlatziGame {
     }
 
     showWinnerModal(modalTemplate: string) {
-        const modalContainer: HTMLElement = document.getElementById('modal');
+        this.modalContainer = document.getElementById('modal');
         const child = document.createElement('div')
         child.innerHTML = modalTemplate;
         child.className = "winner"
-        modalContainer.appendChild(child);
+        this.modalContainer.appendChild(child);
+
+        this.playAgain(child)
     }
 
-    startGame() {
-        this.activePlayers = PlatziGame.players.length - 1;
+    playAgain(child) {
+        this.playAgainButton = document.getElementById('play-again')
+        this.playAgainAction = fromEvent(this.playAgainButton, 'click');
+        this.playAgainAction.pipe(take(1)).subscribe(() => {
+            console.log('show me babby :>> ');
+            this.modalContainer.removeChild(child);
+            this.startGame();
+        })
+        if (this.playAgainButton) {
+        }
+    }
+
+    startGame(numberOfPlayers = 2) {
+
+        this.resetAll();
+
+        this.activePlayers = numberOfPlayers - 1
+
+        for (let index = 0; index < numberOfPlayers; index++) {
+            this.addNewPlayer(new Player);
+        }
 
         this.nextPlayer(0);
     }
@@ -78,12 +104,23 @@ class PlatziGame {
                 this.endGame(playerIndex);
             }
         })
+
+        this.currentTurn++;
     }
 
-    resetStats() {
+    resetAll() {
+
+        if (PlatziGame.players.length > 0) {
+            for (let index = 0; index < PlatziGame.players.length; index++) {
+                const element = PlatziGame.players[index];
+                element.unregisterPlayerDOMElements();
+            }
+        }
+        
         PlatziGame.players = []
+        Player.playerNumber = 1;
         this.activePlayers = 0;
-        this.playerTurn = 0;
+        this.currentTurn = 0;
     }
 
 }
