@@ -1,0 +1,32 @@
+{
+  "name": "challenge-prework-frontend",
+  "version": "1.0.0",
+  "description": "Platzi Game",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seromarin/challenge-prework-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seromarin/challenge-prework-frontend/issues"
+  },
+  "homepage": "https://github.com/seromarin/challenge-prework-frontend#readme",
+  "dependencies": {
+    "countup.js": "^2.0.6",
+    "normalize.css": "^8.0.1",
+    "rxjs": "^6.6.2",
+    "sweetalert2": "^9.17.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10",
+    "typescript": "^3.9.7"
+  }
+}

@@ -1,0 +1,10 @@
+@mixin decorative-circle($width, $heigth, $top, $rigth, $left) {
+    width: $width+px;
+    height: $heigth+px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: $base-blue;
+    top: $top+px;
+    right: $rigth+px;
+    left: $left+px;
+}

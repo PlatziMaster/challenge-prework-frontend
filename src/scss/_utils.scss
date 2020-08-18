@@ -1,0 +1,16 @@
+@import 'variables';
+
+.disable {
+    background-color: $base-grey;
+}
+
+.play-again {
+    background-color: $base-blue;
+    color: $base-white;
+    border: 2px solid $base-black;
+    border-radius: 5rem;
+    height: 3.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    outline: none;
+}
