@@ -3,13 +3,18 @@ import { IPlayerOptions } from "../interfaces/playerOptions.interface";
 import { CountUp, CountUpOptions } from "countup.js";
 import { fromEvent, Observable, Subject } from "rxjs";
 import { take } from "rxjs/operators";
-import Swal from 'sweetalert2'
 import generatePlayerCardTemplate from "../templates/player.template";
 
 class Player {
 
+    /**
+     * The current player
+     */
     static playerNumber = 1;
 
+    /**
+     * Player configuration options
+     */
     private _playerOptions: IPlayerOptions;
 
     private playerPlayButton: HTMLDivElement;
@@ -19,6 +24,9 @@ class Player {
     private playersContainer: HTMLElement;
     private playerNode: HTMLDivElement;
 
+    /**
+     * Register attack action when created
+     */
     playerAttackAction: Observable<Event>;
 
     constructor() {
@@ -31,10 +39,18 @@ class Player {
         Player.playerNumber++;   
     }
 
+    /**
+     * Expose current player options
+     */
     get playerOptions() {
         return this._playerOptions;
     }
 
+    /**
+     * Prepare the player yo play and attack
+     * @param enemy enemy player
+     * @param callback action after attack
+     */
     getReady(enemy: Player, callback: CallableFunction) {
         this.playerPlayButton.classList.remove('disable')
         const obs = this.playerAttackAction.pipe(take(1)).subscribe(() => {
@@ -43,18 +59,27 @@ class Player {
         })
     }
 
+    /**
+     * Attack the enemy player
+     * @param enemy enemy player
+     * @returns if enemy player is death
+     */
     attack(enemy: Player) {
         if (!enemy) return;
         this.playerPlayButton.classList.add('disable')
         return enemy.receiveDamage(this._playerOptions.attackDamage)
     }
-    inspect() {
-        console.log(this._playerOptions);
-    }
 
+
+    /**
+     * Receives damage when enemy attack current player
+     * @param damage damage taken
+     * @returns true if current player is alive
+     */
     receiveDamage(damage: number): boolean {
         let finalLife = this._playerOptions.health - damage;
 
+        // Evoid negative health
         if (finalLife < 0) finalLife = 0;
     
         const options: CountUpOptions = {
@@ -72,33 +97,18 @@ class Player {
           console.error(lifeChange.error);
         }
 
+        // Update current player health
         this._playerOptions.health = finalLife;
         
         return finalLife !== 0;
     }
 
 
+    /**
+     * Generates player in the DOM
+     */
     private generate() {
         const playerTemplate = generatePlayerCardTemplate(Player.playerNumber, this._playerOptions)
-        // `
-        //     <div class="player">
-        //         <div id="player-${Player.playerNumber}" class="player__card">
-        //             <h2 class="player__card--title">${}</h2>
-        //             <div class="player__info-action">
-        //                 <div class="player__info-action__life">
-        //                     <div id="p${Player.playerNumber}-life-percentage" class="player__info-action__life__percentage">${this._playerOptions.health}</div>
-        //                     <div class="player__info-action__life__bar">
-        //                         <div id="p${Player.playerNumber}-life-progress" class="player__info-action__life__bar--progress"></div>
-        //                     </div>
-        //                 </div>
-        //                 <div id="p${Player.playerNumber}-play-button" class="player__info-action__play disable">
-        //                     <p class="player__info-action__play--text">Play</p>
-        //                 </div>
-        //             </div>
-        //             <div class="player__image"></div>
-        //         </div>
-        //     </div>
-        // `;
 
         // Add player to DOM
         this.attachElementToNode(playerTemplate)
@@ -106,7 +116,7 @@ class Player {
         // Register elements
         this.registerPlayerDOMElements();
 
-        // Generate Listener
+        // Generate Listeners
         this.listerForPlayerEvents();
     }
 
@@ -117,20 +127,28 @@ class Player {
         this.playersContainer.appendChild(this.playerNode)
     }
 
+    /**
+     * Registers player DOM elements
+     */
     private registerPlayerDOMElements(): void {
         this.playerLife = document.getElementById(`p${Player.playerNumber}-life-percentage`);
         this.playerProgress = document.getElementById(`p${Player.playerNumber}-life-progress`);
         this.playerPlayButton = document.getElementById(`p${Player.playerNumber}-play-button`) as HTMLDivElement;
     }
 
+    /**
+     * Delete player from DOM
+     */
     unregisterPlayerDOMElements(): void {
         this.playersContainer.removeChild(this.playerNode)
     }
 
+    /**
+     * Listers for player events like 'attack' when created
+     */
     listerForPlayerEvents() {
         this.playerAttackAction = fromEvent(this.playerPlayButton, 'click');
     }
-
 
 }
 
