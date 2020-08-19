@@ -1,0 +1,284 @@
+:root {
+  --color-blue: #1a46e5;
+  --color-card1: #43D8C9;
+  --color-card2: #FFBD11;
+  --color-pink: #FF89BB;
+  --border: 3px solid black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.modal{
+  position: absolute;
+  display: flex;
+  width: 1440px;
+  height: 1024px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.sub-modal{
+  width: 1177px;
+  height: 780px;
+  background: white;
+  border-radius: 20px;
+  border: var(--border);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif{
+  width: 564px;
+  height: 577px;
+  border: var(--border);
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.gif img{
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.winner{
+  display: flex;
+  flex-direction: column;
+  margin-left: 83px;
+  text-align: center;
+}
+
+.winner label{
+  color: black;
+  font-size: 36px;
+}
+
+#play-again{
+  outline: none;
+  width: 274px;
+  height: 78px;
+  margin-top: 40px;
+  background: var(--color-blue);
+  border: var(--border);
+  box-sizing: border-box;
+  border-radius: 40px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+#play-again:hover{
+  cursor: pointer;
+}
+
+.none{
+  display: none;
+}
+
+.container {
+  display: grid;
+  width: 1440px;
+  height: 1024px;
+  background: #ffffff;
+  grid-template-columns: 1fr;
+  grid-template-rows: 270px 1fr 170px;
+}
+
+.title{
+  position: absolute;
+  width: 368px;
+  height: 90px;
+  left: 536px;
+  top: 103px;
+  font-size: 60px;
+}
+
+.circle-1 {
+  position: absolute;
+  width: 195px;
+  height: 195px;
+  left: -48px;
+  top: 26px;
+  background: var(--color-blue);
+  border-radius: 100px;
+}
+
+.circle-2 {
+  position: absolute;
+  width: 97px;
+  height: 97px;
+  left: 162px;
+  top: 16px;
+  background: var(--color-blue);
+  border-radius: 100px;
+}
+
+.circle-3 {
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  left: 1004px;
+  top: -222px;
+
+  background: var(--color-blue);
+  border-radius: 335px;
+}
+
+.circle-4 {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  left: 1314px;
+  top: 99px;
+  background: var(--color-blue);
+  border-radius: 100px;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 182px 470px 1fr 470px 182px;
+}
+
+.card-player1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 2 / span 1;
+  border: var(--border);
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: var(--color-card1);
+}
+
+.card-player2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 4 / span 1;
+  border: var(--border);
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: var(--color-card2);
+}
+
+h2{
+  margin-top: 39px;
+  margin-bottom: 45px;
+  font-size: 36px;
+  color: white;
+}
+
+.life-play{
+  display: flex;
+}
+
+.container-life{
+  margin-right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 45px;
+}
+
+.labelpercent{
+  width: 100%;
+  text-align: center;
+}
+
+.life{
+  width: 215px;
+  height: 50px;
+  border: var(--border);
+  box-sizing: border-box;
+  border-radius: 30px;
+  background-color: var(--color-blue);
+}
+
+#cant-life1{
+  height: 44px;
+  border-radius: inherit;
+  box-sizing: border-box;
+  background-color: var(--color-pink);
+}
+
+#cant-life2{
+  height: 44px;
+  border-radius: inherit;
+  box-sizing: border-box;
+  background-color: var(--color-pink);
+}
+
+.border-100{
+  width: calc(100% - 6px);
+  border-radius: 30px;
+}
+
+.play{
+  margin-left: 17px;
+  margin-bottom: 45px;
+  background-color: var(--color-blue);
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  width: 120px;
+  height: 120px;
+  border: var(--border);
+  box-sizing: border-box;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play label{
+  font-size: 36px;
+}
+
+.hiden-play{
+  visibility: hidden;
+}
+
+.draw{
+  width: 370px;
+  height: 231px;
+  background:white;
+  border-radius: 20px;
+  border: var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer label{
+  color: black;
+  margin-right: 26px;
+  font-size: 24px;
+}
+
+.footer a{
+  margin: 9px;
+}
