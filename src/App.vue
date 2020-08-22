@@ -1,15 +1,29 @@
 <template>
   <div id="app">
+
+    <!-- Main content -->
     <div id="main">
-      <Modal user="sjdkjfkj" v-show="modal"/>
-      <div class="circle one"></div>
-      <div class="circle two"></div>
-      <div class="circle three"></div>
-      <div class="circle four"></div>
+
+      <!--------- modal try again -->
+      <Modal user="modal" v-show="modal"/>
+
+      <!---------- circles -->
+      <div class="circlesContent">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+        <div class="circle four"></div>
+      </div>
+
+      <!------------ Title -->
       <div class="titleM">
         <h1>Platzi Game</h1>
       </div>
+
+      <!----------- Cards -->
       <div class="cards">
+
+        <!-- card1 -->
         <div class="card1">
           <card
           :life="players[0].life"
@@ -22,6 +36,8 @@
             </template>
           </card>
         </div>
+
+        <!-- card2 -->
         <div class="card2">
           <card
           :life="players[1].life"
@@ -34,17 +50,25 @@
             </template>
           </card>
         </div>
+
       </div>
+
     </div>
+
+    <!-- tag -->
     <div class="tag">
-      <p>Made by <a href="https://github.com/circuandante/" target="_blank">@circuandante</a></p>
+      <p>Made by
+        <a href="https://github.com/circuandante/" target="_blank"> @circuandante</a>
+      </p>
     </div>
+
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
 
+// components
 import Modal from '@/components/Modal.vue';
 import Personage from '@/components/Personage.vue';
 import Personage2 from '@/components/Personage2.vue';

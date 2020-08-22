@@ -2,16 +2,23 @@
   <div class="modal">
     <div class="content">
       <div class="grid">
+
+        <!-- personge -->
         <figure>
           <img :src="urlGif || urlgif" alt="">
         </figure>
+
+        <!-- text -->
         <div class="pic">
-          <p>The winnwe is: <br>
-          {{winner}}</p>
+          <p>
+            The winnwe is: <br>
+            {{winner}}
+          </p>
           <div class="btn" @click.prevent="reset">
             <p>Play again</p>
           </div>
         </div>
+
       </div>
     </div>
   </div>
