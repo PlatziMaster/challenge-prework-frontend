@@ -1,3 +1,6 @@
+# challenge-frontend-prework
+[Proyecto en linea](https://www.circuandante.com)
+
 # 🎮 Challenge Frontend 01
 
 Platzi Game
@@ -71,4 +74,25 @@ Platzi Game es un juego en el que compiten 2 personajes. Cada personaje comienza
 
 ## 7. Licencia
 
-challenge-frontend-01 se lanza bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

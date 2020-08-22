@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+  --primary: #48e;
+  --secondary: #ccc;
+  --azul: #1A46E5;
+  --green: #43D8C9;
+  --green-card: #43D8C9;
+  --green-light: #a7d0cb;
+  --green-dark: #356d67;
+  --green-dark-shadow: #2a3e3c;
+  --yellow-card: #FFBD11;
+  --pink: #FF89BB;
+  --btn-blue: #1A46E5;
+}
+
+// mixins
+
+@mixin radius-50{ 
+  border-radius: 50%;
+}
+
+@mixin border {
+  border: 3px solid black;
+}
+@mixin shadow ($x:-3px, $y:2px, $b:6px, $c: #7b7b7bab){
+  box-shadow: $x $y $b $c;
+}
+
+@mixin basic ($h, $w, $t: initial, $r: initial, $l: initial, $b: initial){
+  width: $w;
+  height: $h;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
+ @mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .main-personage{
+  background-color: white;
+  width: 50vmin;
+  border:1px solid black;
+  border-radius: 30px;
+  @include center;
+}
+
+.personage{
+  width: 40vmin;
+  height: 40vmin;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+.personage div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.d{
+  border: 1px solid red;
+}
+
+.s{
+  box-shadow: -4px 5px 14px grey
+}
+
+.btn{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1300px){
+ 
+  .main-personage{
+    width: 46vmin;
+  }
+  .titleM h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+}
