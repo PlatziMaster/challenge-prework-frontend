@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="./assets/images/pokemon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/font/font/flaticon.css">
+  <title>Platzi Game</title>
+</head>
+<body>
+  <header>
+    <div>
+      <p>Platzi Game</p>
+    </div>
+  </header>
+  <main>
+    <div>
+      <section class="boxes">
+        <div class="boxes-sections">
+          <p class="boxes-sections__title">Player 1</p>
+        </div>
+        <div class="boxes-sections">
+          <section class="boxes-sections__state">
+            <div class="boxes-life">
+              <p id="lifePercentOne">100%</p>
+            </div>
+            <div class="boxes-life">
+              <div class="blue-background">
+                <div class="pink-background" id="lifeBoxOne"></div>
+              </div>
+            </div>
+          </section>
+          <section class="boxes-sections__state">
+            <div class="boxes-sections__button-play" id="playOne">
+              <p>Play</p>
+            </div>
+          </section>
+        </div>
+        <div class="boxes-sections">
+          <div class="boxes-sections__image">
+            <img src="./assets/images/custom – 3.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="boxes">
+        <div class="boxes-sections">
+          <p class="boxes-sections__title">Player 2</p>
+        </div>
+        <div class="boxes-sections">
+          <section class="boxes-sections__state">
+            <div class="boxes-life">
+              <p id="lifePercentTwo">100%</p>
+            </div>
+            <div class="boxes-life">
+              <div class="blue-background">
+                <div class="pink-background" id="lifeBoxTwo"></div>
+              </div>
+            </div>
+          </section>
+          <section class="boxes-sections__state">
+            <div class="boxes-sections__button-play" id="playTwo">
+              <p>Play</p>
+            </div>
+          </section>
+        </div>
+        <div class="boxes-sections">
+          <div class="boxes-sections__image">
+            <img src="./assets/images/custom – 2.png" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <section class="footer-comments">
+        <a href="https://github.com/CarGDev/challenge-prework-frontend">Made by CarGDev</a>
+        <a href="https://github.com/CarGDev"><span class="flaticon-039-github"></span></a>
+        <a href="https://twitter.com/CarGDev"><span class="flaticon-013-twitter-1"></span></a>
+        <a href="https://www.instagram.com/cargdev/"><span class="flaticon-034-instagram"></span></a>
+      </section>
+    </div>
+  </footer>
+  <div class="winner" id="winner"></div>
+  <div class="winner-modal" id="winner-modal">
+    <div class="content-modal">
+      <img src="./assets/images/winner images/HORA DE AVENTURA portada.jpg" alt="">
+    </div>
+    <div class="content-modal">
+      <div>
+        <h2>The winner is:</h2>
+        <h2 id="titleContent">Player 1</h2>
+      </div>
+      <div class="modal-buttons">
+        <button class="modal-btn primary" id="add-hide-modal">
+          Play again
+        </button>
+      </div>
+    </div>
+  </div>
+  <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./renderer/index.js"></script>
+</body>
+</html>
