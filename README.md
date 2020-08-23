@@ -4,8 +4,7 @@ Platzi Game
 
 ## 🎮 Contenido
 
-1. [Descripción](#1-descripción)
-2. [Mockups](#2-mockups)
+1. [Descripción](#1-descripción)2. [Mockups](#2-mockups)
 3. [Requerimientos](#3-requerimientos)
 4. [Tecnologías](#4-tecnologías)
 5. [Recursos](#5-recursos)
@@ -68,7 +67,309 @@ Platzi Game es un juego en el que compiten 2 personajes. Cada personaje comienza
 1. Hacer un "Fork" de este proyecto.
 2. Revolver el reto.
 3. Crear un Pull Request hacia este repositorio.
+/d/programacion/PlatziGame/PlatziGame.html
+/d/programacion/PlatziGame/css  
+Aun me falta aprender el Javascript ♥/d/programacion/PlatziGame/images
 
-## 7. Licencia
 
-challenge-frontend-01 se lanza bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzi Game </title>
+    <link rel="icon" href="./images/Platzi.png">
+    <link rel="stylesheet" href="../PlatziGame/css/body.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bola1"></div>
+    <div class="bola2"></div>
+    <div class="bola3"></div>
+    <div class="bola4"></div>
+    <div class="Card1">
+        <div class="Card1-vida1__rosado"></div>
+        <div class="Card1-vida1__porcentaje">50%</div>
+        <div class="card1-vida1"></div>
+        <button class="Card1-boton">Play</button>
+        <p>Torieto</p>
+        <div class="Card1-pj1">
+            <img class="Card1-pj1__img" src="../PlatziGame/images/platziPersonaje1.png" alt="Torieto">
+        </div>
+     </div>
+    <div class="Card2">
+        <div class="Card2-vida2__rosado"></div>
+        <div class="Card2-vida2__porcentaje">20%</div>
+        <div class="card2-vida2"></div>
+        <button class="Card2-boton">Play</button>
+        <p>VikingRock</p>
+        <div class="Card2-pj2">
+            <img class="Card2-pj2__img" src="../PlatziGame/images/PlatziPersonaje2.png" alt="VikingRock">
+        </div>
+     </div>
+    <div class="game">
+             <h1>PLATZI GAME</h1>
+        </div>
+       
+          <footer class="footer">
+                <div class="social"> 
+                    <p>designed by <a href="https://github.com/IvanBarco"> @IvanBarco </a></p> 
+                    <a href="https://github.com/IvanBarco" class="social-m github"></a>
+                    <a href="https://www.instagram.com/ivan.barco_93/" class="social-m instagram"></a>
+                </div>
+          </footer>   
+          
+              
+</body>
+</html>
+
+.social-m
+{
+    display:inline-flex;
+    height: 50px;
+    width: 50px;   
+    background-size: 50px 50px;
+    margin: -10px 5px 1px 30px;    
+    border-radius: 10px;
+    
+}
+.social-m.github
+{ 
+  background-image: url(../images/github.svg);
+  background-color: black;
+}
+.social-m.instagram 
+{
+  background-image: url(../images/instagram.svg);
+  background-color: black;
+}
+.game h1
+{
+  position: absolute;
+  width: 400px;
+  height: 80px;
+  left: 536px;
+  top: 105px;
+  font-size: 60px;
+  line-height: 90px;
+}
+.social
+{
+  display: inline-flex;  
+  width: 400px;
+  height: 100px;
+}
+body
+{
+  font-family: 'Poppins', sans-serif;
+}
+footer
+{ 
+    position: absolute;
+    left: 1000px;
+    top: 950px;
+}
+.bola1
+{
+  position: absolute;
+  width: 195px;
+  height: 195px;
+  left: -48px;
+  top: 26px;
+  background: #1A46E5;
+  border-radius: 100px;
+}
+.bola2
+{
+  position: absolute;
+  width: 97px;
+  height: 97px;
+  left: 162px;
+  top: 16px;
+  background: #1A46E5;
+  border-radius: 100px;
+}
+.bola3
+{
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  left: 1004px;
+  top: -222px;
+  background: #1A46E5;
+  border-radius: 200px;
+}
+.bola4
+{
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  left: 1314px;
+  top: 99px;
+  background: #1A46E5;
+  border-radius: 100px;
+}
+.Card1
+{
+  position: absolute;
+  width: 467px;
+  height: 582px;
+  left: 182px;
+  top: 269px;
+  background: #43D8C9;
+  border: 3px solid #000000;
+  border-radius: 20px;
+}
+.Card2
+{
+  position: absolute;
+  width: 467px;
+  height: 582px;
+  left: 791px;
+  top: 269px;
+  background: #FFBD11;
+  border: 3px solid #000000;
+  border-radius: 20px;
+}
+.Card1-pj1
+{
+  position: absolute;
+  width: 370px;
+  height: 231px;
+  left: 45px;
+  top: 300px;
+  /* background-image: url("../PlatziGame/images/platziPersonaje1.png"); */
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  border-radius: 20px;
+}
+.Card1 p
+{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+.Card2 p
+{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+.Card2-pj2
+{
+  position: absolute;
+  width: 370px;
+  height: 231px;
+  left: 45px;
+  top: 300px;
+  /* background-image: url("../PlatziGame/images/platziPersonaje2.png"); */
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  border-radius: 20px;
+}
+.Card1-boton
+{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 315px;
+  top: 130px;
+  font-size: 35px;
+  background-color: #1A46E5;
+  color: white;
+  border: 3px solid #000000;
+  border-radius: 100px;
+
+}
+.Card2-boton
+{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 315px;
+  top: 130px;
+  font-size: 35px;
+  background-color: #1A46E5;
+  color: white;
+  border: 3px solid #000000;
+  border-radius: 100px;
+}
+.Card1-pj1__img
+{
+    position: absolute;
+    top: -140px;
+    left: -160px;
+}
+.Card2-pj2__img
+{
+  position: absolute;
+  top: -120px;
+  left: -130px;
+}
+.card1-vida1
+{
+  position: absolute;
+  width: 190px;
+  height: 50px;
+  left: 67px;
+  top: 175px;
+  background-color:#1A46E5;
+  color: white;
+  border-radius: 50px;
+  border: 3px solid #000000;
+  z-index: 3;
+}
+.card2-vida2
+{
+  position: absolute;
+  width: 190px;
+  height: 50px;
+  left: 67px;
+  top: 175px;
+  background-color:#1A46E5;
+  color: white;
+  border-radius: 50px;
+  border: 3px solid #000000;
+  z-index: 1;
+}
+.Card2-vida2__porcentaje
+{
+  color: white;
+  position: absolute;
+  height: 5px;
+  width: 3px;
+  left: 150px;
+  top:150px;
+}
+.Card2-vida2__rosado
+{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 210px;
+  top: 178px;
+  background-color:#FF89BB;
+  z-index: 2;
+  border-radius: 0px 30px 30px 0px;
+}
+.Card1-vida1__porcentaje
+{
+  color: white;
+  position: absolute;
+  height: 5px;
+  width: 3px;
+  left: 150px;
+  top:150px;
+}
+.Card1-vida1__rosado
+{
+  position: absolute;
+  width: 95px;
+  height: 50px;
+  left: 165px;
+  top: 178px;
+  background-color:#FF89BB;
+  border-radius: 0px 30px 30px 0px;
+  z-index: 4;
+}
+
