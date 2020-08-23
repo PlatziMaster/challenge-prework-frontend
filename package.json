@@ -1,0 +1,28 @@
+{
+  "name": "challenge-prework-frontend",
+  "version": "1.0.0",
+  "description": "Challenge for platzi master",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarGDev/challenge-prework-frontend.git"
+  },
+  "keywords": [
+    "jquery",
+    "css",
+    "html",
+    "javascript"
+  ],
+  "author": "Carlos Arturo Gutierrez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarGDev/challenge-prework-frontend/issues"
+  },
+  "homepage": "https://github.com/CarGDev/challenge-prework-frontend#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
