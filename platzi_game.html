@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platzi Game</title>
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="shelf">
+    <div class="background">
+      <div class="circle sm"></div>
+      <div class="circle md"></div>
+      <div class="circle lg"></div>
+      <div class="circle xl"></div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal__info">
+        <div class="modal__gif">
+          <div class="gif_flexible">
+            <!-- <iframe class="giphy" src="https://giphy.com/embed/Y2sh5TrypYRbo4PAu8" width="480" height="446" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> -->
+          </div>
+        </div>
+        <div class="modal__texts">
+          <div class="wraper">
+            <h1>The winner is:</h1>
+            <h1 id="winner"></h1>
+            <button id="again_btn" class="button">Play again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <h1>Platzi Game</h1>
+    </header>
+    <section id="players">
+      <div class="player_card">
+        <h3 class="player_card__title">Player 1</h3>
+        <div class="player_card__info">
+          <div class="player_card__life">
+            <div id="player_one_number" class=" player_card__life_percentage"></div>
+            <div class="button player_card__life_bar player_card__life_bar--total">
+              <div id="player_one_bar" class="player_card__life_bar player_card__life_bar--current"></div>
+            </div>
+          </div>
+          <button id="player_one_btn" class="button play_button">Play</button>
+        </div>
+        <div class="player_card__character_shelf">
+          <!-- aqui dibujo el personaje del jugador -->
+          <img src="./assets/character_one.png" alt="character one">
+        </div>
+      </div>
+      <div class="player_card">
+        <h3 class="player_card__title">Player 2</h3>
+        <div class="player_card__info">
+          <div class="player_card__life">
+            <div id="player_two_number" class=" player_card__life_percentage">20%</div>
+            <div class="button player_card__life_bar player_card__life_bar--total">
+              <div id="player_two_bar" class="player_card__life_bar player_card__life_bar--current"></div>
+            </div>
+          </div>
+          <button id="player_two_btn" class="button play_button">Play</button>
+        </div>
+        <div class="player_card__character_shelf">
+          <!-- aqui dibujo el personaje del jugador -->
+          <img src="./assets/character_two.png" alt="Character two">
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="dev_info">
+        <span class="dev_info__name">Made by @Pipe12</span>
+        <div class="dev_info__social">
+          <a href="https://github.com/Pipe12" target="blank">
+            <img src="./assets/github_icon.png" alt="GitHub icon">
+          </a>
+        </div>
+        <a href="https://twitter.com/PipeBurbano12" target="blank" class="dev_info__social">
+          <img src="./assets/twitter_icon.png" alt="Twitter icon">
+        </a>
+        <a href="https://www.instagram.com/cavemandeveloper/" target="blank" class="dev_info__social">
+          <img src="./assets/instagram_icon.png" alt="Instagram icon">
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/platzi_game.js"></script>
+</body>
+</html>
