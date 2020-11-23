@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function initialize() {
-    modal.classList.add('hidden')
+    hideModal()
     if(btnPlayerOne.classList.contains('blocked') ){
       btnPlayerOne.classList.remove('blocked')
     }
@@ -99,11 +99,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     youWin()
   }
 
+  function hideModal() {
+    modal.classList.add('hidden')
+  }
+
   function restart() {
-    window.location.reload()
+    players[0].life = 100
+    players[1].life = 100
+    turn = 0
+    initialize()
   }
   
-  let play = initialize();
+  let play = initialize()
   let players = play[0]
   let turn = play[1]
   console.log("comenzo el juego.")
