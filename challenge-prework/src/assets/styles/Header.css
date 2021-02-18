@@ -1,0 +1,64 @@
+.Header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+
+}
+
+.title {
+
+    font-size: 50px;
+    line-height: 90px;
+    letter-spacing: 2px;
+
+}
+
+.circle__1 {
+
+    position: absolute;
+    width: 335px;
+    height: 335px;
+    left: 1004px;
+    top: -222px;
+    background: #1A46E5;
+    border-radius: 50%;
+
+}
+
+.circle__2 {
+
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    left: -48px;
+    top: 26px;
+    background: #1A46E5;
+    border-radius: 100px;
+
+}
+
+.circle__3 {
+    
+    position: absolute;
+    width: 97px;
+    height: 97px;
+    left: 162px;
+    top: 16px;
+    background: #1A46E5;
+    border-radius: 100px;
+
+}
+
+.circle__4 {
+
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    left: 1314px;
+    top: 99px;
+    background: #1A46E5;
+    border-radius: 100px;
+
+}

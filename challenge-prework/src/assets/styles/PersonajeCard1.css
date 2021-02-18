@@ -1,0 +1,13 @@
+.PersonajeCard1 {
+    
+    position: absolute;
+    width: 370px;
+    height: 231px;
+    left: 231px;
+    top: 572px;
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+}

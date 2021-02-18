@@ -1,0 +1,38 @@
+.Footer {
+display: flex;
+position: absolute;
+width: 260px;
+height: 60px;
+left: 1000px;
+top: 933px;
+font-weight: bold;
+font-size: 14px;
+line-height: 36px;
+
+}
+
+.Footer a {
+    text-decoration: none;
+    color: #100303;
+}
+
+.social__github, .social__instagram, .social__twitter  {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    background-size: 30px 30px;
+
+} 
+.social__github {
+    background-image: url('../../assets/images/Github.svg');
+}
+
+.social__instagram {
+    background-image: url('../../assets/images/Instagram.svg');
+}
+
+
+.social__twitter {
+    background-image: url('../../assets/images/Twitter.svg');
+}
