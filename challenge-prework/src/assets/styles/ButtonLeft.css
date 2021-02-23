@@ -1,28 +1,34 @@
+
+/* --------------------------------------
+code for the left button, player 1 
+-------------------------------------- */
+
 .ButtonLeft {
+
+    background: #000000;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
     position: absolute;
     width: 120px;
     height: 120px;
     left: 483px;
     top: 413px;
-    background: #000000;
-    border: 3px solid #000000;
-    box-sizing: border-box;
-    border-radius: 100px;
 
 }
 
 .ButtonLeft__b1 {
 
-    width: 120px;
-    height: 120px;
-    left: 481px;
-    top: 407px;
     background: #1A46E5;
-    color: #FFFFFF;
-    font-size: 40px;
     border: 3px solid #000000;
     box-sizing: border-box;
     border-radius: 100px;
+    color: #FFFFFF;
+    font-size: 40px;
+    height: 120px;
+    width: 120px;
+    left: 481px;
+    top: 407px;
     outline: none;
 
 }

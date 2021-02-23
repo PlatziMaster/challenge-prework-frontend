@@ -1,7 +1,11 @@
+/* ------------------------------------------
+code for the Player2: ProgressBar
+--------------------------------------------- */
+
 .ProgressBar2  {
 
     position: absolute;
-    width: 228px;
+    width: 208px;
     height: 50px;
     left: 355px;
     top: 50px;

@@ -1,13 +1,18 @@
+/* ------------------------------------------
+code for the Player1: ProgressBar
+--------------------------------------------- */
+
 .ProgressBar1 {
 
-    position: absolute;
-    width: 228px;
-    height: 50px;
-    right: 750px;
-    top: 50px;
     background: #1A46E5;
     border: 3px solid #000000;
     box-sizing: border-box;
     border-radius: 30px;
+    position: absolute;
+    width: 208px;
+    height: 50px;
+    right: 750px;
+    top: 50px;
+
 }
 

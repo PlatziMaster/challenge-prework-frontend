@@ -1,3 +1,8 @@
+/* ------------------------------------------
+code for the Player2: Main card and title.
+--------------------------------------------- */
+
+
 .Player__2 {
 
     position: absolute;
@@ -13,6 +18,8 @@
 }
 
 .Player2__title {
-    text-align: center;
+
     color:  #FFFFFF;
+    text-align: center;
+
 }

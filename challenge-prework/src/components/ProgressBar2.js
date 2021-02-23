@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/styles/ProgressBar2.css';
 
+// Progress bar for player 2
 
 const ProgressBar2 = ({progress}) => {
     return (

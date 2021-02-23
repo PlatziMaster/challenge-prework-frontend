@@ -1,13 +1,18 @@
+/* ------------------------------------------
+code for the CardPlayer2: small quadrant
+--------------------------------------------- */
+
+
 .PersonajeCard2 {
 
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
     position: absolute;
     width: 370px;
     height: 231px;
     left: 840px;
     top: 572px;
-    background: #FFFFFF;
-    border: 3px solid #000000;
-    box-sizing: border-box;
-    border-radius: 20px;
 
 }

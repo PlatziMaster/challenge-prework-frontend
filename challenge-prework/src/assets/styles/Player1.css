@@ -1,18 +1,25 @@
+/* ------------------------------------------
+code for the Player1: Main card and title.
+--------------------------------------------- */
+
+
 .Player__1 {
 
+    background: #43D8C9;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
     position: absolute;
     width: 467px;
     height: 582px;
     left: 182px;
     top: 269px; 
-    background: #43D8C9;
-    border: 3px solid #000000;
-    box-sizing: border-box;
-    border-radius: 20px;
-    
+
 }
 
 .Player1__title {
-    text-align: center;
+
     color:  #FFFFFF;
+    text-align: center;
+
 }

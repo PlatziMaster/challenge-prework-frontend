@@ -1,4 +1,10 @@
+/* ------------------------------------------
+code for the header and title.
+--------------------------------------------- */
+
+
 .text__1 {
+
     position: absolute;
     width: 252px;
     height: 54px;
@@ -10,9 +16,11 @@
     font-size: 26px;
     line-height: 44px;
     color: #100303;
+
 }
 
 .text__2 {
+
     position: absolute;
     width: 140px;
     height: 54px;
@@ -24,7 +32,6 @@
     font-size: 26px;
     line-height: 44px;
     color: #000000;
-    
 
 }
 

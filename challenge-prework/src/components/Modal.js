@@ -2,6 +2,8 @@ import React from 'react';
 import '../assets/styles/Modal.css';
 
 
+// The modal opens when there is a winner
+
 function Modal ({ action }) {
     
     return (

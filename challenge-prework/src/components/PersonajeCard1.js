@@ -2,6 +2,8 @@ import React from 'react';
 import '../assets/styles/PersonajeCard1.css';
 import '../assets/styles/Warrior1.css';
 
+// Creation of the first warrior
+
 
 const PersonajeCard1 = () => (
 
