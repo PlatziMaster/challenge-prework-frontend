@@ -1,0 +1,69 @@
+/* ------------------------------------------
+code for the header and title.
+--------------------------------------------- */
+
+
+.Header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+
+}
+
+.title {
+
+    font-size: 50px;
+    line-height: 90px;
+    letter-spacing: 2px;
+
+}
+
+.circle__1 {
+
+    background: #1A46E5;
+    border-radius: 50%;
+    position: absolute;
+    width: 335px;
+    height: 335px;
+    left: 1004px;
+    top: -222px;
+
+}
+
+.circle__2 {
+
+    background: #1A46E5;
+    border-radius: 100px;
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    left: -48px;
+    top: 26px;
+
+}
+
+.circle__3 {
+    
+    background: #1A46E5;
+    border-radius: 100px;
+    position: absolute;
+    width: 97px;
+    height: 97px;
+    left: 162px;
+    top: 16px;
+
+}
+
+.circle__4 {
+
+    background: #1A46E5;
+    border-radius: 100px;
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    left: 1314px;
+    top: 99px;
+
+}

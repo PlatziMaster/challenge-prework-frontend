@@ -1,0 +1,206 @@
+/* -------------------------------------------------
+code for the Warrior1: warrior creation, body parts
+--------------------------------------------------- */
+.PersonajeCard1 {
+
+    background-image: url('../images/background1.jpg');
+    background-size: cover;
+}
+
+.face {
+    position: absolute;
+    width: 67px;
+    height: 55px;
+    right: 130px;
+    bottom: 140px;
+    border-radius: 50%;
+    background: #FFCCBC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    
+}
+
+.eyes {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 37px;
+    bottom: 25px;
+    background: #000000;
+    border-radius: 50%;
+}
+
+.mouth {
+    position: absolute;
+    width: 10px;
+    height: -0px;
+    right: 25px;
+    top: 40px;
+    border: 2px solid #000000;
+    transform: rotate(29.05deg);
+}
+
+
+.mask {
+    position: absolute;
+    bottom: 116px;
+    left: 10px;
+    border-style: groove;
+    height: 1000px;
+    width: 100px;
+    border-radius: 40% 50%;
+    border-color: transparent transparent #202336;
+    border-width: 40px 20px 40px 10px;
+    transform: rotate(120deg);
+    transform-origin: bottom left;
+    z-index: 1;
+
+}
+
+.body1 {
+    
+    position: absolute;
+    width: 66px;
+    height: 76px;
+    left: 155px;
+    top: 85px;
+    background: #202336;
+    border-radius: 10%;
+    z-index: 7;
+}
+
+.logo {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 25px;
+    bottom: 70px;
+    border-style: double;
+    background: linear-gradient(0deg, #A4EFBE, #A4EFBE), linear-gradient(0deg, #1A9CE5, #1A9CE5), #1A9CE5;
+    border-radius: 50%;
+    transform: rotate(120deg);
+    transform-origin: bottom left;
+}
+
+.shield {
+    position: absolute;
+    border-style: groove;
+    width: 102px;
+    height: 102px;
+    right: 50px;
+    bottom: 77px;
+    border-radius: 50%;
+    background: #C71B44;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.accesory {
+
+    position: absolute;
+    width: 10px;
+    height: 41px;
+    right: 45px;
+    top: 33px;
+    background: #C4C4C4;
+}
+
+.arm-left {
+
+    position: absolute;
+    border-style: solid;
+    border-color:  #FFCCBC transparent transparent transparent;
+    border-width: 75px 13px 0px 12px;
+    height: 0px;
+    width: 0px;
+    left: 115px;
+    top: 35px;
+    margin: 20px 0 50px 0;
+    transform: rotate(120deg);
+    transform-origin:left right;
+
+}
+
+.hand-right {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 90px;
+    bottom: 116px;
+    border-radius: 50%;
+    background: #FFCCBC;
+}
+
+.hand-left {
+
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -10px;
+    bottom: 1px;
+    border-radius: 50%;
+    background: #FFCCBC;
+}
+
+.leg-left {
+    position: absolute;
+    border-style: solid;
+    border-color:  #FFCCBC transparent transparent transparent;
+    border-width: 60px 13px 0px 12px;
+    height: 0px;
+    width: 0px;
+    left: 144px;
+    top: 133px;
+    margin: 20px 0 50px 0;
+    transform: rotate(24deg);
+    transform-origin:left right;
+}
+
+.leg-right {
+
+    position: absolute;
+    border-style: solid;
+    border-color:  #FFCCBC transparent transparent transparent;
+    border-width: 60px 13px 0px 12px;
+    height: 0px;
+    width: 0px;
+    right: 143px;
+    top: 133px;
+    margin: 20px 0 50px 0;
+    transform-origin:left right;
+}
+
+.accesory1-sword {
+
+    position: relative;
+    border-style: solid;
+    border-color: transparent transparent #202336 transparent;
+    border-width: 0 10px 10px 10px;
+    height: 0;
+    width: 10px;
+    margin: 20px 0 50px 0;
+    left: 90px;
+    top: 40px;
+
+}
+
+.accesory2-sword {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 100px;
+    top: 95px;
+    background: #202336;
+}
+
+.sword {
+    position: absolute;
+    border-style: groove;
+    border-color:  #A7B3FB transparent transparent transparent;
+    border-width: 60px 10px 0px 10px;
+    height: 0px;
+    width: 0px;
+    left: 95px;
+    top: -15px;
+    margin: 20px 0 20px 0;
+    transform: rotate(180deg);
+}

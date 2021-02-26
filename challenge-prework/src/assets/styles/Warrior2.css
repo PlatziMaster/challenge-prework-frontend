@@ -1,0 +1,232 @@
+/* -------------------------------------------------
+code for the Warrior2: warrior creation, body parts
+--------------------------------------------------- */
+
+
+.PersonajeCard2 {
+
+    background-image: url('../images/background2.png');
+    background-size: cover;
+
+}
+
+.head {
+
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    right: 140px;
+    top: 20px;
+    border-radius: 50%;
+    background: #FFCCBC;
+    z-index: 1;
+
+}
+
+.mask-p2 {
+
+    position: absolute;
+    bottom: 80px;
+    left: 75px;
+    border-style: solid;
+    height: 850px;
+    width: 80px;
+    border-radius: 20% 20%;
+    border-color: transparent transparent #202336;
+    border-width: 0px 0px 30px 0px;
+    transform: rotate(180deg);
+    transform-origin: bottom left;
+
+}
+
+.eyes-left {
+
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 45px;
+    bottom: 30px;
+    border-radius: 50%;
+    background: #000000;
+
+}
+
+.eyes-right {
+
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 20px;
+    top: 27px;
+    border-radius: 50%;
+    background: #000000;
+
+}
+
+.mouth-p2 {
+
+    position: absolute;
+    width: 10px;
+    height: -0px;
+    right: 25px;
+    top: 50px;
+    border: 2px solid #000000;
+    transform: rotate(-35deg);
+
+}
+
+.body-p2 {
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 140px;
+    top: 70px;
+    border-radius: 50%;
+    background: #1F7E75;
+
+}
+
+.arm__right-p2 {
+
+    position: absolute;
+    width: 35px;
+    height: 100px;
+    left: 70px;
+    top: 10px;
+    background: #FFCCBC;
+    border: 1px solid #FFCCBC;
+    box-sizing: border-box;
+    border-radius: 30px;
+
+}
+
+.arm__left-p2 {
+
+    position: absolute;
+    width: 77.82px;
+    height: 22.8px;
+    right: 75px;
+    bottom: 80px;
+    background: #FFCCBC;
+    mix-blend-mode: normal;
+    border-radius: 30px;
+    transform: matrix(-1, -0.001, -0.01, 1, 2, 3);
+
+}
+
+.hand-p2 {
+
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 130px;
+    bottom: 76px;
+    border-radius: 50%;
+    background: #FFCCBC;
+
+}
+
+.weapon {
+
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: -20px;
+    bottom: 6px;
+    border-radius: 50%;
+    background: #202336;
+
+}
+
+.handle {
+
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 27px;
+    top: 50px;
+    background: #202336;
+
+}
+
+.prompter {
+
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    right: 44px;
+    bottom: 25px;
+    background:#202336;
+    mix-blend-mode: normal;
+    border-radius: 30px;
+    transform: matrix(-1, -0.001, -0.01, 1, 2, 3);
+
+}
+
+.accesory__p2-1 {
+
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 41px;
+    top: -3px;
+    border-radius: 50%;
+    background: #202336;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.accesory__p2-2 {
+
+    position: absolute;
+    width: 30px;
+    height: 8px;
+    right: 5px;
+    top: -1px;
+    background:orangered;
+    border-radius: 30px;
+    transform: rotate(90deg);
+
+}
+
+.accesory__p2-3 {
+
+    position: absolute;
+    width: 60px;
+    height: 8px;
+    right: 5px;
+    top: -1px;
+    background:orangered;
+    border-radius: 30px;
+    transform: rotate(90deg);
+
+}
+
+.legs__left-p2 {
+
+    position: absolute;
+    width: 19px;
+    height: 50px;
+    left: 20px;
+    bottom: -30px;
+    background: #1F7E75;
+    border: 1px solid #1F7E75;
+    box-sizing: border-box;
+    border-radius: 30px;
+
+}
+
+.legs__right-p2 {
+    
+    position: absolute;
+    width: 19px;
+    height: 42px;
+    left: 51px;
+    bottom: -30px;
+    background: #1F7E75;
+    border: 1px solid #1F7E75;
+    box-sizing: border-box;
+    border-radius: 30px;
+
+}

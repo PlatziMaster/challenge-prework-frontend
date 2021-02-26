@@ -1,0 +1,25 @@
+/* ------------------------------------------
+code for the Player2: Main card and title.
+--------------------------------------------- */
+
+
+.Player__2 {
+
+    position: absolute;
+    width: 467px;
+    height: 582px;
+    left: 791px;
+    top: 269px;
+    background: #FFBD11;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+}
+
+.Player2__title {
+
+    color:  #FFFFFF;
+    text-align: center;
+
+}
